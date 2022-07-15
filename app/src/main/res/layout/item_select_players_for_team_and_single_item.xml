@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+<RelativeLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rl_container"
+        android:background="@drawable/shape_big_gray_corners"
+        xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <TextView
+            android:layout_width="match_parent"
+            android:textColor="#FF666666"
+            android:id="@+id/tv_text_six_module"
+            android:textSize="@dimen/sp_13"
+            android:paddingTop="@dimen/dp_8"
+            android:paddingBottom="@dimen/dp_8"
+            android:gravity="center"
+
+            android:text="李冰冰"
+            android:layout_height="wrap_content">
+
+    </TextView>
+    <ImageView
+            android:id="@+id/iv_sex"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_alignParentRight="true"
+            android:layout_width="@dimen/dp_11"
+            android:layout_height="@dimen/dp_11"/>
+</RelativeLayout>
+
+</layout>

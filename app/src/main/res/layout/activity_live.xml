@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+
+        <variable
+            name="listener"
+            type="android.view.View.OnClickListener" />
+    </data>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fff">
+
+<!--        <FrameLayout-->
+<!--            android:id="@+id/push_container"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"></FrameLayout>-->
+
+<!--        <RelativeLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent">-->
+
+<!--            <ImageView-->
+
+<!--                android:id="@+id/btn_close"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_alignParentLeft="true"-->
+<!--                android:layout_alignParentTop="true"-->
+<!--                android:layout_marginLeft="@dimen/dp_20"-->
+<!--                android:layout_marginTop="@dimen/dp_20"-->
+<!--                android:contentDescription="@null"-->
+<!--                android:padding="@dimen/liveroom_margin_10"-->
+<!--                android:src="@drawable/img_live_close" />-->
+
+<!--            <ImageView-->
+<!--                android:visibility="gone"-->
+<!--                android:id="@+id/iv_live_play"-->
+<!--                android:onClick="@{v->listener.onClick(v)}"-->
+<!--                android:layout_marginBottom="@dimen/dp_16"-->
+<!--                android:layout_centerHorizontal="true"-->
+<!--                android:layout_alignParentBottom="true"-->
+<!--                android:layout_width="@dimen/dp_52"-->
+<!--                android:layout_height="@dimen/dp_52"-->
+<!--                android:src="@drawable/img_live_start" />-->
+<!--            <ImageView-->
+<!--                android:src="@drawable/img_water_yin"-->
+<!--                android:layout_marginTop="@dimen/dp_15"-->
+<!--                android:layout_marginRight="@dimen/dp_15"-->
+<!--                android:layout_alignParentRight="true"-->
+<!--                android:layout_width="@dimen/dp_135"-->
+<!--                android:layout_height="@dimen/dp_43"/>-->
+<!--        </RelativeLayout>-->
+
+
+<!--        <heyong.intellectPinPang.live.aliview.DataView-->
+<!--            android:id="@+id/ll_data"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_alignParentBottom="true"-->
+<!--            android:layout_marginBottom="254dp"-->
+<!--            android:visibility="gone" />-->
+
+<!--        &lt;!&ndash;    <heyong.intellectPinPang.live.aliview.AnchorButtonListView&ndash;&gt;-->
+<!--        &lt;!&ndash;        android:id="@+id/live_buttonlistview"&ndash;&gt;-->
+<!--        &lt;!&ndash;        android:layout_width="match_parent"&ndash;&gt;-->
+<!--        &lt;!&ndash;        android:layout_height="wrap_content"&ndash;&gt;-->
+<!--        &lt;!&ndash;        android:layout_alignParentBottom="true"&ndash;&gt;-->
+<!--        &lt;!&ndash;        android:layout_marginBottom="36dp"/>&ndash;&gt;-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/live_url_message"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginLeft="10dp"-->
+<!--            android:layout_marginRight="10dp"-->
+<!--            android:background="@color/alivc_color_gry"-->
+<!--            android:padding="5dp"-->
+<!--            android:textColor="#222"-->
+<!--            android:textSize="12sp"-->
+<!--            android:visibility="gone" />-->
+
+
+<!--        <heyong.intellectPinPang.live.aliview.AliPushConfigView-->
+<!--            android:id="@+id/live_configview"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:visibility="gone" />-->
+
+<!--        <heyong.intellectPinPang.live.aliview.AdvancedSoundEffectView-->
+<!--            android:id="@+id/live_advance_sound_effect"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:visibility="gone" />-->
+
+<!--        <heyong.intellectPinPang.live.aliview.VoiceChangerView-->
+<!--            android:id="@+id/live_voice_changer"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:visibility="gone" />-->
+
+<!--        <heyong.intellectPinPang.live.aliview.BeautyView-->
+<!--            android:id="@+id/live_beauty_view"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_alignParentBottom="true"-->
+<!--            android:visibility="gone" />-->
+
+
+    </RelativeLayout>
+
+</layout>

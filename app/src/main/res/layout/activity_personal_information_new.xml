@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="listener"
+            type="android.view.View.OnClickListener" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_f5"
+        android:orientation="vertical">
+
+
+        <heyong.handong.framework.widget.TopBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:centerText="个人资料" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:background="#F6F6F6" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:onClick="@{v->listener.onClick(v)}"
+
+                android:id="@+id/rl_avatar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_13"
+                    android:layout_marginTop="@dimen/dp_31"
+                    android:layout_marginBottom="@dimen/dp_31"
+                    android:text="头像"
+                    android:textColor="#ff333333"
+                    android:textSize="15sp" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="@dimen/dp_60"
+                    android:layout_height="@dimen/dp_60"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="@dimen/dp_12"
+                    android:layout_marginRight="@dimen/dp_32"
+                    android:src="@drawable/img_default_avatar" />
+
+                <ImageView
+                    android:layout_width="@dimen/dp_15"
+                    android:layout_height="@dimen/dp_15"
+                    android:layout_alignParentRight="true"
+
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/dp_9"
+                    android:src="@drawable/img_right_gray_back" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_0_5"
+                android:layout_marginLeft="@dimen/dp_9"
+                android:layout_marginRight="@dimen/dp_12"
+                android:background="#DDDDDD" />
+
+            <RelativeLayout
+                android:onClick="@{v->listener.onClick(v)}"
+
+                android:id="@+id/rl_nick_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_13"
+                    android:layout_marginTop="@dimen/dp_21"
+                    android:layout_marginBottom="@dimen/dp_15"
+                    android:text="昵称"
+                    android:textColor="#ff333333"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="@dimen/dp_22"
+                    android:layout_marginRight="@dimen/dp_32"
+                    android:text="老虎视个眈眈"
+                    android:textColor="#ff666666"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:layout_width="@dimen/dp_15"
+                    android:layout_height="@dimen/dp_15"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/dp_9"
+                    android:src="@drawable/img_right_gray_back" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_0_5"
+                android:layout_marginLeft="@dimen/dp_9"
+                android:layout_marginRight="@dimen/dp_12"
+                android:background="#DDDDDD" />
+
+            <RelativeLayout
+                android:onClick="@{v->listener.onClick(v)}"
+
+                android:id="@+id/rl_sign"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_13"
+                    android:layout_marginTop="@dimen/dp_21"
+                    android:layout_marginBottom="@dimen/dp_15"
+                    android:text="个性签名"
+                    android:textColor="#ff333333"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="@dimen/dp_22"
+                    android:layout_marginRight="@dimen/dp_32"
+                    android:text="我的星座不固定我...."
+                    android:textColor="#ff666666"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:layout_width="@dimen/dp_15"
+                    android:layout_height="@dimen/dp_15"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/dp_9"
+                    android:src="@drawable/img_right_gray_back" />
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_0_5"
+                android:layout_marginLeft="@dimen/dp_9"
+                android:layout_marginRight="@dimen/dp_12"
+                android:background="#DDDDDD" />
+
+            <RelativeLayout
+                android:onClick="@{v->listener.onClick(v)}"
+
+                android:id="@+id/rl_sign_information"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_information"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_13"
+                    android:layout_marginTop="@dimen/dp_21"
+                    android:layout_marginBottom="@dimen/dp_15"
+                    android:text="参赛信息（参加必填）"
+                    android:textColor="#ff333333"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_21"
+                    android:layout_marginBottom="@dimen/dp_15"
+                    android:layout_toRightOf="@id/tv_information"
+                    android:text="*"
+                    android:textColor="#ffd10505"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:layout_width="@dimen/dp_15"
+                    android:layout_height="@dimen/dp_15"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/dp_9"
+                    android:src="@drawable/img_right_gray_back" />
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_0_5"
+                android:layout_marginLeft="@dimen/dp_9"
+                android:layout_marginRight="@dimen/dp_12"
+                android:background="#DDDDDD" />
+
+            <RelativeLayout
+                android:onClick="@{v->listener.onClick(v)}"
+
+                android:id="@+id/rl_qicai"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_13"
+                    android:layout_marginTop="@dimen/dp_18"
+                    android:layout_marginBottom="@dimen/dp_17"
+                    android:text="器材信息"
+                    android:textColor="#ff333333"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="@dimen/dp_22"
+                    android:layout_marginRight="@dimen/dp_32"
+                    android:text="完善+50积分"
+                    android:textColor="#FF9A21"
+                    android:textSize="12sp" />
+
+                <ImageView
+                    android:layout_width="@dimen/dp_15"
+                    android:layout_height="@dimen/dp_15"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/dp_9"
+                    android:src="@drawable/img_right_gray_back" />
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_0_5"
+                android:layout_marginLeft="@dimen/dp_9"
+                android:layout_marginRight="@dimen/dp_12"
+                android:background="#DDDDDD" />
+
+            <RelativeLayout
+                android:onClick="@{v->listener.onClick(v)}"
+
+                android:id="@+id/rl_dafa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_13"
+                    android:layout_marginTop="@dimen/dp_18"
+                    android:layout_marginBottom="@dimen/dp_17"
+                    android:text="打法信息"
+                    android:textColor="#ff333333"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="@dimen/dp_22"
+                    android:layout_marginRight="@dimen/dp_32"
+                    android:text="完善+20积分"
+                    android:textColor="#FF9A21"
+                    android:textSize="12sp" />
+
+                <ImageView
+                    android:layout_width="@dimen/dp_15"
+                    android:layout_height="@dimen/dp_15"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/dp_9"
+                    android:src="@drawable/img_right_gray_back" />
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_0_5"
+                android:layout_marginLeft="@dimen/dp_9"
+                android:layout_marginRight="@dimen/dp_12"
+                android:background="#DDDDDD" />
+
+            <RelativeLayout
+                android:onClick="@{v->listener.onClick(v)}"
+
+                android:id="@+id/rl_shoose"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_13"
+                    android:layout_marginTop="@dimen/dp_18"
+                    android:layout_marginBottom="@dimen/dp_17"
+                    android:text="鞋服信息"
+                    android:textColor="#ff333333"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="@dimen/dp_22"
+                    android:layout_marginRight="@dimen/dp_32"
+                    android:text="完善+20积分"
+                    android:textColor="#FF9A21"
+                    android:textSize="12sp" />
+
+                <ImageView
+                    android:layout_width="@dimen/dp_15"
+                    android:layout_height="@dimen/dp_15"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/dp_9"
+                    android:src="@drawable/img_right_gray_back" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_6"
+                android:background="@color/color_f5"/>
+
+            <RelativeLayout
+                android:onClick="@{v->listener.onClick(v)}"
+                android:id="@+id/rl_shouxie_sign"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_13"
+                    android:layout_marginTop="@dimen/dp_18"
+                    android:layout_marginBottom="@dimen/dp_17"
+                    android:text="录入手写签名"
+                    android:textColor="#ff333333"
+                    android:textSize="15sp" />
+
+
+                <ImageView
+                    android:layout_width="@dimen/dp_15"
+                    android:layout_height="@dimen/dp_15"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/dp_9"
+                    android:src="@drawable/img_right_gray_back" />
+            </RelativeLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_10">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_group_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@dimen/dp_18"
+                    android:text="第一双打"
+                    android:textColor="#ff333333"
+                    android:textSize="13sp" />
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/dp_27"
+                    android:layout_weight="1"
+
+                    android:background="@drawable/shape_corners_storke_grays">
+
+                    <TextView
+                        android:id="@+id/tv_left_group_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="狐妖小红娘"
+                        android:textColor="#ff666666"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_left_logo"
+                        android:layout_width="@dimen/dp_10"
+                        android:layout_height="@dimen/dp_10"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:layout_marginRight="@dimen/dp_5"
+                        android:src="@drawable/img_sex_little_blue" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/dp_27"
+                    android:layout_weight="1"
+
+                    android:background="@drawable/shape_corners_storke_grays">
+
+                    <TextView
+                        android:id="@+id/tv_right_group_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="狐妖小红娘"
+                        android:textColor="#ff666666"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_right_logo"
+                        android:layout_width="@dimen/dp_10"
+                        android:layout_height="@dimen/dp_10"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:layout_marginRight="@dimen/dp_5"
+                        android:src="@drawable/img_sex_little_blue" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/dp_27"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_corners_storke_grays"
+
+                    android:visibility="invisible">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="狐妖小红娘"
+                        android:textColor="#ff666666"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:layout_width="@dimen/dp_10"
+                        android:layout_height="@dimen/dp_10"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:layout_marginRight="@dimen/dp_5"
+                        android:src="@drawable/img_sex_little_blue" />
+                </RelativeLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</layout>

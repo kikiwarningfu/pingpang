@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="listener"
+            type="android.view.View.OnClickListener" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_30"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_marginLeft="@dimen/dp_12"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/shape_search_corners_15"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:id="@+id/iv_search_write"
+                    android:layout_width="@dimen/dp_16"
+                    android:layout_gravity="center"
+                    android:layout_height="@dimen/dp_16"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dp_8"
+                    android:src="@drawable/img_search_icon"/>
+
+
+                <EditText
+                    android:id="@+id/query"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@id/iv_search_write"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:hint="请输入想要搜索的内容"
+                    android:imeOptions="actionSearch"
+                    android:inputType="textAutoComplete"
+                    android:paddingLeft="@dimen/dp_7"
+                    android:paddingRight="@dimen/dp_15"
+                    android:singleLine="true"
+                    android:textColor="#000000"
+                    android:textColorHint="#99999C"
+                    android:textCursorDrawable="@drawable/my_et_cursor"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/iv_close"
+                    android:layout_gravity="center"
+                    android:layout_width="@dimen/dp_14"
+                    android:layout_marginLeft="@dimen/dp_5"
+                    android:layout_height="@dimen/dp_14"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/dp_8"
+                    android:onClick="@{v->listener.onClick(v)}"
+                    android:src="@drawable/img_clear_empty"
+                    android:visibility="visible"/>
+            </LinearLayout>
+            <TextView
+                android:id="@+id/tv_search"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_12"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="取消"
+                android:textColor="#ff333333"
+                android:textSize="15sp"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_16"
+                    android:layout_marginTop="@dimen/dp_23"
+                    android:text="历史记录"
+                    android:textColor="#333333"
+                    android:textSize="16sp"/>
+                <TextView
+                    android:id="@+id/iv_clear_search"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="@dimen/dp_23"
+                    android:layout_marginRight="@dimen/dp_16"
+                    android:text="清空"
+                    android:textColor="#999999"
+                    android:onClick="@{v->listener.onClick(v)}"
+                 />
+            </RelativeLayout>
+
+
+            <com.zhy.view.flowlayout.TagFlowLayout
+                android:id="@+id/flow_history_searchs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp_14"
+                app:max_select="-1">
+
+            </com.zhy.view.flowlayout.TagFlowLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+</layout>

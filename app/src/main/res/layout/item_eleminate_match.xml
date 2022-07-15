@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/ll_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="@dimen/dp_0_5"
+                android:background="#FFB3B3B3" />
+            <TextView
+                android:id="@+id/tv_content"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:layout_marginRight="@dimen/dp_15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1 - 4"
+                android:textColor="#fffb2a2a"
+                android:textSize="18sp"
+                />
+            <View
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="@dimen/dp_0_5"
+                android:background="#FFB3B3B3" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:id="@+id/tv_left_position"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_1"
+                android:layout_marginTop="@dimen/dp_28"
+                android:text=""
+                android:textColor="#ff0d3078"
+                android:textSize="13sp" />
+
+            <LinearLayout
+                android:id="@+id/ll_one"
+                android:layout_width="@dimen/dp_115"
+                android:layout_height="@dimen/dp_40"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/dp_31"
+                android:layout_marginTop="@dimen/dp_15"
+                android:background="@drawable/shape_little_blue_corners_8_solid"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+
+                    android:id="@+id/tv_left_name"
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:lines="1"
+                    android:maxEms="13"
+                    android:ellipsize="end"
+                    android:textColor="#ff333333"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_left_club_name"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_3"
+                    android:text=""
+                    android:lines="1"
+                    android:maxEms="13"
+                    android:ellipsize="end"
+                    android:textColor="#ff999999"
+                    android:textSize="10sp"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_two"
+                android:layout_width="@dimen/dp_115"
+                android:layout_height="@dimen/dp_40"
+                android:layout_below="@id/ll_one"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/dp_31"
+                android:layout_marginTop="@dimen/dp_15"
+                android:background="@drawable/shape_little_blue_corners_8_solid"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_right_name"
+                    android:gravity="center"
+                    android:lines="1"
+                    android:maxEms="13"
+                    android:ellipsize="end"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="#ff333333"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:gravity="center"
+                    android:lines="1"
+                    android:maxEms="13"
+                    android:ellipsize="end"
+                    android:id="@+id/tv_right_club_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_3"
+                    android:text=""
+                    android:textColor="#ff999999"
+                    android:textSize="10sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_right_position"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_left_position"
+                android:layout_marginLeft="@dimen/dp_1"
+                android:layout_marginTop="@dimen/dp_42"
+                android:text=""
+                android:textColor="#ff0d3078"
+                android:textSize="13sp" />
+
+            <RelativeLayout
+                android:id="@+id/rl_score"
+                android:layout_width="@dimen/dp_74"
+                android:layout_height="@dimen/dp_57"
+                android:layout_alignBottom="@id/ll_two"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp_8"
+                android:layout_marginTop="@dimen/dp_19"
+                android:layout_marginBottom="@dimen/dp_19"
+                android:layout_toRightOf="@id/ll_one"
+                android:background="@drawable/img_eleminate_match">
+
+                <LinearLayout
+
+                    android:id="@+id/ll_no_start"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_day"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="日"
+                        android:textColor="#ff333333"
+                        android:textSize="11sp" />
+
+                    <LinearLayout
+                        android:visibility="visible"
+                        android:id="@+id/ll_content_no"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_5"
+                        android:layout_marginRight="@dimen/dp_13"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_hour"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/dp_2"
+                            android:layout_marginBottom="@dimen/dp_7"
+                            android:text=""
+                            android:textColor="#ff333333"
+                            android:textSize="10sp" />
+
+                        <View
+                            android:layout_width="@dimen/dp_28"
+                            android:layout_height="@dimen/dp_1"
+                            android:layout_marginBottom="@dimen/dp_7"
+                            android:background="#333333" />
+
+                        <TextView
+                            android:id="@+id/tv_table_num"
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/dp_2"
+                            android:text=""
+                            android:textColor="#ff333333"
+                            android:textSize="10sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dp_15"
+                    android:text="2:0"
+                    android:textColor="#fffb2a2a"
+                    android:textSize="18sp"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_three"
+                android:layout_width="@dimen/dp_115"
+                android:layout_height="@dimen/dp_40"
+                android:layout_alignTop="@id/rl_score"
+                android:layout_marginLeft="@dimen/dp_6"
+                android:layout_marginTop="@dimen/dp_8"
+                android:layout_toRightOf="@id/rl_score"
+
+                android:background="@drawable/shape_little_blue_corners_8_solid"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_win_team_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:gravity="center"
+                    android:lines="1"
+                    android:maxEms="13"
+                    android:ellipsize="end"
+                    android:textColor="#ff333333"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_win_club_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_3"
+                    android:gravity="center"
+                    android:lines="1"
+                    android:maxEms="13"
+                    android:ellipsize="end"
+                    android:text=""
+                    android:textColor="#ff999999"
+                    android:textSize="10sp" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+</layout>

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="listener"
+            type="android.view.View.OnClickListener" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".ui.friendcircle.MyFriendCircleActivity">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginBottom="@dimen/dp_4">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/ll_recommend"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:onClick="@{v->listener.onClick(v)}"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_recommend"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="推荐"
+                        android:textColor="#ff333333"
+                        android:textSize="17sp" />
+
+                    <View
+                        android:id="@+id/view_recommend"
+                        android:layout_width="@dimen/dp_36"
+                        android:layout_height="@dimen/dp_2"
+                        android:layout_marginTop="@dimen/dp_2"
+                        android:background="@drawable/shape_recommend_style" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_attention"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/dp_50"
+                    android:gravity="center"
+                    android:onClick="@{v->listener.onClick(v)}"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_attention"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="关注"
+                        android:textColor="#ff666666"
+                        android:textSize="16sp" />
+
+                    <View
+                        android:id="@+id/view_attention"
+                        android:layout_width="@dimen/dp_36"
+                        android:layout_height="@dimen/dp_2"
+                        android:layout_marginTop="@dimen/dp_2"
+                        android:background="@drawable/shape_recommend_style"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/iv_fabu"
+                android:onClick="@{v->listener.onClick(v)}"
+                android:layout_width="@dimen/dp_24"
+                android:layout_height="@dimen/dp_24"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/dp_10"
+                android:src="@drawable/img_circle_add" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0_5"
+            android:background="#45000000" />
+
+        <LinearLayout
+            android:id="@+id/ll_recommend_first"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/dp_21"
+            android:paddingTop="@dimen/dp_10"
+            android:paddingBottom="@dimen/dp_10">
+
+            <TextView
+                android:id="@+id/tv_hot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="@{v->listener.onClick(v)}"
+                android:text="热门"
+                android:textColor="#fff72424"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_city_local"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_32"
+                android:onClick="@{v->listener.onClick(v)}"
+                android:text="同城"
+                android:textColor="#ff666666"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_video"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_32"
+                android:onClick="@{v->listener.onClick(v)}"
+                android:text="视频"
+                android:textColor="#ff666666"
+                android:textSize="15sp" />
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:background="@color/color_f5"
+            android:layout_height="@dimen/dp_8"/>
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/color_f5" />
+
+    </LinearLayout>
+</layout>

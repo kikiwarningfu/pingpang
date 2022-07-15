@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/rl_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent_20">
+
+    <LinearLayout
+            android:id="@+id/ll_mr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/dp_19"
+
+                android:orientation="horizontal">
+            <TextView
+                    android:id="@+id/tv_cancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="取消"
+                    android:layout_marginLeft="@dimen/dp_25"
+                    android:textColor="#ff666666"
+                    android:textSize="18sp"
+                    />
+
+            <TextView
+                    android:id="@+id/tv_submit"
+                    android:layout_marginBottom="@dimen/dp_10"
+                    android:layout_marginRight="@dimen/dp_24"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="确定"
+                    android:textColor="#ff4795ed"
+                    android:textSize="18sp"
+                    />
+        </RelativeLayout>
+
+<!--        <jsc.kit.wheel.base.WheelItemView-->
+<!--                android:id="@+id/wheel_item_view"-->
+<!--                app:wheelTextSize="@dimen/sp_18"-->
+<!--                app:wheelShowCount="5"-->
+<!--                app:wheelMaskLineColor="@color/wheel_divider_color"-->
+<!--                app:wheelItemVerticalSpace="@dimen/sp_14"-->
+<!--                app:wheelTextColor="@color/wheel_select_color"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"/>-->
+
+        <!--wheelTextColor	color	选中item字体颜色
+wheelTextSize	dimension	字体大小
+wheelShowCount	integer	显示item条数，与wheelItemVerticalSpace决定了控件的高度
+wheelTotalOffsetX	dimension	X轴方向总弯曲度，决定弧形效果
+wheelItemVerticalSpace	dimension	两个item之间的间距，与wheelShowCount决定了控件的高度
+wheelRotationX	float	已X轴为轴心旋转角度，决定3D效果
+wheelVelocityUnits	integer	自动翻滚速度单位-->
+    </LinearLayout>
+</RelativeLayout>

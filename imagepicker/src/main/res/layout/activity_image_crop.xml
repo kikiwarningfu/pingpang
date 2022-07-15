@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:custom="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#000"
+              android:orientation="vertical">
+    <TextView
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginTop="34dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="缩放和移动"
+        android:textColor="#ffffffff"
+        android:textSize="18sp"
+        />
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="#cc22292c"
+        android:clickable="true">
+
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="48dp"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:background="@drawable/selector_back_press"
+            android:padding="14dp"
+            android:src="@mipmap/ic_back"/>
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="12dp"
+            android:layout_marginTop="12dp"
+            android:layout_toRightOf="@id/btn_back"
+            android:background="#cc111111"/>
+
+        <TextView
+            android:id="@+id/tv_des"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@id/btn_back"
+            android:text="选择图片"
+            android:textColor="#ffffff"
+            android:textSize="16dp"/>
+
+        <Button
+            android:id="@+id/btn_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/selector_top_ok"
+            android:minHeight="30dp"
+            android:minWidth="50dp"
+            android:padding="8dp"
+            android:text="完成(3/9)"
+            android:textColor="#ffffff"
+            android:textSize="14dp"/>
+
+        <ImageView
+            android:id="@+id/btn_del"
+            android:layout_width="48dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/selector_back_press"
+            android:padding="14dp"
+            android:src="@mipmap/ic_del"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+   <!-- <com.lzy.imagepicker.view.CropImageView
+        android:id="@+id/cv_crop_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>-->
+
+        <heyong.lzy.imagepicker.view.CropImageView
+            android:id="@+id/cv_crop_image"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+        <RelativeLayout
+            android:orientation="horizontal"
+            android:layout_marginBottom="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+            <TextView
+                android:id="@+id/tv_cancel"
+                android:layout_marginLeft="29dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="重拍"
+                android:textColor="#ffffffff"
+                android:textSize="18sp"
+                />
+            <TextView
+                android:id="@+id/tv_sure"
+                android:layout_marginRight="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="使用照片"
+                android:textColor="#ffffffff"
+                android:textSize="18sp"
+                />
+        </RelativeLayout>
+
+
+    <!-- <com.lzy.imagepicker.view.crop.CropImageView2
+         android:id="@+id/cv_crop_image"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:background="#000"
+         custom:backgroundColor="#FFFFFB"
+         custom:cropMode="ratio_fit_image"
+         custom:frameColor="#86C166"
+         custom:frameStrokeWeight="1dp"
+         custom:guideColor="#AA86C166"
+         custom:guideShowMode="show_on_touch"
+         custom:guideStrokeWeight="1dp"
+         custom:handleColor="#86C166"
+         custom:handleShowMode="show_always"
+         custom:handleSize="8dp"
+         custom:minFrameSize="50dp"
+         custom:overlayColor="#AA1C1C1C"
+         custom:touchPadding="8dp"/>-->
+
+</LinearLayout>

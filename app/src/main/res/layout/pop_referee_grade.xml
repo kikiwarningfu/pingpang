@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+
+     >
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginLeft="@dimen/dp_17"
+        android:background="@drawable/rect_white_gray_stroke_5"
+        android:id="@+id/rv_refree_list"
+        android:layout_width="match_parent"
+        android:layout_marginRight="@dimen/dp_17"
+        android:layout_height="wrap_content"/>
+
+<!--    <TextView-->
+<!--            android:id="@+id/tv_level_three"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="@dimen/dp_13"-->
+<!--            android:layout_marginBottom="@dimen/dp_13"-->
+<!--            android:gravity="center"-->
+<!--            android:text="国家三级"-->
+<!--            android:textColor="#ff333333"-->
+<!--            android:textSize="15sp" />-->
+
+<!--    <View-->
+<!--            android:layout_marginLeft="@dimen/dp_45"-->
+<!--            android:layout_marginRight="@dimen/dp_45"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="@dimen/dp_1"-->
+<!--            android:background="#E5E5E5" />-->
+<!--    <TextView-->
+<!--            android:id="@+id/tv_level_two"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="@dimen/dp_13"-->
+<!--            android:layout_marginBottom="@dimen/dp_13"-->
+<!--            android:gravity="center"-->
+<!--            android:text="国家二级"-->
+<!--            android:textColor="#ff333333"-->
+<!--            android:textSize="15sp" />-->
+
+<!--    <View-->
+<!--            android:layout_marginLeft="@dimen/dp_45"-->
+<!--            android:layout_marginRight="@dimen/dp_45"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="@dimen/dp_1"-->
+<!--            android:background="#E5E5E5" />-->
+<!--    <TextView-->
+<!--            android:id="@+id/tv_level_one"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="@dimen/dp_13"-->
+<!--            android:layout_marginBottom="@dimen/dp_13"-->
+<!--            android:gravity="center"-->
+<!--            android:text="国家一级"-->
+<!--            android:textColor="#ff333333"-->
+<!--            android:textSize="15sp" />-->
+
+<!--    <View-->
+<!--            android:layout_marginLeft="@dimen/dp_45"-->
+<!--            android:layout_marginRight="@dimen/dp_45"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="@dimen/dp_1"-->
+<!--            android:background="#E5E5E5" />-->
+<!--    <TextView-->
+<!--            android:id="@+id/tv_level_country"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="@dimen/dp_13"-->
+<!--            android:layout_marginBottom="@dimen/dp_13"-->
+<!--            android:gravity="center"-->
+<!--            android:text="国家级"-->
+<!--            android:textColor="#ff333333"-->
+<!--            android:textSize="15sp" />-->
+
+<!--    <View-->
+<!--            android:layout_marginLeft="@dimen/dp_45"-->
+<!--            android:layout_marginRight="@dimen/dp_45"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="@dimen/dp_1"-->
+<!--            android:background="#E5E5E5" />-->
+<!--    <TextView-->
+<!--            android:id="@+id/tv_level_national"-->
+
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="@dimen/dp_13"-->
+<!--            android:layout_marginBottom="@dimen/dp_13"-->
+<!--            android:gravity="center"-->
+<!--            android:text="国际级"-->
+<!--            android:textColor="#ff333333"-->
+<!--            android:textSize="15sp" />-->
+
+
+</LinearLayout>

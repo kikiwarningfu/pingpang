@@ -1,0 +1,26 @@
+# Project exclude paths
+/.gradle/
+/app/build/
+/autoupdate/build/
+/autoupdate/build/intermediates/javac/debug/classes/
+/dialog/build/
+/dialog/build/intermediates/javac/debug/classes/
+/formlayoutmanager/build/
+/formlayoutmanager/build/intermediates/javac/debug/classes/
+/framework/build/
+/imagepicker/build/
+/imagepicker/build/intermediates/javac/debug/classes/
+/iosdialog/build/
+/iosdialog/build/intermediates/javac/debug/classes/
+/jiaozilibary/build/
+/jiaozilibary/build/intermediates/javac/debug/classes/
+/loopcityview/build/
+/loopcityview/build/intermediates/javac/debug/classes/
+/matisse/build/
+/matisse/build/intermediates/javac/debug/classes/
+/pickerview/build/
+/pickerview/build/intermediates/javac/debug/classes/
+/umeng/build/
+/umeng/build/intermediates/javac/debug/classes/
+/zxing/build/
+/zxing/build/intermediates/javac/debug/classes/

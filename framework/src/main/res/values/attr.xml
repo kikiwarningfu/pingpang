@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="RoundImageView">
+        <attr name="borderRadius" format="dimension"></attr>
+        <attr name="type"/>
+        <attr name="square" format="boolean"/>
+    </declare-styleable>
+
+
+    <attr name="type">
+        <enum name="circle" value="0" />
+        <enum name="round" value="1" />
+    </attr>
+
+
+    <declare-styleable name="SwipeMenuLayout">
+        <attr name="swipeEnable" format="boolean"/>
+        <attr name="ios" format="boolean"/>
+        <attr name="leftSwipe" format="boolean"/>
+    </declare-styleable>
+
+    <attr name="topbar_background" format="color|reference"/>
+
+    <!--比例布局-->
+    <declare-styleable name="PercentRelativeLayout">
+        <attr name="widthSize" format="float"/>
+        <attr name="heightSize" format="float"/>
+
+        <attr name="fixFlag">
+            <enum name="width" value="0"/>
+            <enum name="height" value="1"/>
+        </attr>
+    </declare-styleable>
+
+
+
+    <!--搜索导航栏-->
+    <declare-styleable name="SearchBar">
+        <attr name="textRight" format="string"/>
+        <attr name="searchHint" format="string"/>
+        <attr name="ivRightHint" format="boolean"/>
+        <attr name="textRightHint" format="boolean"/>
+        <attr name="ivRightIcon" format="reference"/>
+        <attr name="ivLeftIcon" format="reference"/>
+    </declare-styleable>
+
+
+
+    <!--评分条-->
+    <declare-styleable name="RatingBar">
+        <attr name="starNormalIcon" format="reference"/>
+        <attr name="starCheckedIcon" format="reference"/>
+        <attr name="starSize" format="dimension"/>
+        <attr name="starPadding" format="dimension"/>
+        <attr name="starMaxCount" format="integer"/>
+        <attr name="starCurCount" format="integer"/>
+    </declare-styleable>
+
+</resources>

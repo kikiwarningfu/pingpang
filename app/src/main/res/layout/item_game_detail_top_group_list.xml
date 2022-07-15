@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/dp_94"
+    android:id="@+id/rl_content"
+    android:layout_height="@dimen/dp_45"
+    android:background="@drawable/shape_item_title_top_left_gray_solid">
+
+    <TextView
+        android:id="@+id/tv_top_name"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="第 二"
+        android:textColor="#ff0c3177"
+        android:textSize="18sp"
+        />
+
+</RelativeLayout>

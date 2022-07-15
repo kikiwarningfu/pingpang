@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_group_solid_stroke"
+        android:paddingLeft="@dimen/dp_9"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_10"
+        android:paddingTop="@dimen/dp_6"
+        android:paddingRight="@dimen/dp_10"
+        android:paddingBottom="@dimen/dp_6"
+        android:layout_marginBottom="@dimen/dp_8"
+        android:text="超级组"
+        android:textColor="#ff4895ed"
+        android:textSize="12sp" />
+
+
+</layout>

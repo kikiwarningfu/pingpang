@@ -1,0 +1,93 @@
+apply plugin: 'com.android.library'
+
+android {
+
+    compileSdkVersion rootProject.ext.compileSdkVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    configurations.all {
+        resolutionStrategy.force 'com.android.support:support-core-utils:27.1.1'
+    }
+
+    dataBinding {
+        enabled = true
+    }
+    buildToolsVersion '30.0.3'
+
+
+}
+
+repositories {
+    flatDir {
+        dirs 'libs', '../oceans/libs'
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+
+    api baseDependencies.appcompat
+    api baseDependencies.core
+    api baseDependencies.constraintlayout
+
+    api baseDependencies.recyclerview
+
+    api 'com.jaeger.statusbarutil:library:1.5.1'
+//    api project(':umeng')
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.0.0'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.0.0'
+
+    api baseDependencies.utilcode
+    api baseDependencies.gson
+    api baseDependencies.glide
+    annotationProcessor baseDependencies.glideCompiler
+    api baseDependencies.okHttp
+    api baseDependencies.retrofit
+    api baseDependencies.retrofitGsonConverter
+    api baseDependencies.retrofitRxJava2Adapter
+    api baseDependencies.okHttpLogging
+    api baseDependencies.rxJava2
+    api baseDependencies.rxAndroid2
+    api baseDependencies.qmui
+    api baseDependencies.baseAdapter
+    api baseDependencies.skeleton
+    api baseDependencies.flowlayout
+
+    api baseDependencies.multiDex
+
+    api baseDependencies.logger
+    api baseDependencies.SwipeDelMenuLayout
+    api baseDependencies.rxPermissions
+    api baseDependencies.jsoup
+    api baseDependencies.banner
+    api baseDependencies.eventbus
+    api project(':imagepicker')
+//    api 'liji.library.dev:citypickerview:3.1.6'
+    api 'com.google.zxing:core:3.3.0'
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.15'
+    implementation project(path: ':iosdialog')
+    implementation project(path: ':umeng')
+    implementation 'com.github.jarryleo:SingleClick:v1.8.3'
+//    api files('libs/SaaS_AppAnalytics_Android_SDK_V4.0.62.jar')//统计
+//    compile'com.alibaba:arouter-api:1.3.1'
+//    annotationProcessor'com.alibaba:arouter-compiler:1.1.4'
+}

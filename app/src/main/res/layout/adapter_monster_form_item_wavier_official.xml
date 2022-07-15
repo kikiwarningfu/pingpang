@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/dp_70"
+    android:id="@+id/rl_contenet"
+    android:layout_height="@dimen/dp_45"
+    android:background="@drawable/shape_item_title_top_left_write_solid"
+    >
+    <!--shape_item_title_top_left_write_solid-->
+    <LinearLayout
+        android:gravity="center"
+        android:id="@+id/ll_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+
+        android:visibility="visible">
+
+        <TextView
+
+            android:id="@+id/tv_wavier_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#fffb2a2a"
+            android:textSize="15sp" />
+
+        <View
+            android:visibility="gone"
+            android:id="@+id/tv_wavier_divider"
+            android:layout_width="@dimen/dp_45"
+            android:layout_height="@dimen/dp_1"
+            android:layout_marginTop="@dimen/dp_5"
+            android:layout_marginBottom="@dimen/dp_5"
+            android:background="#FB2A2A" />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tv_wavier_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="011111111111"
+            android:textColor="#fffb2a2a"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/ll_not_start"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/dp_4"
+            android:gravity="center_vertical"
+            android:text="10日"
+            android:textColor="#ff333333"
+            android:textSize="12sp" />
+
+        <LinearLayout
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dp_3"
+                android:layout_marginBottom="@dimen/dp_5"
+                android:text="09:30"
+
+                android:textColor="#ff333333"
+                android:textSize="12sp" />
+
+            <View
+                android:layout_width="@dimen/dp_30"
+                android:layout_height="@dimen/dp_1"
+                android:background="#818181" />
+
+            <TextView
+                android:id="@+id/tv_table_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dp_3"
+                android:text="7台"
+                android:textColor="#ff062a74"
+                android:textSize="11sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_centerInParent="true"
+        android:id="@+id/iv_gift"
+        android:layout_width="@dimen/dp_27"
+        android:layout_height="@dimen/dp_27"
+        android:layout_gravity="center"
+        android:src="@drawable/img_blue_gift"
+        android:visibility="gone" />
+</RelativeLayout>

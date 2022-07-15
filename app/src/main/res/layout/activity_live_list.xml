@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="listener"
+            type="android.view.View.OnClickListener" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_f5"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/top_bar_relative"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:layout_gravity="center"
+            android:background="@color/white">
+
+            <ImageView
+                android:onClick="@{v->listener.onClick(v)}"
+                android:id="@+id/iv_finish"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingLeft="@dimen/page_padding"
+                android:paddingRight="@dimen/page_padding"
+                android:src="@drawable/icon_left_back" />
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/ll_play_back"
+                    android:layout_width="@dimen/dp_40"
+                    android:layout_height="wrap_content"
+                    android:onClick="@{v->listener.onClick(v)}"
+                    android:orientation="vertical"
+                    android:paddingTop="@dimen/dp_10">
+
+                    <TextView
+                        android:id="@+id/tv_play_back"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:paddingBottom="@dimen/dp_13"
+                        android:text="回放"
+                        android:textColor="#333333"
+                        android:textSize="16sp" />
+
+                    <View
+                        android:id="@+id/view_play_back"
+                        android:layout_width="@dimen/dp_40"
+                        android:layout_height="@dimen/dp_2"
+                        android:background="#4795ED"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_to_live"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_19"
+                    android:onClick="@{v->listener.onClick(v)}"
+                    android:orientation="vertical"
+                    android:paddingTop="@dimen/dp_10">
+
+                    <TextView
+                        android:id="@+id/tv_to_live"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:paddingBottom="@dimen/dp_13"
+                        android:text="直播"
+                        android:textColor="#4795ED"
+                        android:textSize="19sp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:id="@+id/view_to_live"
+                        android:layout_width="@dimen/dp_40"
+                        android:layout_height="@dimen/dp_2"
+                        android:background="#4795ED" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_to_buy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_19"
+                    android:onClick="@{v->listener.onClick(v)}"
+                    android:orientation="vertical"
+                    android:paddingTop="@dimen/dp_10">
+
+                    <TextView
+                        android:id="@+id/tv_to_buy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:paddingBottom="@dimen/dp_13"
+                        android:text="已购买"
+                        android:textColor="#333333"
+                        android:textSize="16sp" />
+
+                    <View
+                        android:id="@+id/view_to_buy"
+                        android:layout_width="@dimen/dp_40"
+                        android:layout_height="@dimen/dp_2"
+                        android:background="#4795ED"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/ll_search"
+                android:onClick="@{v->listener.onClick(v)}"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_30"
+                android:layout_marginLeft="@dimen/dp_17"
+                android:layout_marginTop="@dimen/dp_7"
+                android:layout_marginRight="@dimen/dp_17"
+                android:layout_marginBottom="@dimen/dp_7"
+                android:background="@drawable/shape_live_search"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/iv_logo"
+                    android:visibility="visible"
+                    android:layout_width="@dimen/dp_18"
+                    android:layout_height="@dimen/dp_18"
+                    android:layout_marginLeft="@dimen/dp_9"
+                    android:src="@drawable/img_search_gray" />
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_9"
+                    android:layout_marginTop="@dimen/dp_2"
+                    android:layout_toRightOf="@id/iv_logo"
+                    android:textColor="#ff666666"
+                    android:textSize="13sp" />
+                <ImageView
+                    android:visibility="gone"
+                    android:id="@+id/iv_clear"
+                    android:onClick="@{v->listener.onClick(v)}"
+                    android:layout_marginRight="@dimen/dp_11"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/img_live_search_game_close"
+                    android:layout_width="@dimen/dp_17"
+                    android:layout_height="@dimen/dp_17"/>
+            </RelativeLayout>
+
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/viewPager"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/color_f5" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+</layout>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+        android:layout_marginTop="@dimen/dp_20">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_shuangda"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/dp_21"
+                android:layout_marginRight="@dimen/dp_18"
+                android:text="第一双打"
+                android:textColor="#ff333333"
+                android:textSize="13sp" />
+
+            <LinearLayout
+                android:id="@+id/ll_left_one"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginRight="@dimen/dp_36"
+                android:layout_weight="1"
+                android:background="@drawable/shape_corners_storke_grays"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tv_left_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="请选择"
+                    android:textColor="#ff666666"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:layout_width="@dimen/dp_16"
+                    android:layout_height="@dimen/dp_10"
+                    android:layout_marginLeft="@dimen/dp_7"
+                    android:src="@drawable/img_black_down_arrow" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_right_one"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginRight="@dimen/dp_27"
+                android:layout_weight="1"
+                android:background="@drawable/shape_corners_storke_grays"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tv_right_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="请选择"
+                    android:textColor="#ff666666"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:layout_width="@dimen/dp_16"
+                    android:layout_height="@dimen/dp_10"
+                    android:layout_marginLeft="@dimen/dp_7"
+                    android:src="@drawable/img_black_down_arrow" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</layout>

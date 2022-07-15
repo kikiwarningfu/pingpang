@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_duiwu_name"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="@dimen/dp_16"
+            android:layout_marginLeft="@dimen/dp_12"
+            android:layout_height="wrap_content"
+            android:text="M1男子团体队伍1："
+            android:textColor="#ff999999"
+            android:textSize="12sp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_team_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp_15" />
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:layout_marginLeft="@dimen/dp_12"
+            android:layout_marginRight="@dimen/dp_12"
+            android:background="#F6F6F6" />
+</LinearLayout>
+</layout>

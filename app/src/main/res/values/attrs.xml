@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="RoundImageView">
+        <attr name="image_radius" format="reference|dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="MeasureFixedLayout">
+        <attr name="measureFixed_half_height" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="AspectRatioFrameLayout">
+        <attr name="resize_mode" />
+    </declare-styleable>
+
+    <declare-styleable name="Hand_RatioImageView">
+        <attr name="hand_ratio_width" format="integer|dimension" />
+        <attr name="hand_ratio_height" format="integer|dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="CharIndexView">
+        <!-- 	banner背影色  	 -->
+        <!-- 索引字大小 -->
+        <attr name="indexTextSize" format="dimension"/>
+        <!-- 字颜色 -->
+        <attr name="charTextColor" format="color"/>
+        <!-- 索引字颜色 -->
+        <attr name="indexTextColor" format="color"/>
+    </declare-styleable>
+
+    <declare-styleable name="RoundTextView">
+        <attr name="radius" format="reference|dimension" />
+        <attr name="round_color" format="color" />
+    </declare-styleable>
+
+</resources>

@@ -1,0 +1,443 @@
+
+为啥子要混淆
+简单来说，Android 进行ProGuard，可以起到压缩，混淆，预检，优化的功能，虽然不能说更安全但还是一个不容忽视的环节。
+
+开始混淆第一步
+首先在build.gradle 中将混淆的开关打开，即 minifyEnabled 置为 true
+
+
+
+然后就要去proguard-rules.pro写入我们的混淆的规则（如文件其名），防止重要的类被混淆移除了。
+
+先特别介绍的是与保持相关元素不参与混淆的规则相关的几种命令：
+命令	作用
+-keep	防止类和成员被移除或者被重命名
+-keepnames	防止类和成员被重命名
+-keepclassmembers	防止成员被移除或者被重命名
+-keepclasseswithmembers	防止拥有该成员的类和成员被移除或者被重命名
+-keepclasseswithmembernames	防止拥有该成员的类和成员被重命名
+
+快速混淆？
+省事第一步，先套个模板，就是找到网上博客上别人分享好的模板，像四大组件，主流开源库，JNI调用本地方法，R资源等的混淆规则都一般有了，注意一点就是套模板，也要套个时间比较近的，没有翻车的模板，可以能比较节省自己的时间，毕竟这么多行不一定能快速看出来，打个包出来才发现有问题就尴尬啦。
+
+一般来说，用了混淆的模板后，我们还会有很多项目专属的需要混淆的部分，例如我们的自定义View，Json解析的实体类，反射用到的类，还有我们依赖的非主流的开源框架，SDK等等。
+对于自定义View，很多的模板都会将继承与View的类用keep指令防止被混淆。有个偷懒的方法就是把自定义View 放入同一个包，再把这个包的类都写入混淆规则，就可以搞定了。
+对于Json解析的实体类，反射用到的类都是同理可得，找到那些不能被移除的，把它们写入自己的混淆规则里面。
+
+所以如果在做项目时，有提前想到要给项目做混淆的，在导入依赖时就顺手把对应混淆规则写了，那事后就快活似神仙了。
+
+如果依赖的非主流的开源库作者没提及有关混淆的东西，demo里也没找到，怎么办？
+首先，先判断下它是否内置了混淆规则。如果不声明它的混淆规则也正常运行，说明已经它带了混淆。
+
+但是生活往往不会一帆风顺，一般来说会有各种报错，所以还是需要对它声明混淆。
+
+最简单的办法就是找到依赖的这个包，就这个包的类都写入混淆规则。例如：
+
+项目里导入了一个非主流的开源库，然后我需要对它写入混淆规则，确保它能正常工作。
+
+implementation 'site.gemus:openingstartanimation:1.0.0'
+这时候不可以认为直接去使用它的地方，将有关它 import的类 keep class 就可以。
+import io.reactives.ObServable
+import site.aaa.bbb.xxx
+import site.aaa.bbb.yyy
+
+
+因为可能它内部还会使用包内其他类，所以最好仔细排查，最简(tou)单(lan)就是把这个包的类都 用 keep 指令，防止它们被混淆。如下所示：
+-keep class site.aaa.**{*;}
+
+
+一般来说就可以防止这个开源库里的类被混淆了。
+
+如果导入了SDK，官网没有提及有关混淆的事项，demo里也没找到，怎么办？
+例如
+    //讯飞语音sdk
+    implementation files('libs/Msc.jar')
+
+
+先使用 -libraryjars 命令 ，对导入的jar包和 so 文件进行声明保留它们。
+
+-libraryjars libs/Msc.jar
+#-libraryjars libs/armeabi-v7a/libmsc.so
+#-libraryjars libs/armeabi-v7a/libmsc.so
+
+如果依旧出错，尝试去External library文件夹 或者使用 这个SDK的地方 找到这个 SDK的包找到，并把这个包里的类 都用 keep 指令保持不被移除。如：
+    import com.ifytek.cloud.aaa
+    import com.ifytek.cloud.bbb
+    import com.ifytek.cloud.ccc
+    import com.ifytek.cloud.ddd
+    import com.ifytek.cloud.eee
+    import com.ifytek.cloud.fff
+
+
+
+根据包名，写入混淆规则
+
+-keep class com.iflytek.**{*;}
+-keepattributes Signature
+一般来说，这样就可以避免这个SDK的类被混淆啦
+
+# 泛型与反射
+    -keepattributes Signature
+    -keepattributes EnclosingMethod
+
+模板时间
+好了，最后附上一份自己做的项目的混淆规则（伪模板）
+
+
+
+
+---------------------------------------------------------------------------------------------------------
+最近在做Android应用的混淆，踩了一些坑，这里记录分享下个人的心得。
+
+混淆介绍
+首先先简单说一下什么是混淆和混淆的作用，其实这个搜索下可以找到一堆官方的说法等等，这里简单口语叙述一下，混淆就是把代码替换成a、b、c基本字母组成的代码，比如一个方法名为：function()，混淆后可能会被替换成a()。
+
+混淆的好处：
+
+代码混淆后阅读性降低，反编译后破译程序难度提高
+混淆后字节数减少，减少了应用了体积
+前者只能说有一点作用，后者则需要看代码的数量
+当然不能忽视混淆的缺点：
+
+混淆后，测试不充分可能导致某些功能不能使用
+开启混淆
+混淆在Android Studio的项目中默认是关闭的，其中控制开关和规则配置文件分别由项目moudle中的build.gradle和proguard-rules.pro控制，如下图所示：
+
+
+
+其中build.gradle中
+
+buildTypes {
+    release {
+        minifyEnabled false
+        proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+    }
+}
+
+其中
+
+minifyEnabled false
+1
+表示不开启混淆，可以改为
+
+minifyEnabled true
+1
+开启混淆，开启混淆后可以添加一句：
+
+shrinkResources true
+1
+表示去掉没有引用的资源，可以减少应用的体积，但这个只有在混淆开启后才有效。
+
+混淆规则文件
+可以从上述的代码看出，Android自带一个混淆规则文件：
+
+proguard-android.txt
+1
+这个文件在SDK目录下，里面有一些默认自带的规则，而我们今天需要配置的自定义配置的文件，即上面所述的
+
+proguard-rules.pro
+1
+混淆规则基本语法
+混淆文件采用白名单法，意思是不在白名单里面的都要混淆。
+混淆规则的基本符号：
+
+# 代表行注释符
+- 表示一条规则的开始
+
+一般规则用连起来单词表示，主要有：
+
+keep 保留，例如keepattributes：表示保留属性
+dont 不要，例如dontwarn：表示不要提示警告
+ignore 忽略，例如ignorewarning：表示忽略警告
+
+混淆配置文件不检查规则是否重复，如果两条规则冲突，则采用白名单的，比如设置了开启优化和不优化两个选项后，无论顺序，最终都会执行不优化的操作。
+
+优化控制
+这个是用于控制混淆是否开启优化代码，例如一些if/else语句可以被简化等这些操作：
+
+# 不优化
+-dontoptimize
+
+# 代码循环优化次数，0-7，默认为5
+-optimizationpasses 5
+
+值得注意的是默认混淆配置文件开启了-dontoptimize。
+
+优化进阶
+开启优化后可以设置下面的规则，assumenosideeffects表示指定的代码无效，可以优化，最终效果表现为不执行。
+
+# 混淆时所采用的优化规则
+-optimizations !code/simplification/arithmetic,!field/*,!class/merging/*
+
+# 关闭log
+-assumenosideeffects class android.util.Log {
+    public static boolean isLoggable(java.lang.String, int);
+    public static int v(...);
+    public static int i(...);
+    public static int w(...);
+    public static int d(...);
+    public static int e(...);
+}
+
+基本混淆规则
+下面这些一般混淆规则都要加入，其中前两个在默认文件中已经配置：
+
+# 包名不使用大小写混合 aA Aa
+-dontusemixedcaseclassnames
+
+# 不混淆第三方引用的库
+-dontskipnonpubliclibraryclasses
+
+# 不做预校验
+-dontpreverify
+
+# 忽略警告
+-ignorewarning
+
+输出混淆记录
+混淆后由于阅读困难性提高，所以为了方便自己查阅，可以输出mapping对应文件，可以利用AndroidSDK\tools\proguard\bin中的proguardgui.bat打开混淆工具，利用retrace结合mapping和stacktrace调试遇到的错误
+
+# 混淆后生产映射文件 map 类名->转化后类名的映射
+# 存放在app\build\outputs\mapping\release中
+-verbose
+
+# 混淆前后的映射
+-printmapping mapping.txt
+
+# apk 包内所有 class 的内部结构
+-dump class_files.txt
+
+# 未混淆的类和成员
+-printseeds seeds.txt
+
+# 列出从 apk 中删除的代码
+-printusage unused.txt
+
+保留源代码行号
+即使使用retrace工具，还是很难定位到错误的时候，可以暂时先保留行号，观察错误修改后再关闭掉
+
+# 抛出异常时保留代码行号
+# 这个最后release的时候关闭掉
+-keepattributes SourceFile,LineNumberTable
+
+基本组件白名单
+Android中的基本组件不能混淆，为了方便，下面提供了兼容性比较高的规则：
+
+-keep public class * extends android.app.Fragment
+-keep public class * extends android.app.Activity
+-keep public class * extends android.app.Application
+-keep public class * extends android.app.Service
+-keep public class * extends android.content.BroadcastReceiver
+-keep public class * extends android.content.ContentProvider
+-keep public class * extends android.app.backup.BackupAgentHelper
+-keep public class * extends android.preference.Preference
+
+Support包规则
+# 如果有引用v4包可以添加下面这行
+-keep public class * extends android.support.v4.app.Fragment
+
+# 如果引用了v4或者v7包
+-dontwarn android.support.**
+
+不混淆本地方法
+本地方法不能混淆，这个规则在默认配置文件中有：
+
+# 保持 native 方法不被混淆
+-keepclasseswithmembernames class * {
+    native <methods>;
+}
+
+WebView混淆规则
+使用了WebView的JS功能则开启下面规则，这个规则在自定义规则文件中已经用注释说明了：
+
+# WebView使用javascript功能则需要开启
+-keepclassmembers class fqcn.of.javascript.interface.for.webview {
+    public *;
+}
+
+注解、泛型和反射混淆
+下面是混淆规则：
+
+# 保护注解
+-keepattributes *Annotation*
+-keep class * extends java.lang.annotation.Annotation {*;}
+
+# 泛型与反射
+-keepattributes Signature
+-keepattributes EnclosingMethod
+
+有些注解可能不能被混淆，需要手动混淆一下
+
+内部类混淆
+# 不混淆内部类
+-keepattributes InnerClasses
+
+第三方混淆参考规则
+Gson
+# gson
+-dontwarn com.google.**
+-keep class com.google.gson.** {*;}
+
+otto
+# otto混淆规则
+-keepattributes *Annotation*
+-keepclassmembers class ** {
+    @com.squareup.otto.Subscribe public *;
+    @com.squareup.otto.Produce public *;
+}
+
+universal-image-loader
+-dontwarn com.nostra13.universalimageloader.**
+-keep class com.nostra13.universalimageloader.** {*;}
+
+友盟统计
+# 友盟统计
+-keepclassmembers class * {
+    public <init> (org.json.JSONObject);
+}
+
+# 友盟统计5.0.0以上SDK需要
+-keepclassmembers enum * {
+    public static **[] values();
+    public static ** valueOf(java.lang.String);
+}
+
+# 友盟统计R.java删除问题
+-keep public class com.gdhbgh.activity.R$*{
+    public static final int *;
+}
+
+OkHttp
+# OkHttp
+-dontwarn com.squareup.okhttp.**
+-keep class com.squareup.okhttp.** {*;}
+-keep interface com.squareup.okhttp.** {*;}
+-dontwarn okio.**
+
+nineoldandroids
+-dontwarn com.nineoldandroids.*
+-keep class com.nineoldandroids.** {*;}
+
+支付宝
+# 支付宝
+-keep class com.alipay.android.app.IAlixPay{*;}
+-keep class com.alipay.android.app.IAlixPay$Stub{*;}
+-keep class com.alipay.android.app.IRemoteServiceCallback{*;}
+-keep class com.alipay.android.app.IRemoteServiceCallback$Stub{*;}
+-keep class com.alipay.sdk.app.PayTask{
+    public *;
+}
+-keep class com.alipay.sdk.app.AuthTask{
+    public *;
+}
+
+Socket.io
+# socket.io
+-keep class socket.io-client.
+-keepclasseswithmembers,allowshrinking class socket.io-client.* {*;}
+-keep class io.socket.
+-keepclasseswithmembers,allowshrinking class io.socket.* {*;}
+
+
+JPUSH
+# jpush
+-dontwarn cn.jpush.**
+-keep class cn.jpush.** {*;}
+
+# protobuf（jpush依赖）
+-dontwarn com.google.**
+-keep class com.google.protobuf.** {*;}
+
+友盟分享
+这个只有部分热门的SDK，具体可以参考分享文档：
+
+# 友盟分享
+-dontwarn com.umeng.**
+-dontwarn com.tencent.weibo.sdk.**
+
+-keep public interface com.tencent.**
+-keep public interface com.umeng.socialize.**
+-keep public interface com.umeng.socialize.sensor.**
+-keep public interface com.umeng.scrshot.**
+
+-keep public class com.umeng.socialize.* {*;}
+
+-keep class com.umeng.scrshot.**
+-keep public class com.tencent.** {*;}
+-keep class com.umeng.socialize.sensor.**
+-keep class com.umeng.socialize.handler.**
+-keep class com.umeng.socialize.handler.*
+-keep class com.tencent.mm.sdk.modelmsg.WXMediaMessage {*;}
+-keep class com.tencent.mm.sdk.modelmsg.** implements com.tencent.mm.sdk.modelmsg.WXMediaMessage$IMediaObject {*;}
+
+-keep class im.yixin.sdk.api.YXMessage {*;}
+-keep class im.yixin.sdk.api.** implements im.yixin.sdk.api.YXMessage$YXMessageData{*;}
+
+-keep class com.tencent.** {*;}
+-dontwarn com.tencent.**
+-keep public class com.umeng.soexample.R$*{
+    public static final int *;
+}
+-keep class com.tencent.open.TDialog$*
+-keep class com.tencent.open.TDialog$* {*;}
+-keep class com.tencent.open.PKDialog
+-keep class com.tencent.open.PKDialog {*;}
+-keep class com.tencent.open.PKDialog$*
+-keep class com.tencent.open.PKDialog$* {*;}
+
+-keep class com.sina.** {*;}
+-dontwarn com.sina.**
+-keep class  com.alipay.share.sdk.** {*;}
+
+个人遇到的一些坑
+网络层混淆
+混淆要注意，一般网络层都不进行混淆，可以经过划分包后直接不混淆网络层的包：
+
+-keep class com.xxx.xxx.http.** {*;}
+1
+数据模型混淆
+所有bean都不要混淆，可以使用下面的：
+
+-keep class * implements java.io.Serializable {*;}
+-keepclassmembers class * implements java.io.Serializable {*;}
+1
+2
+但是有时候上述代码可能导致应用卡住，没用任何错误提示，所以我建议采用分包模式，把所有bean放在一个包中，直接对该包加白名单：
+
+-keep class com.xxx.xxx.domain.** {*;}
+1
+XML映射问题
+如果你遇到一些控件无法Inflate，报NullPointException，比如ListView，NavigationView等等，这个问题花了我几个小时自己研究出了规则：
+
+-keep class org.xmlpull.v1.** {*;}
+1
+混淆规则编写方法
+如果混淆后报错，通过retrace后找到错误的问题后可以直接编写规则来去掉混淆，但是如果报的错误莫名其妙，而且报错的类没有混淆，那么你可以采用极端的方法：
+
+加入下面规则：
+
+-keep class *.** {*;}
+1
+这条规则表示不混淆所有类及其中所有代码，加了这条规则之后，
+还不能运行表示是其他问题，例如注解，内部类等等，
+可以运行后，可以通过反编译，寻找所有包名，记录下来，把上述规则改为：
+
+-keep class android.** {*;}
+-keep class com.** {*;}
+-keep class io.** {*;}
+-keep class org.** {*;}
+...
+1
+2
+3
+4
+5
+一个个去掉检查是否有报错，例如查到
+
+-keep class com.** {*;}
+1
+加了就不报错，则可以继续一级级往下检查。
+但要注意，有时候可能是几个包混合问题。
+————————————————
+版权声明：本文为CSDN博主「Maxwell_nc」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
+原文链接：https://blog.csdn.net/maxwell_nc/article/details/51998766

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_12"
+        android:layout_marginTop="@dimen/dp_15"
+        android:layout_marginRight="@dimen/dp_12"
+
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_210">
+
+            <View
+                android:id="@+id/view_divider"
+                android:layout_width="@dimen/dp_8"
+                android:layout_height="match_parent"
+                android:background="@drawable/shape_left_corners_blue" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="match_parent"
+                android:lines="1"
+                android:ellipsize="end"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_11"
+                android:layout_marginTop="@dimen/dp_15"
+                android:layout_toRightOf="@id/view_divider"
+                android:text="2020宏亮俱乐部队内乒乓球训练赛"
+                android:textColor="#ff333333"
+                android:textSize="17sp" />
+
+
+
+            <TextView
+                android:id="@+id/tv_heji"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_title"
+                android:layout_marginLeft="@dimen/dp_40"
+                android:layout_marginTop="@dimen/dp_19"
+                android:layout_toRightOf="@id/view_divider"
+                android:text="合计"
+                android:textColor="#ff333333"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_title"
+                android:layout_marginLeft="@dimen/dp_65"
+                android:layout_marginTop="@dimen/dp_20"
+                android:layout_toRightOf="@id/tv_heji"
+                android:text="¥2800"
+                android:textColor="#ff333333"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tv_pay_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_title"
+                android:layout_marginLeft="@dimen/dp_76"
+                android:layout_marginTop="@dimen/dp_21"
+                android:layout_toRightOf="@id/tv_price"
+                android:text="未支付"
+                android:textColor="#ff666666"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_heji"
+                android:layout_marginLeft="@dimen/dp_19"
+                android:layout_marginTop="@dimen/dp_26"
+                android:text="报名截止时间：2020-05-21"
+                android:textColor="#ff333333"
+                android:textSize="15sp" />
+
+<!--            <LinearLayout-->
+<!--                android:layout_marginLeft="@dimen/dp_43"-->
+<!--                android:layout_width="match_parent"-->
+
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_below="@id/tv_time"-->
+<!--                android:layout_marginBottom="@dimen/dp_10"-->
+<!--                android:layout_marginTop="@dimen/dp_20"-->
+<!--                android:orientation="horizontal">-->
+
+<!--                <TextView-->
+<!--                  -->
+<!--                    android:layout_width="@dimen/dp_120"-->
+<!--                    android:layout_height="@dimen/dp_40"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:background="@drawable/shape_club_blue"-->
+<!--                    android:gravity="center"-->
+<!--                    android:text="取消报名"-->
+<!--                    android:textColor="#ffffffff"-->
+<!--                    android:textSize="14sp" />-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/tv_submit"-->
+<!--                    android:layout_width="@dimen/dp_120"-->
+<!--                    android:layout_height="@dimen/dp_40"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:layout_marginLeft="@dimen/dp_31"-->
+<!--                    android:layout_marginRight="@dimen/dp_14"-->
+<!--                    android:background="@drawable/shape_red_corners_5e"-->
+<!--                    android:gravity="center"-->
+<!--                    android:text="去提交"-->
+<!--                    android:textColor="#ffffffff"-->
+<!--                    android:textSize="14sp" />-->
+<!--            </LinearLayout>-->
+            <LinearLayout
+                android:gravity="center"
+
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/dp_14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/iv_delete"
+                    android:background="@drawable/shape_club_blue"
+                    android:paddingTop="@dimen/dp_11"
+                    android:paddingBottom="@dimen/dp_11"
+                    android:paddingLeft="@dimen/dp_24"
+                    android:paddingRight="@dimen/dp_24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="取消报名"
+                    android:textColor="#ffffffff"
+                    android:textSize="18sp"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_submit"
+                    android:background="@drawable/shape_red_corners_5e"
+                    android:layout_marginLeft="@dimen/dp_30"
+                    android:paddingTop="@dimen/dp_11"
+                    android:paddingBottom="@dimen/dp_11"
+                    android:paddingLeft="@dimen/dp_24"
+                    android:paddingRight="@dimen/dp_24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="修改或提交"
+                    android:textColor="#ffffffff"
+                    android:textSize="18sp"
+                    />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+</layout>

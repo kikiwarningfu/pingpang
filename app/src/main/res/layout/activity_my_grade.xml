@@ -1,0 +1,1540 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="listener"
+            type="android.view.View.OnClickListener" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        tools:context=".ui.homepage.activity.GameDetailActivity">
+
+        <RelativeLayout
+            android:id="@+id/top_bar_relative"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:background="@color/white">
+
+            <ImageView
+                android:onClick="@{v->listener.onClick(v)}"
+                android:id="@+id/iv_finish"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingLeft="@dimen/page_padding"
+                android:paddingRight="@dimen/page_padding"
+                android:src="@drawable/icon_left_back" />
+
+            <TextView
+                android:id="@+id/tv_center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:ellipsize="marquee"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="我的成绩"
+                android:textColor="#333333"
+                android:textSize="17sp" />
+
+            <ImageView
+                android:id="@+id/iv_right_add"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@+id/iv_right"
+                android:padding="@dimen/dp_13"
+                android:scaleType="center"
+                android:visibility="gone"
+                tools:src="@drawable/morentouxiang" />
+
+            <ImageView
+                android:id="@+id/iv_right"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:padding="@dimen/dp_13"
+                android:scaleType="center"
+                android:visibility="gone"
+                tools:src="@drawable/morentouxiang" />
+
+            <TextView
+                android:id="@+id/tv_right"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/page_padding"
+                android:paddingRight="@dimen/page_padding"
+                android:text="清空"
+                android:textColor="#666666"
+                android:textSize="14sp"
+                android:visibility="gone" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:layout_alignParentBottom="true"
+                android:background="@color/divider"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:background="@color/color_f5" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginLeft="@dimen/dp_27"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginRight="@dimen/dp_27"
+            android:layout_marginBottom="@dimen/dp_11"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/rl_sports_container"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/shape_left_corners_gray"
+                android:onClick="@{v->listener.onClick(v)}">
+
+                <TextView
+                    android:id="@+id/tv_sports_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:text="运动员"
+                    android:textColor="#ff666666"
+                    android:textSize="17sp" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_coach_container"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/shape_right_corners_blue"
+                android:onClick="@{v->listener.onClick(v)}">
+
+                <TextView
+                    android:id="@+id/tv_coach"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:text="教练员"
+                    android:textColor="#FFFFFF"
+                    android:textSize="17sp" />
+
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_4"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_10"
+                android:layout_weight="64" />
+
+            <LinearLayout
+                android:id="@+id/ll_all_scored"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:onClick="@{v->listener.onClick(v)}"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_all_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="所有成绩"
+                    android:textColor="#ff4795ed"
+                    android:textSize="15sp" />
+
+                <View
+                    android:id="@+id/view_score"
+                    android:layout_width="@dimen/dp_60"
+                    android:layout_height="@dimen/dp_2"
+                    android:layout_marginTop="@dimen/dp_13"
+                    android:background="#4795ED" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_10"
+                android:layout_weight="120" />
+
+            <LinearLayout
+                android:id="@+id/ll_get_award_score"
+                android:onClick="@{v->listener.onClick(v)}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_get_award_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="获奖成绩"
+                    android:textColor="#666666"
+                    android:textSize="15sp" />
+
+                <View
+                    android:id="@+id/view_get_award_score"
+                    android:layout_width="@dimen/dp_60"
+                    android:layout_height="@dimen/dp_2"
+                    android:layout_marginTop="@dimen/dp_13"
+                    android:background="#4795ED"
+                    android:visibility="invisible" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_10"
+                android:layout_weight="71" />
+        </LinearLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/ll_all_grade"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_12"
+                        android:layout_marginTop="@dimen/dp_20"
+                        android:layout_marginRight="@dimen/dp_12"
+                        android:layout_marginBottom="@dimen/dp_27"
+                        android:background="@drawable/shape_solid_stroke_gray_corners_5"
+                        android:orientation="vertical"
+                        android:padding="@dimen/dp_2"
+                        android:visibility="visible">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_45"
+                            android:background="#F5F5F5"
+                            android:orientation="horizontal">
+
+                            <View
+                                android:layout_width="@dimen/dp_49"
+                                android:layout_height="match_parent" />
+
+                            <View
+                                android:layout_width="@dimen/dp_1"
+                                android:layout_height="match_parent"
+                                android:background="#CCCCCC" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="团体"
+                                android:textColor="#999999"
+                                android:textSize="@dimen/sp_18" />
+
+                            <View
+                                android:layout_width="@dimen/dp_1"
+                                android:layout_height="match_parent"
+                                android:background="#CCCCCC" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="单打"
+                                android:textColor="#999999"
+                                android:textSize="@dimen/sp_18" />
+
+                            <View
+                                android:layout_width="@dimen/dp_1"
+                                android:layout_height="match_parent"
+                                android:background="#CCCCCC" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="双打"
+                                android:textColor="#999999"
+                                android:textSize="@dimen/sp_18" />
+
+                            <View
+                                android:layout_width="@dimen/dp_1"
+                                android:layout_height="match_parent"
+                                android:background="#CCCCCC" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="混双"
+                                android:textColor="#999999"
+                                android:textSize="@dimen/sp_18" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_1"
+                            android:background="#CCCCCC" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_45"
+                            android:background="#F5F5F5"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="@dimen/dp_49"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:background="#FFFFFF"
+                                android:gravity="center"
+                                android:text="合计"
+                                android:textColor="#666666"
+                                android:textSize="@dimen/sp_18" />
+
+                            <View
+                                android:layout_width="@dimen/dp_1"
+                                android:layout_height="match_parent"
+                                android:background="#CCCCCC" />
+
+                            <TextView
+                                android:id="@+id/tv_tuanti_heji_one"
+                                android:onClick="@{v->listener.onClick(v)}"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:background="#FFFFFF"
+                                android:gravity="center"
+                                android:text="0"
+                                android:textColor="#4795ED"
+                                android:textSize="@dimen/sp_18" />
+
+                            <View
+                                android:layout_width="@dimen/dp_1"
+                                android:layout_height="match_parent"
+                                android:background="#CCCCCC" />
+
+                            <TextView
+                                android:onClick="@{v->listener.onClick(v)}"
+                                android:id="@+id/tv_danda_heji_one"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:background="#FFFFFF"
+                                android:gravity="center"
+                                android:text="0"
+                                android:textColor="#4795ED"
+                                android:textSize="@dimen/sp_18" />
+
+                            <View
+                                android:layout_width="@dimen/dp_1"
+                                android:layout_height="match_parent"
+                                android:background="#CCCCCC" />
+
+                            <TextView
+                                android:onClick="@{v->listener.onClick(v)}"
+                                android:id="@+id/tv_shuangda_heji_one"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:background="#FFFFFF"
+                                android:gravity="center"
+                                android:text="0"
+                                android:textColor="#4795ED"
+                                android:textSize="@dimen/sp_18" />
+
+                            <View
+                                android:layout_width="@dimen/dp_1"
+                                android:layout_height="match_parent"
+                                android:background="#CCCCCC" />
+
+                            <TextView
+                                android:onClick="@{v->listener.onClick(v)}"
+                                android:id="@+id/tv_hunshuang_heji_one"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:background="#FFFFFF"
+                                android:gravity="center"
+                                android:text="0"
+                                android:textColor="#4795ED"
+                                android:textSize="@dimen/sp_18" />
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_grade_visvible"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_bisai_changci"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textColor="#ff333333"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp_20"
+                                android:text="比赛总场次"
+                                android:textColor="#ff666666"
+                                android:textSize="15sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="@dimen/dp_40"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_win_count"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textColor="#E53333"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp_20"
+                                android:text="胜"
+                                android:textColor="#E53333"
+                                android:textSize="15sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="@dimen/dp_49"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_lose_count"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textColor="#333333"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp_20"
+                                android:text="负"
+                                android:textColor="#666666"
+                                android:textSize="15sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="@dimen/dp_47"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_win_rate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0%"
+                                android:textColor="#E53333"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp_20"
+                                android:text="胜率"
+                                android:textColor="#E53333"
+                                android:textSize="15sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/ll_huojiang_grade"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_12"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:layout_marginRight="@dimen/dp_12"
+                    android:layout_marginBottom="@dimen/dp_27"
+                    android:background="@drawable/shape_solid_stroke_gray_corners_5"
+                    android:orientation="vertical"
+                    android:padding="@dimen/dp_1"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_45"
+                        android:background="#F5F5F5"
+                        android:orientation="horizontal">
+
+                        <View
+                            android:layout_width="@dimen/dp_49"
+                            android:layout_height="match_parent" />
+
+                        <View
+                            android:layout_width="@dimen/dp_1"
+                            android:layout_height="match_parent"
+                            android:background="#CCCCCC" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="团体"
+                            android:textColor="#999999"
+                            android:textSize="@dimen/sp_18" />
+
+                        <View
+                            android:layout_width="@dimen/dp_1"
+                            android:layout_height="match_parent"
+                            android:background="#CCCCCC" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="单打"
+                            android:textColor="#999999"
+                            android:textSize="@dimen/sp_18" />
+
+                        <View
+                            android:layout_width="@dimen/dp_1"
+                            android:layout_height="match_parent"
+                            android:background="#CCCCCC" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="双打"
+                            android:textColor="#999999"
+                            android:textSize="@dimen/sp_18" />
+
+                        <View
+                            android:layout_width="@dimen/dp_1"
+                            android:layout_height="match_parent"
+                            android:background="#CCCCCC" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="混双"
+                            android:textColor="#999999"
+                            android:textSize="@dimen/sp_18" />
+
+                        <View
+                            android:layout_width="@dimen/dp_1"
+                            android:layout_height="match_parent"
+                            android:background="#CCCCCC" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_1"
+                        android:background="#CCCCCC" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_45"
+                        android:background="#F5F5F5"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="@dimen/dp_49"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="合计"
+                            android:textColor="#666666"
+                            android:textSize="@dimen/sp_18" />
+
+                        <View
+                            android:layout_width="@dimen/dp_1"
+                            android:layout_height="match_parent"
+                            android:background="#CCCCCC" />
+
+                        <TextView
+                            android:onClick="@{v->listener.onClick(v)}"
+                            android:id="@+id/tv_tuanti_heji"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:background="#FFFFFF"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textColor="#4795ED"
+                            android:textSize="@dimen/sp_18" />
+
+                        <View
+                            android:layout_width="@dimen/dp_1"
+                            android:layout_height="match_parent"
+                            android:background="#CCCCCC" />
+
+                        <TextView
+                            android:id="@+id/tv_danda_heji"
+                            android:onClick="@{v->listener.onClick(v)}"
+
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:background="#FFFFFF"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textColor="#4795ED"
+                            android:textSize="@dimen/sp_18" />
+
+                        <View
+                            android:layout_width="@dimen/dp_1"
+                            android:layout_height="match_parent"
+                            android:background="#CCCCCC" />
+
+                        <TextView
+                            android:id="@+id/tv_shuangda_heji"
+                            android:onClick="@{v->listener.onClick(v)}"
+
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:background="#FFFFFF"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textColor="#4795ED"
+                            android:textSize="@dimen/sp_18" />
+
+                        <View
+                            android:layout_width="@dimen/dp_1"
+                            android:layout_height="match_parent"
+                            android:background="#CCCCCC" />
+
+                        <TextView
+                            android:id="@+id/tv_hunshuang_heji"
+                            android:onClick="@{v->listener.onClick(v)}"
+
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:background="#FFFFFF"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textColor="#4795ED"
+                            android:textSize="@dimen/sp_18" />
+
+                        <View
+                            android:layout_width="@dimen/dp_1"
+                            android:layout_height="match_parent"
+                            android:background="#CCCCCC" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_1"
+                        android:background="#CCCCCC" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_45"
+                        android:background="#F5F5F5"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="@dimen/dp_49"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="冠军"
+                            android:textColor="#666666"
+                            android:textSize="@dimen/sp_18" />
+
+                        <View
+                            android:layout_width="@dimen/dp_1"
+                            android:layout_height="match_parent"
+                            android:background="#CCCCCC" />
+
+                        <TextView
+                            android:id="@+id/tv_guanjun_tuanti"
+                            android:onClick="@{v->listener.onClick(v)}"
+
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:background="#FFFFFF"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textColor="#4795ED"
+                            android:textSize="@dimen/sp_18" />
+
+                        <View
+                            android:layout_width="@dimen/dp_1"
+                            android:layout_height="match_parent"
+                            android:background="#CCCCCC" />
+
+                        <TextView
+                            android:id="@+id/tv_guanjun_danda"
+                            android:onClick="@{v->listener.onClick(v)}"
+
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:background="#FFFFFF"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textColor="#4795ED"
+                            android:textSize="@dimen/sp_18" />
+
+                        <View
+                            android:layout_width="@dimen/dp_1"
+                            android:layout_height="match_parent"
+                            android:background="#CCCCCC" />
+
+                        <TextView
+                            android:id="@+id/tv_guanjun_shuangda"
+                            android:onClick="@{v->listener.onClick(v)}"
+
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:background="#FFFFFF"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textColor="#4795ED"
+                            android:textSize="@dimen/sp_18" />
+
+                        <View
+                            android:layout_width="@dimen/dp_1"
+                            android:layout_height="match_parent"
+                            android:background="#CCCCCC" />
+
+                        <TextView
+                            android:id="@+id/tv_guanjun_hunshhuang"
+                            android:onClick="@{v->listener.onClick(v)}"
+
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:background="#FFFFFF"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textColor="#4795ED"
+                            android:textSize="@dimen/sp_18" />
+
+                        <View
+                            android:layout_width="@dimen/dp_1"
+                            android:layout_height="match_parent"
+                            android:background="#CCCCCC" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_1"
+                        android:background="#CCCCCC" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_45"
+                        android:background="#F5F5F5"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="@dimen/dp_49"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="亚军"
+                            android:textColor="#666666"
+                            android:textSize="@dimen/sp_18" />
+
+                        <View
+                            android:layout_width="@dimen/dp_1"
+                            android:layout_height="match_parent"
+                            android:background="#CCCCCC" />
+
+                        <TextView
+                            android:id="@+id/tv_yajun_tuanti"
+                            android:onClick="@{v->listener.onClick(v)}"
+
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:background="#FFFFFF"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textColor="#4795ED"
+                            android:textSize="@dimen/sp_18" />
+
+                        <View
+                            android:layout_width="@dimen/dp_1"
+                            android:layout_height="match_parent"
+                            android:background="#CCCCCC" />
+
+                        <TextView
+                            android:id="@+id/tv_yajun_danda"
+                            android:onClick="@{v->listener.onClick(v)}"
+
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:background="#FFFFFF"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textColor="#4795ED"
+                            android:textSize="@dimen/sp_18" />
+
+                        <View
+                            android:layout_width="@dimen/dp_1"
+                            android:layout_height="match_parent"
+                            android:background="#CCCCCC" />
+
+                        <TextView
+                            android:id="@+id/tv_yajun_shuangda"
+                            android:onClick="@{v->listener.onClick(v)}"
+
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:background="#FFFFFF"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textColor="#4795ED"
+                            android:textSize="@dimen/sp_18" />
+
+                        <View
+                            android:layout_width="@dimen/dp_1"
+                            android:layout_height="match_parent"
+                            android:background="#CCCCCC" />
+
+                        <TextView
+                            android:id="@+id/tv_yajun_hunshuang"
+                            android:onClick="@{v->listener.onClick(v)}"
+
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:background="#FFFFFF"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textColor="#4795ED"
+                            android:textSize="@dimen/sp_18" />
+
+                        <View
+                            android:layout_width="@dimen/dp_1"
+                            android:layout_height="match_parent"
+                            android:background="#CCCCCC" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_1"
+                        android:background="#CCCCCC" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_45"
+                        android:background="#F5F5F5"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="@dimen/dp_49"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="季军"
+                            android:textColor="#666666"
+                            android:textSize="@dimen/sp_18" />
+
+                        <View
+                            android:layout_width="@dimen/dp_1"
+                            android:layout_height="match_parent"
+                            android:background="#CCCCCC" />
+
+                        <TextView
+                            android:id="@+id/tv_jijun_tuanti"
+                            android:onClick="@{v->listener.onClick(v)}"
+
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:background="#FFFFFF"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textColor="#4795ED"
+                            android:textSize="@dimen/sp_18" />
+
+                        <View
+                            android:layout_width="@dimen/dp_1"
+                            android:layout_height="match_parent"
+                            android:background="#CCCCCC" />
+
+                        <TextView
+                            android:id="@+id/tv_jijun_danda"
+                            android:onClick="@{v->listener.onClick(v)}"
+
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:background="#FFFFFF"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textColor="#4795ED"
+                            android:textSize="@dimen/sp_18" />
+
+                        <View
+                            android:layout_width="@dimen/dp_1"
+                            android:layout_height="match_parent"
+                            android:background="#CCCCCC" />
+
+                        <TextView
+                            android:id="@+id/tv_jijun_shuangda"
+                            android:onClick="@{v->listener.onClick(v)}"
+
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:background="#FFFFFF"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textColor="#4795ED"
+                            android:textSize="@dimen/sp_18" />
+
+                        <View
+                            android:layout_width="@dimen/dp_1"
+                            android:layout_height="match_parent"
+                            android:background="#CCCCCC" />
+
+                        <TextView
+                            android:id="@+id/tv_jijun_hunshuang"
+                            android:onClick="@{v->listener.onClick(v)}"
+
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:background="#FFFFFF"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textColor="#4795ED"
+                            android:textSize="@dimen/sp_18" />
+
+                        <View
+                            android:layout_width="@dimen/dp_1"
+                            android:layout_height="match_parent"
+                            android:background="#CCCCCC" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_1"
+                        android:background="#CCCCCC" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_45"
+                        android:background="#F5F5F5"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="@dimen/dp_49"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="第四"
+                            android:textColor="#666666"
+                            android:textSize="@dimen/sp_18" />
+
+                        <View
+                            android:layout_width="@dimen/dp_1"
+                            android:layout_height="match_parent"
+                            android:background="#CCCCCC" />
+
+                        <TextView
+                            android:id="@+id/tv_disi_tuanti"
+                            android:onClick="@{v->listener.onClick(v)}"
+
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:background="#FFFFFF"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textColor="#4795ED"
+                            android:textSize="@dimen/sp_18" />
+
+                        <View
+                            android:layout_width="@dimen/dp_1"
+                            android:layout_height="match_parent"
+                            android:background="#CCCCCC" />
+
+                        <TextView
+                            android:id="@+id/tv_disi_danda"
+                            android:onClick="@{v->listener.onClick(v)}"
+
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:background="#FFFFFF"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textColor="#4795ED"
+                            android:textSize="@dimen/sp_18" />
+
+                        <View
+                            android:layout_width="@dimen/dp_1"
+                            android:layout_height="match_parent"
+                            android:background="#CCCCCC" />
+
+                        <TextView
+                            android:id="@+id/tv_disi_shuangda"
+                            android:onClick="@{v->listener.onClick(v)}"
+
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:background="#FFFFFF"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textColor="#4795ED"
+                            android:textSize="@dimen/sp_18" />
+
+                        <View
+                            android:layout_width="@dimen/dp_1"
+                            android:layout_height="match_parent"
+                            android:background="#CCCCCC" />
+
+                        <TextView
+                            android:id="@+id/tv_disi_hunshuang"
+                            android:onClick="@{v->listener.onClick(v)}"
+
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:background="#FFFFFF"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textColor="#4795ED"
+                            android:textSize="@dimen/sp_18" />
+
+                        <View
+                            android:layout_width="@dimen/dp_1"
+                            android:layout_height="match_parent"
+                            android:background="#CCCCCC" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_1"
+                        android:background="#CCCCCC" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_45"
+                        android:background="#F5F5F5"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="@dimen/dp_49"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="第五"
+                            android:textColor="#666666"
+                            android:textSize="@dimen/sp_18" />
+
+                        <View
+                            android:layout_width="@dimen/dp_1"
+                            android:layout_height="match_parent"
+                            android:background="#CCCCCC" />
+
+                        <TextView
+                            android:id="@+id/tv_diwu_tuanti"
+                            android:onClick="@{v->listener.onClick(v)}"
+
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:background="#FFFFFF"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textColor="#4795ED"
+                            android:textSize="@dimen/sp_18" />
+
+                        <View
+                            android:layout_width="@dimen/dp_1"
+                            android:layout_height="match_parent"
+                            android:background="#CCCCCC" />
+
+                        <TextView
+                            android:id="@+id/tv_diwu_danda"
+                            android:onClick="@{v->listener.onClick(v)}"
+
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:background="#FFFFFF"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textColor="#4795ED"
+                            android:textSize="@dimen/sp_18" />
+
+                        <View
+                            android:layout_width="@dimen/dp_1"
+                            android:layout_height="match_parent"
+                            android:background="#CCCCCC" />
+
+                        <TextView
+                            android:id="@+id/tv_diwu_shuangda"
+                            android:onClick="@{v->listener.onClick(v)}"
+
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:background="#FFFFFF"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textColor="#4795ED"
+                            android:textSize="@dimen/sp_18" />
+
+                        <View
+                            android:layout_width="@dimen/dp_1"
+                            android:layout_height="match_parent"
+                            android:background="#CCCCCC" />
+
+                        <TextView
+                            android:id="@+id/tv_diwu_hunshuang"
+                            android:onClick="@{v->listener.onClick(v)}"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:background="#FFFFFF"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textColor="#4795ED"
+                            android:textSize="@dimen/sp_18" />
+
+                        <View
+                            android:layout_width="@dimen/dp_1"
+                            android:layout_height="match_parent"
+                            android:background="#CCCCCC" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_1"
+                        android:background="#CCCCCC" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_45"
+                        android:background="#F5F5F5"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="@dimen/dp_49"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="第六"
+                            android:textColor="#666666"
+                            android:textSize="@dimen/sp_18" />
+
+                        <View
+                            android:layout_width="@dimen/dp_1"
+                            android:layout_height="match_parent"
+                            android:background="#CCCCCC" />
+
+                        <TextView
+                            android:id="@+id/tv_diliu_tuanti"
+                            android:onClick="@{v->listener.onClick(v)}"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:background="#FFFFFF"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textColor="#4795ED"
+                            android:textSize="@dimen/sp_18" />
+
+                        <View
+                            android:layout_width="@dimen/dp_1"
+                            android:layout_height="match_parent"
+                            android:background="#CCCCCC" />
+
+                        <TextView
+                            android:id="@+id/tv_diliu_danda"
+                            android:onClick="@{v->listener.onClick(v)}"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:background="#FFFFFF"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textColor="#4795ED"
+                            android:textSize="@dimen/sp_18" />
+
+                        <View
+                            android:layout_width="@dimen/dp_1"
+                            android:layout_height="match_parent"
+                            android:background="#CCCCCC" />
+
+                        <TextView
+                            android:id="@+id/tv_diliu_shuangda"
+                            android:onClick="@{v->listener.onClick(v)}"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:background="#FFFFFF"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textColor="#4795ED"
+                            android:textSize="@dimen/sp_18" />
+
+                        <View
+                            android:layout_width="@dimen/dp_1"
+                            android:layout_height="match_parent"
+                            android:background="#CCCCCC" />
+
+                        <TextView
+                            android:id="@+id/tv_diliu_hunshuang"
+                            android:layout_width="0dp"
+                            android:onClick="@{v->listener.onClick(v)}"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:background="#FFFFFF"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textColor="#4795ED"
+                            android:textSize="@dimen/sp_18" />
+
+                        <View
+                            android:layout_width="@dimen/dp_1"
+                            android:layout_height="match_parent"
+                            android:background="#CCCCCC" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_1"
+                        android:background="#CCCCCC" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_45"
+                        android:background="#F5F5F5"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="@dimen/dp_49"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="第七"
+                            android:textColor="#666666"
+                            android:textSize="@dimen/sp_18" />
+
+                        <View
+                            android:layout_width="@dimen/dp_1"
+                            android:layout_height="match_parent"
+                            android:background="#CCCCCC" />
+
+                        <TextView
+                            android:id="@+id/tv_diqi_tuanti"
+                            android:onClick="@{v->listener.onClick(v)}"
+
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:background="#FFFFFF"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textColor="#4795ED"
+                            android:textSize="@dimen/sp_18" />
+
+                        <View
+                            android:layout_width="@dimen/dp_1"
+                            android:layout_height="match_parent"
+                            android:background="#CCCCCC" />
+
+                        <TextView
+                            android:id="@+id/tv_diqi_danda"
+                            android:onClick="@{v->listener.onClick(v)}"
+
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:background="#FFFFFF"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textColor="#4795ED"
+                            android:textSize="@dimen/sp_18" />
+
+                        <View
+                            android:layout_width="@dimen/dp_1"
+                            android:layout_height="match_parent"
+                            android:background="#CCCCCC" />
+
+                        <TextView
+                            android:id="@+id/tv_diqi_shuangda"
+                            android:onClick="@{v->listener.onClick(v)}"
+
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:background="#FFFFFF"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textColor="#4795ED"
+                            android:textSize="@dimen/sp_18" />
+
+                        <View
+                            android:layout_width="@dimen/dp_1"
+                            android:layout_height="match_parent"
+                            android:background="#CCCCCC" />
+
+                        <TextView
+                            android:id="@+id/tv_diqi_hunshuang"
+                            android:onClick="@{v->listener.onClick(v)}"
+
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:background="#FFFFFF"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textColor="#4795ED"
+                            android:textSize="@dimen/sp_18" />
+
+                        <View
+                            android:layout_width="@dimen/dp_1"
+                            android:layout_height="match_parent"
+                            android:background="#CCCCCC" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_1"
+                        android:background="#CCCCCC" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_45"
+                        android:background="#F5F5F5"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="@dimen/dp_49"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="第八"
+                            android:textColor="#666666"
+                            android:textSize="@dimen/sp_18" />
+
+                        <View
+                            android:layout_width="@dimen/dp_1"
+                            android:layout_height="match_parent"
+                            android:background="#CCCCCC" />
+
+                        <TextView
+                            android:id="@+id/tv_diba_tuanti"
+                            android:onClick="@{v->listener.onClick(v)}"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:background="#FFFFFF"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textColor="#4795ED"
+                            android:textSize="@dimen/sp_18" />
+
+                        <View
+                            android:layout_width="@dimen/dp_1"
+                            android:layout_height="match_parent"
+                            android:background="#CCCCCC" />
+
+                        <TextView
+                            android:id="@+id/tv_diba_danda"
+                            android:onClick="@{v->listener.onClick(v)}"
+
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:background="#FFFFFF"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textColor="#4795ED"
+                            android:textSize="@dimen/sp_18" />
+
+                        <View
+                            android:layout_width="@dimen/dp_1"
+                            android:layout_height="match_parent"
+                            android:background="#CCCCCC" />
+
+                        <TextView
+                            android:id="@+id/tv_diba_shuangda"
+                            android:onClick="@{v->listener.onClick(v)}"
+
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:background="#FFFFFF"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textColor="#4795ED"
+                            android:textSize="@dimen/sp_18" />
+
+                        <View
+                            android:layout_width="@dimen/dp_1"
+                            android:layout_height="match_parent"
+                            android:background="#CCCCCC" />
+
+                        <TextView
+                            android:id="@+id/tv_diba_hunshuang"
+                            android:onClick="@{v->listener.onClick(v)}"
+
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:background="#FFFFFF"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textColor="#4795ED"
+                            android:textSize="@dimen/sp_18" />
+
+                        <View
+                            android:layout_width="@dimen/dp_1"
+                            android:layout_height="match_parent"
+                            android:background="#CCCCCC" />
+                    </LinearLayout>
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+</layout>

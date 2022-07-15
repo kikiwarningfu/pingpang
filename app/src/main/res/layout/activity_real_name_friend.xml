@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="listener"
+            type="android.view.View.OnClickListener" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFF3F3F3"
+        android:orientation="vertical"
+        tools:context=".ui.homepage.activity.CreateEventsActivity">
+
+
+        <heyong.handong.framework.widget.TopBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:centerText="实名认证" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:background="#F6F6F6" />
+        <LinearLayout
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_marginTop="@dimen/dp_41"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp_8"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="89dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="@dimen/dp_13"
+                    android:gravity="right"
+                    android:text="姓名"
+                    android:textColor="#ff333333"
+                    android:textSize="14sp" />
+                <TextView
+                    android:layout_marginLeft="@dimen/dp_40"
+                    android:layout_width="match_parent"
+                    android:layout_marginRight="@dimen/dp_15"
+                    android:lines="1"
+                    android:ellipsize="end"
+                    android:layout_height="17dp"
+                    android:text="王二小王二小王二小王二小王二小王二小王二小王二小王二小王二小王二小王二小王二小王二小王二小王二小王二小王二小王二小"
+                    android:textColor="#ff666666"
+                    android:textSize="12sp"
+                    />
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_marginLeft="@dimen/dp_12"
+                android:layout_marginRight="@dimen/dp_12"
+                android:layout_height="@dimen/dp_0_5"
+                android:background="#979797"/>
+            <LinearLayout
+                android:layout_marginTop="@dimen/dp_41"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp_8"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_marginLeft="@dimen/dp_13"
+                    android:layout_gravity="right"
+                    android:gravity="right"
+                    android:layout_width="89dp"
+                    android:layout_height="wrap_content"
+                    android:text="身份证号码"
+                    android:textColor="#ff333333"
+                    android:textSize="14sp"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="17dp"
+                    android:layout_marginLeft="@dimen/dp_40"
+                    android:layout_marginRight="@dimen/dp_15"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:text="1427011111000010010010"
+                    android:textColor="#ff666666"
+                    android:textSize="12sp" />
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_marginLeft="@dimen/dp_12"
+                android:layout_marginRight="@dimen/dp_12"
+                android:layout_marginBottom="@dimen/dp_42"
+                android:layout_height="@dimen/dp_0_5"
+                android:background="#979797"/>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="@dimen/dp_46"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_centerHorizontal="true"
+                android:paddingTop="@dimen/dp_12"
+                android:background="@drawable/shape_blue_certificate"
+                android:paddingLeft="@dimen/dp_77"
+                android:paddingRight="@dimen/dp_77"
+                android:paddingBottom="@dimen/dp_12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="提交"
+                android:textColor="#ffffffff"
+                android:textSize="14sp"
+                />
+        </RelativeLayout>
+
+    </LinearLayout>
+</layout>

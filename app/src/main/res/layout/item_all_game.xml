@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_100"
+        android:layout_marginLeft="@dimen/dp_12"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_12"
+        android:background="@drawable/shape_white_corners_stroke">
+
+        <View
+            android:layout_width="@dimen/dp_9"
+            android:layout_height="match_parent"
+            android:background="@drawable/shape_vs_left_corners" />
+
+
+        <TextView
+            android:id="@+id/tv_name_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_17"
+            android:layout_marginTop="@dimen/dp_20"
+            android:layout_marginBottom="@dimen/dp_11"
+            android:text="临猗老凤祥1"
+            android:textColor="#ff333333"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tv_vs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_4"
+            android:layout_marginTop="@dimen/dp_18"
+            android:layout_marginRight="@dimen/dp_5"
+            android:layout_toRightOf="@id/tv_name_one"
+            android:text="VS"
+            android:textColor="#ffffd366"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tv_name_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_20"
+            android:layout_marginRight="@dimen/dp_18"
+            android:layout_toRightOf="@id/tv_vs"
+            android:text="临猗老凤祥1"
+            android:textColor="#ff333333"
+            android:textSize="15sp" />
+
+        <View
+            android:id="@+id/view_dividers"
+            android:layout_width="@dimen/dp_0_5"
+            android:layout_height="@dimen/dp_50"
+            android:layout_marginTop="@dimen/dp_20"
+            android:layout_toRightOf="@id/tv_name_two"
+            android:background="#FFCCCCCC" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_name_one"
+            android:layout_marginLeft="@dimen/dp_17"
+            android:layout_marginRight="@dimen/dp_8"
+            android:layout_marginBottom="@dimen/dp_15"
+
+            android:layout_toLeftOf="@id/view_dividers"
+            android:text="2020盐湖区乒乓球友谊赛男子单打【第一
+阶段B组】"
+            android:textColor="#ff333333"
+            android:textSize="11sp" />
+
+        <RelativeLayout
+            android:layout_width="@dimen/dp_140"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true">
+
+            <TextView
+                android:layout_alignParentRight="true"
+                android:id="@+id/tv_table_num"
+                android:background="@drawable/shape_stroke_66_corners_10"
+                android:paddingTop="@dimen/dp_4"
+                android:paddingBottom="@dimen/dp_4"
+                android:paddingLeft="@dimen/dp_11"
+                android:paddingRight="@dimen/dp_11"
+                android:layout_marginRight="@dimen/dp_8"
+                android:layout_marginTop="@dimen/dp_20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1台"
+                android:textColor="#ff666666"
+                android:textSize="13sp"
+                />
+            <TextView
+                android:id="@+id/tv_score"
+                android:layout_marginTop="@dimen/dp_20"
+                android:layout_marginRight="@dimen/dp_23"
+                android:textStyle="bold"
+                android:layout_toLeftOf="@id/tv_table_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2:0"
+                android:textColor="#ff333333"
+                android:textSize="22sp"
+                />
+            <TextView
+                android:layout_marginTop="@dimen/dp_15"
+                android:layout_marginRight="@dimen/dp_34"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/tv_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="已结束"
+                android:textColor="#ff333333"
+                android:textSize="18sp"
+                />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</layout>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_30"
+            android:layout_marginLeft="@dimen/dp_14"
+            android:layout_marginTop="@dimen/dp_5"
+            android:background="@drawable/shape_join_team_bg"
+            android:gravity="center"
+            android:text="西门吹雪"
+            android:textColor="#FF4795ED"
+            android:textSize="@dimen/sp_11" />
+
+        <ImageView
+            android:layout_alignParentRight="true"
+            android:id="@+id/iv_close_blue"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:layout_width="@dimen/dp_16"
+            android:layout_height="@dimen/dp_16"
+            android:src="@drawable/img_del_red" />
+    </RelativeLayout>
+
+</layout>

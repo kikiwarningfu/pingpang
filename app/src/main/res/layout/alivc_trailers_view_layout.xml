@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/ll_trailer_tips_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/alivc_common_bg_black_alpha_90">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_trailer_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/alivc_player_trailer_tips"
+                android:textColor="@color/alivc_common_font_white"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_trailer_open"
+                android:layout_width="111dp"
+                android:layout_height="38dp"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/alivc_player_red_rectangle_bg_trailer_shape"
+                android:gravity="center"
+                android:text="立即开通"
+                android:textColor="@color/alivc_common_font_white"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_trailer_play_again"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="16dp"
+                android:layout_marginRight="6dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/alivc_player_icon_trailer_play_again" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="重新观看"
+                android:textColor="@color/alivc_common_font_white"
+                android:textSize="14sp" />
+
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_trailer_play_tips_root"
+        android:layout_width="160dp"
+        android:layout_height="38dp"
+        android:layout_gravity="bottom"
+        android:layout_margin="10dp"
+        android:background="@drawable/alivc_player_bg_trailer_play_tips"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/alivc_player_icon_trailer_vip_tips" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="5dp"
+            android:textColor="@color/alivc_common_font_white"
+            android:text="试看前5分钟"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/alivc_player_icon_right_back_arrow" />
+
+    </LinearLayout>
+
+</FrameLayout>

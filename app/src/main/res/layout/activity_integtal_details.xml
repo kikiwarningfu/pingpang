@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/dp_12"
+    android:layout_marginRight="@dimen/dp_12"
+    android:padding="@dimen/dp_1"
+  >
+
+    <TextView
+        android:id="@+id/tv_title_against_the_list"
+        android:layout_width="@dimen/dp_100"
+        android:layout_height="@dimen/dp_30"
+        android:background="@drawable/shape_solid_stroke_gray_jisuan_title"
+        android:gravity="center"
+        android:text="对阵名单"
+        android:textColor="#0C3177"
+        android:textSize="@dimen/sp_13"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/rv_top_intergal_detail"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_top_intergal_detail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@+id/rv_intergal_detail"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_intergal_detail"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp_150"
+        app:layout_constraintLeft_toRightOf="@+id/rv_left_intergal_detail"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rv_top_intergal_detail" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_left_intergal_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_150"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@id/rv_intergal_detail" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

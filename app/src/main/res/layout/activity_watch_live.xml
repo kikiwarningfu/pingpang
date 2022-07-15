@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="listener"
+            type="android.view.View.OnClickListener" />
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/activity_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/foreground_video"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <ImageView
+            android:id="@+id/iv_finish_logo"
+            android:layout_width="@dimen/dp_10"
+            android:layout_height="@dimen/dp_18"
+            android:layout_marginLeft="@dimen/dp_12"
+            android:layout_marginTop="@dimen/dp_33"
+            android:onClick="@{v->listener.onClick(v)}"
+            android:src="@drawable/img_left_back_write" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_55"
+            android:layout_below="@id/iv_finish_logo"
+            android:layout_marginLeft="@dimen/dp_12"
+            android:layout_marginTop="@dimen/dp_13"
+            android:layout_marginRight="@dimen/dp_12"
+            android:background="@drawable/shape_live_write_stroke">
+
+            <ImageView
+                android:id="@+id/iv_left_logo"
+                android:layout_width="@dimen/dp_42"
+                android:layout_height="@dimen/dp_42"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp_7"
+                android:scaleType="centerCrop"
+                android:src="@drawable/morentouxiang" />
+
+            <TextView
+                android:id="@+id/tv_left_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp_14"
+                android:layout_toRightOf="@id/iv_left_logo"
+                android:text="张三"
+                android:textColor="#fffefefe"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="0:0"
+                android:textColor="#fffefefe"
+                android:textSize="30sp" />
+
+            <ImageView
+                android:id="@+id/img_right_logo"
+                android:layout_width="@dimen/dp_42"
+                android:layout_height="@dimen/dp_42"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+
+                android:layout_marginRight="@dimen/dp_7"
+                android:src="@drawable/morentouxiang" />
+
+            <TextView
+                android:id="@+id/tv_right_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dp_14"
+                android:layout_toLeftOf="@id/img_right_logo"
+                android:text="李四"
+                android:textColor="#fffefefe"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_right_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/dp_42"
+            android:layout_marginRight="@dimen/dp_11"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="观看人数："
+                android:textColor="#ffffffff"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tv_see_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="11W"
+                android:textColor="#FF7500"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_room_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_42"
+            android:layout_marginRight="@dimen/dp_28"
+            android:layout_toLeftOf="@id/ll_right_container"
+            android:text="房间号：1234657"
+            android:textColor="#ffcecece"
+            android:textSize="12sp" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/message_list"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/dp_25"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_140"
+            android:paddingStart="@dimen/dp_12"
+            android:paddingEnd="@dimen/dp_12"/>
+        <LinearLayout
+            android:layout_marginBottom="@dimen/dp_202"
+            android:layout_marginLeft="@dimen/dp_12"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/shape_live_bg_corners"
+            android:layout_width="@dimen/dp_262"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:paddingLeft="@dimen/dp_20"
+                android:paddingRight="@dimen/dp_17"
+                android:paddingTop="@dimen/dp_16"
+                android:paddingBottom="@dimen/dp_18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="欢迎来到小亮直播间，小亮倡导绿色健康
+直播，直播内容和评论严禁包含政治，禁
+止低俗直播，若有违反将封号处理"
+                android:textColor="#fff0b62c"
+                android:textSize="12sp"
+                />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</layout>
+

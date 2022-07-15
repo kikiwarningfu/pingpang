@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/dp_16"
+        android:paddingBottom="@dimen/dp_16">
+
+        <TextView
+            android:id="@+id/tv_position"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_12"
+            android:text="第二盘"
+            android:textColor="#ff333333"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tv_double_give_up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_13"
+            android:background="@drawable/shape_gray_stroke_13"
+            android:paddingLeft="@dimen/dp_8"
+            android:paddingTop="@dimen/dp_6"
+            android:paddingRight="@dimen/dp_8"
+            android:paddingBottom="@dimen/dp_6"
+            android:text="双弃权"
+            android:textColor="#ff999999"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_left_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_18"
+            android:layout_marginRight="@dimen/dp_18"
+            android:text="陈胜云"
+            android:textColor="#ff333333"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_left_give_up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_gray_stroke_13"
+            android:paddingLeft="@dimen/dp_8"
+            android:paddingTop="@dimen/dp_6"
+            android:paddingRight="@dimen/dp_8"
+            android:paddingBottom="@dimen/dp_6"
+            android:text="弃权"
+            android:textColor="#ff999999"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_right_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_18"
+            android:layout_marginRight="@dimen/dp_18"
+            android:text="迪丽热巴\n迪丽热巴"
+            android:textColor="#ff333333"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_right_give_up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_gray_stroke_13"
+            android:paddingLeft="@dimen/dp_8"
+            android:paddingTop="@dimen/dp_6"
+            android:paddingRight="@dimen/dp_8"
+            android:paddingBottom="@dimen/dp_6"
+            android:text="弃权"
+            android:textColor="#ff999999"
+            android:textSize="12sp" />
+    </LinearLayout>
+</layout>

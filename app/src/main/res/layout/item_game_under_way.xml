@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_90"
+        android:layout_marginLeft="@dimen/dp_12"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_12"
+        android:background="@drawable/shape_yellow_corners_stroke">
+
+        <View
+            android:id="@+id/left_bg"
+            android:layout_width="@dimen/dp_9"
+            android:layout_height="match_parent"
+            android:background="@drawable/shape_vs_left_corners"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_round"
+            android:layout_width="@dimen/dp_20"
+            android:layout_height="@dimen/dp_20"
+            android:layout_marginLeft="@dimen/dp_9"
+            android:layout_marginTop="@dimen/dp_8"
+            android:background="@drawable/shape_blue_corners_20_stroke"
+            android:gravity="center"
+            android:text="120"
+            android:textColor="#4795ED"
+            android:textSize="@dimen/sp_11"
+            app:layout_constraintStart_toEndOf="@+id/left_bg"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_name_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintVertical_chainStyle="packed"
+            android:text="张史蒂"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:textColor="#ff333333"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/tv_vs"
+            app:layout_constraintStart_toEndOf="@+id/left_bg"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_vs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_2"
+            android:layout_marginRight="@dimen/dp_2"
+
+            android:text="VS"
+            android:textColor="#ffffd366"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/divider"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_name_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constrainedWidth="true"
+            android:text="临猗老凤是的奥迪阿斯顿祥1"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:textColor="#ff333333"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/divider"
+            app:layout_constraintStart_toEndOf="@+id/tv_vs"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!--<TextView
+            android:id="@+id/tv_title"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/dp_21"
+            android:layout_marginBottom="@dimen/dp_17"
+            android:text="2020盐湖区乒乓球友谊赛男子单打"
+            android:textColor="#ff333333"
+            android:textSize="11sp" />-->
+        <View
+            android:id="@+id/divider"
+            android:layout_width="@dimen/dp_0_5"
+            android:layout_height="0dp"
+            android:background="#FFFFD524"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_max="wrap"
+            app:layout_constraintHeight_percent="0.6"
+            app:layout_constraintHorizontal_bias="0.65"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tc_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="2:0"
+            android:textColor="#ff333333"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/tv_update_status"
+            app:layout_constraintEnd_toEndOf="@+id/tv_update_status"
+            app:layout_constraintStart_toStartOf="@+id/tv_update_status"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_update_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_club_blue_15"
+            android:paddingLeft="@dimen/dp_17"
+            android:paddingTop="@dimen/dp_5"
+            android:paddingRight="@dimen/dp_17"
+            android:paddingBottom="@dimen/dp_5"
+            android:text="修改"
+            android:textColor="#FFFFFFFF"
+            android:textSize="@dimen/sp_15"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/divider"
+            app:layout_constraintTop_toBottomOf="@+id/tc_score" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

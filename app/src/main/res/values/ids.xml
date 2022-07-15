@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="invalid_click" type="id" />
+    <item name="text_view_tianqiyubao" type="id"/>
+    <item name="text_view_jiating" type="id"/>
+    <item name="text_view_zhishu" type="id"/>
+    <item name="text_view_wenzhang" type="id"/>
+    <item name="text_view_shebei" type="id"/>
+    <item name="text_view_qiandao" type="id"/>
+    <item name="text_view_zixun" type="id"/>
+    <item name="text_view_zhoubian" type="id"/>
+
+    <item name="last_click_time" type="id"/>
+</resources>

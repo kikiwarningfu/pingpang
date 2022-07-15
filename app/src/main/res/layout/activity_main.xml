@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipChildren="false">
+
+            <FrameLayout
+                android:id="@+id/fl_main"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/dp_56"
+                android:background="#fff">
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_56"
+                android:layout_alignParentBottom="true"
+                android:clipChildren="false"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/ll_home_page"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:paddingTop="@dimen/dp_9">
+
+
+                    <ImageView
+                        android:id="@+id/iv_home_page"
+                        android:layout_width="@dimen/dp_23"
+                        android:layout_height="@dimen/dp_23"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="@dimen/dp_5"
+                        android:src="@drawable/rb_homepage_selected" />
+
+                    <TextView
+                        android:id="@+id/tv_home_page"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="@dimen/dp_4"
+                        android:layout_weight="1"
+                        android:text="首页"
+                        android:textSize="@dimen/sp_11" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/ll_club"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+
+                    android:orientation="vertical"
+                    android:paddingTop="@dimen/dp_9">
+
+                    <ImageView
+                        android:id="@+id/iv_club"
+                        android:layout_width="@dimen/dp_23"
+                        android:layout_height="@dimen/dp_23"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="@dimen/dp_5"
+                        android:src="@drawable/rb_club_unselected" />
+
+                    <TextView
+                        android:id="@+id/tv_club"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="@dimen/dp_4"
+                        android:layout_weight="1"
+                        android:text="俱乐部"
+                        android:textSize="@dimen/sp_11" />
+                </LinearLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/ll_competition"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dp_80"
+                    android:layout_gravity="bottom"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:scaleType="centerCrop">
+
+                    <ImageView
+                        android:layout_centerHorizontal="true"
+                        android:id="@+id/iv_competition"
+                        android:layout_width="@dimen/dp_62"
+                        android:layout_height="@dimen/dp_62"
+                        android:layout_gravity="center_horizontal"
+
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/img_saishi" />
+
+                    <TextView
+                        android:layout_centerHorizontal="true"
+                        android:layout_alignParentBottom="true"
+                        android:id="@+id/tv_competition"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="@dimen/dp_3"
+                        android:gravity="bottom"
+                        android:text="赛事"
+                        android:textSize="@dimen/sp_11" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_shop_mall"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:paddingTop="@dimen/dp_9">
+
+                    <ImageView
+                        android:id="@+id/iv_shop_mall"
+                        android:layout_width="@dimen/dp_23"
+                        android:layout_height="@dimen/dp_23"
+
+
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="@dimen/dp_5"
+                        android:src="@drawable/rb_shopmall_unselected" />
+
+
+                    <TextView
+                        android:id="@+id/tv_shop_mall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="@dimen/dp_4"
+                        android:layout_weight="1"
+                        android:text="商城"
+                        android:textSize="@dimen/sp_11" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_mine"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:paddingTop="@dimen/dp_9">
+
+                    <ImageView
+                        android:id="@+id/iv_mine"
+                        android:layout_width="@dimen/dp_23"
+                        android:layout_height="@dimen/dp_23"
+
+
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="@dimen/dp_5"
+                        android:src="@drawable/rb_mine_unselected" />
+
+                    <TextView
+                        android:id="@+id/tv_mine"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="@dimen/dp_4"
+                        android:layout_weight="1"
+                        android:text="我的"
+                        android:textSize="@dimen/sp_11" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</layout>

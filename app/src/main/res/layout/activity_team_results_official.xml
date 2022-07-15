@@ -1,0 +1,1218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="listener"
+            type="android.view.View.OnClickListener" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        tools:context=".ui.homepage.activity.CreateEventsActivity">
+
+
+        <RelativeLayout
+            android:id="@+id/top_bar_relative"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/iv_finish"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingLeft="@dimen/page_padding"
+                android:paddingRight="@dimen/page_padding"
+                android:src="@drawable/icon_left_back" />
+
+            <TextView
+                android:id="@+id/tv_center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:ellipsize="marquee"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="团体比赛成绩"
+                android:textColor="#FF333333"
+                android:textSize="17sp" />
+
+            <ImageView
+                android:id="@+id/iv_right_add"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@+id/iv_right"
+                android:padding="@dimen/dp_13"
+                android:scaleType="center"
+                android:visibility="gone"
+                tools:src="@drawable/morentouxiang" />
+
+            <ImageView
+                android:id="@+id/iv_right"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:padding="@dimen/dp_13"
+                android:scaleType="center"
+                android:visibility="gone"
+                tools:src="@drawable/morentouxiang" />
+
+            <TextView
+                android:id="@+id/tv_right"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:gravity="center_vertical"
+                android:onClick="@{v->listener.onClick(v)}"
+                android:paddingLeft="@dimen/page_padding"
+                android:paddingRight="@dimen/page_padding"
+                android:text="申请修改比分"
+                android:textColor="#4795ED"
+                android:textSize="14sp"
+                android:visibility="gone" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:layout_alignParentBottom="true"
+                android:background="@color/divider"
+                android:visibility="gone" />
+
+            <TextView
+                android:visibility="gone"
+                android:onClick="@{v->listener.onClick(v)}"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/dp_12"
+                android:layout_width="26dp"
+                android:layout_height="13dp"
+                android:text="弃权"
+                android:textColor="#ffdc0d0d"
+                android:textSize="13sp"
+                />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:background="#F6F6F6" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_40"
+                        android:layout_marginBottom="@dimen/dp_20">
+
+                        <View
+                            android:layout_width="@dimen/dp_213"
+                            android:layout_height="@dimen/dp_10"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/shape_little_blude_solid_5" />
+
+                        <TextView
+                            android:id="@+id/tv_team_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="@dimen/dp_6"
+                            android:text="2020宏亮俱乐部乒乓球练习赛"
+                            android:textColor="#ff333333"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+
+                    </RelativeLayout>
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_12"
+                            android:layout_marginRight="@dimen/dp_12"
+                            android:layout_marginBottom="@dimen/dp_60"
+                            android:background="@drawable/shape_clube_grade_solid"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dp_103"
+                                android:orientation="horizontal">
+                                <!--5   11-->
+                                <LinearLayout
+                                    android:layout_width="@dimen/dp_75"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:gravity="center"
+                                        android:text="场次"
+                                        android:textColor="#ff333333"
+                                        android:textSize="18sp"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="@dimen/dp_1"
+                                    android:layout_height="match_parent"
+                                    android:background="#FFCCCCCC" />
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="11"
+                                    android:orientation="horizontal">
+
+                                    <LinearLayout
+                                        android:orientation="vertical"
+                                        android:layout_width="0dp"
+                                        android:layout_gravity="center"
+                                        android:gravity="center"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="0.7">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_alignParentRight="true"
+                                            android:orientation="vertical">
+                                            <de.hdodenhof.circleimageview.CircleImageView
+                                                android:id="@+id/iv_left_logo"
+                                                android:layout_gravity="center"
+                                                android:layout_marginTop="@dimen/dp_9"
+                                                android:src="@drawable/img_default_avatar"
+                                                android:layout_width="@dimen/dp_41"
+                                                android:layout_height="@dimen/dp_41"/>
+                                            <TextView
+                                                android:layout_marginTop="@dimen/dp_6"
+                                                android:id="@+id/tv_left_name"
+
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:gravity="center"
+                                                android:textColor="#ff333333"
+                                                android:textSize="14sp"
+                                                android:textStyle="bold" />
+                                            <!--     android:src="@drawable/img_team_host"-->
+                                            <ImageView
+                                                android:id="@+id/iv_zhu"
+                                                android:layout_width="@dimen/dp_16"
+                                                android:layout_height="@dimen/dp_16"
+                                                android:layout_gravity="center"
+                                                android:layout_marginTop="@dimen/dp_6"
+                                                />
+                                        </LinearLayout>
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="center"
+                                        android:layout_weight="0.4"
+                                        android:gravity="center">
+
+                                        <ImageView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:src="@drawable/img_versus_icon" />
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:orientation="vertical"
+                                        android:layout_width="0dp"
+                                        android:gravity="center"
+                                        android:layout_gravity="center"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="0.7">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_alignParentLeft="true"
+                                            android:orientation="vertical">
+                                            <de.hdodenhof.circleimageview.CircleImageView
+                                                android:layout_marginTop="@dimen/dp_9"
+                                                android:id="@+id/iv_right_logo"
+                                                android:layout_gravity="center"
+                                                android:src="@drawable/img_default_avatar"
+                                                android:layout_width="@dimen/dp_41"
+                                                android:layout_height="@dimen/dp_41"/>
+
+                                            <TextView
+                                                android:layout_marginTop="@dimen/dp_6"
+                                                android:id="@+id/tv_right_name"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:gravity="center"
+                                                android:textColor="#ff333333"
+                                                android:textSize="14sp"
+                                                android:textStyle="bold" />
+                                            <!-- android:src="@drawable/img_team_customer"-->
+                                            <ImageView
+                                                android:id="@+id/iv_ke"
+                                                android:layout_width="@dimen/dp_16"
+                                                android:layout_height="@dimen/dp_16"
+                                                android:layout_gravity="center"
+                                                android:layout_marginTop="@dimen/dp_6"
+                                                />
+                                        </LinearLayout>
+                                    </LinearLayout>
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dp_1"
+                                android:background="#FFCCCCCC" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dp_44"
+                                android:orientation="horizontal">
+                                <!--5   11-->
+                                <LinearLayout
+                                    android:layout_width="@dimen/dp_75"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:gravity="center"
+                                        android:text="1"
+                                        android:textColor="#ff333333"
+                                        android:textSize="18sp"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="@dimen/dp_1"
+                                    android:layout_height="match_parent"
+                                    android:background="#FFCCCCCC" />
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="11"
+                                    android:orientation="horizontal">
+
+                                    <RelativeLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="0.7">
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:layout_alignParentRight="true"
+                                            android:gravity="center"
+                                            android:orientation="vertical">
+
+
+                                            <TextView
+                                                android:id="@+id/tv_one_left_name"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:gravity="center"
+                                                android:textColor="#ff333333"
+                                                android:textSize="15sp" />
+
+
+                                        </LinearLayout>
+                                    </RelativeLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="center"
+                                        android:layout_weight="1.1"
+                                        android:gravity="center">
+
+                                        <TextView
+                                            android:onClick="@{v->listener.onClick(v)}"
+                                            android:id="@+id/tv_score_one"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:textColor="#FF4795ED"
+                                            android:textSize="18sp"
+                                            android:textStyle="bold"
+                                            android:visibility="visible" />
+
+                                        <TextView
+                                            android:id="@+id/tv_start_one"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:background="@drawable/shape_club_blue"
+                                            android:paddingLeft="@dimen/dp_12"
+                                            android:paddingTop="@dimen/dp_7"
+                                            android:paddingRight="@dimen/dp_12"
+                                            android:paddingBottom="@dimen/dp_7"
+                                            android:text="开始"
+                                            android:textColor="#ffffffff"
+                                            android:textSize="13sp"
+                                            android:visibility="gone" />
+
+                                        <ImageView
+                                            android:id="@+id/iv_close_match_one"
+                                            android:layout_width="22dp"
+                                            android:layout_height="22dp"
+                                            android:src="@drawable/img_match_close"
+                                            android:visibility="gone" />
+
+                                    </LinearLayout>
+
+                                    <RelativeLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="0.7">
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:layout_alignParentLeft="true"
+                                            android:gravity="center"
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:id="@+id/tv_right_one_name"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:gravity="center"
+                                                android:textColor="#ff333333"
+                                                android:textSize="15sp" />
+                                        </LinearLayout>
+                                    </RelativeLayout>
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dp_1"
+                                android:background="#FFCCCCCC" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dp_44"
+                                android:orientation="horizontal">
+                                <!--5   11-->
+                                <LinearLayout
+                                    android:layout_width="@dimen/dp_75"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:gravity="center"
+                                        android:text="2"
+                                        android:textColor="#ff333333"
+                                        android:textSize="18sp"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="@dimen/dp_1"
+                                    android:layout_height="match_parent"
+                                    android:background="#FFCCCCCC" />
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="11"
+                                    android:orientation="horizontal">
+
+                                    <RelativeLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="0.7">
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:layout_alignParentRight="true"
+                                            android:gravity="center"
+                                            android:orientation="vertical">
+
+
+                                            <TextView
+                                                android:id="@+id/tv_two_left_name"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:gravity="center"
+                                                android:textColor="#ff333333"
+                                                android:textSize="15sp" />
+
+
+                                        </LinearLayout>
+                                    </RelativeLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="center"
+                                        android:layout_weight="1.1"
+                                        android:gravity="center">
+
+                                        <TextView
+                                            android:id="@+id/tv_score_two"
+                                            android:onClick="@{v->listener.onClick(v)}"
+
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="2 : 0"
+                                            android:textColor="#FF4795ED"
+                                            android:textSize="18sp"
+                                            android:textStyle="bold"
+                                            android:visibility="gone" />
+
+                                        <TextView
+                                            android:id="@+id/tv_start_two"
+                                            android:visibility="gone"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:background="@drawable/shape_club_blue"
+                                            android:paddingLeft="@dimen/dp_12"
+                                            android:paddingTop="@dimen/dp_7"
+                                            android:paddingRight="@dimen/dp_12"
+                                            android:paddingBottom="@dimen/dp_7"
+                                            android:text="开始"
+                                            android:textColor="#ffffffff"
+                                            android:textSize="13sp" />
+
+                                        <ImageView
+                                            android:id="@+id/iv_close_match_two"
+                                            android:layout_width="22dp"
+                                            android:layout_height="22dp"
+                                            android:src="@drawable/img_match_close"
+                                            android:visibility="gone" />
+                                    </LinearLayout>
+
+                                    <RelativeLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="0.7">
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:layout_alignParentLeft="true"
+                                            android:gravity="center"
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:id="@+id/tv_two_right_name"
+
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:gravity="center"
+                                                android:textColor="#ff333333"
+                                                android:textSize="15sp" />
+                                        </LinearLayout>
+                                    </RelativeLayout>
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dp_1"
+                                android:background="#FFCCCCCC" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dp_44"
+                                android:orientation="horizontal">
+                                <!--5   11-->
+                                <LinearLayout
+                                    android:layout_width="@dimen/dp_75"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:gravity="center"
+                                        android:text="3"
+                                        android:textColor="#ff333333"
+                                        android:textSize="18sp"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="@dimen/dp_1"
+                                    android:layout_height="match_parent"
+                                    android:background="#FFCCCCCC" />
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="11"
+                                    android:orientation="horizontal">
+
+                                    <RelativeLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="0.7">
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:layout_alignParentRight="true"
+                                            android:gravity="center"
+                                            android:orientation="vertical">
+
+
+                                            <TextView
+                                                android:id="@+id/tv_three_left_name"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:gravity="center"
+                                                android:textColor="#ff333333"
+                                                android:textSize="15sp" />
+
+
+                                        </LinearLayout>
+                                    </RelativeLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="center"
+                                        android:layout_weight="1.1"
+                                        android:gravity="center">
+
+                                        <TextView
+                                            android:onClick="@{v->listener.onClick(v)}"
+
+                                            android:id="@+id/tv_three_score"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="2 : 0"
+                                            android:textColor="#FF4795ED"
+                                            android:textSize="18sp"
+                                            android:textStyle="bold"
+                                            android:visibility="gone" />
+
+                                        <TextView
+                                            android:visibility="gone"
+                                            android:id="@+id/tv_three_start"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:background="@drawable/shape_club_blue"
+                                            android:paddingLeft="@dimen/dp_12"
+                                            android:paddingTop="@dimen/dp_7"
+                                            android:paddingRight="@dimen/dp_12"
+                                            android:paddingBottom="@dimen/dp_7"
+                                            android:text="开始"
+                                            android:textColor="#ffffffff"
+                                            android:textSize="13sp" />
+
+                                        <ImageView
+                                            android:id="@+id/iv_close_match_three"
+                                            android:layout_width="22dp"
+                                            android:layout_height="22dp"
+                                            android:src="@drawable/img_match_close"
+                                            android:visibility="gone" />
+                                    </LinearLayout>
+
+                                    <RelativeLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="0.7">
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:layout_alignParentLeft="true"
+                                            android:gravity="center"
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:id="@+id/tv_three_right_name"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:gravity="center"
+                                                android:textColor="#ff333333"
+                                                android:textSize="15sp" />
+                                        </LinearLayout>
+                                    </RelativeLayout>
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dp_1"
+                                android:background="#FFCCCCCC" />
+                            <LinearLayout
+                                android:visibility="gone"
+                                android:id="@+id/ll_container_competition"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/dp_44"
+                                    android:orientation="horizontal">
+                                    <!--5   11-->
+                                    <LinearLayout
+                                        android:layout_width="@dimen/dp_75"
+                                        android:layout_height="match_parent"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:gravity="center"
+                                            android:text="4"
+                                            android:textColor="#ff333333"
+                                            android:textSize="18sp"
+                                            android:textStyle="bold" />
+                                    </LinearLayout>
+
+                                    <View
+                                        android:layout_width="@dimen/dp_1"
+                                        android:layout_height="match_parent"
+                                        android:background="#FFCCCCCC" />
+
+                                    <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="11"
+                                        android:orientation="horizontal">
+
+                                        <RelativeLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="0.7">
+
+                                            <LinearLayout
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="match_parent"
+                                                android:layout_alignParentRight="true"
+                                                android:gravity="center"
+                                                android:orientation="vertical">
+
+
+                                                <TextView
+                                                    android:id="@+id/tv_four_left_name"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_gravity="center"
+                                                    android:gravity="center"
+                                                    android:textColor="#ff333333"
+                                                    android:textSize="15sp" />
+
+
+                                            </LinearLayout>
+                                        </RelativeLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_gravity="center"
+                                            android:layout_weight="1.1"
+                                            android:gravity="center">
+
+                                            <TextView
+                                                android:id="@+id/tv_four_score"
+                                                android:onClick="@{v->listener.onClick(v)}"
+
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="2 : 0"
+                                                android:textColor="#FF4795ED"
+                                                android:textSize="18sp"
+                                                android:textStyle="bold"
+                                                android:visibility="gone" />
+
+                                            <TextView
+                                                android:visibility="gone"
+                                                android:id="@+id/tv_four_start"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:background="@drawable/shape_club_blue"
+                                                android:paddingLeft="@dimen/dp_12"
+                                                android:paddingTop="@dimen/dp_7"
+                                                android:paddingRight="@dimen/dp_12"
+                                                android:paddingBottom="@dimen/dp_7"
+                                                android:text="开始"
+                                                android:textColor="#ffffffff"
+                                                android:textSize="13sp" />
+
+                                            <ImageView
+                                                android:id="@+id/iv_close_match_four"
+                                                android:layout_width="22dp"
+                                                android:layout_height="22dp"
+                                                android:src="@drawable/img_match_close"
+                                                android:visibility="gone" />
+                                        </LinearLayout>
+
+                                        <RelativeLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="0.7">
+
+                                            <LinearLayout
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="match_parent"
+                                                android:layout_alignParentLeft="true"
+                                                android:gravity="center"
+                                                android:orientation="vertical">
+
+                                                <TextView
+                                                    android:id="@+id/tv_four_right_name"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_gravity="center"
+                                                    android:gravity="center"
+                                                    android:textColor="#ff333333"
+                                                    android:textSize="15sp" />
+                                            </LinearLayout>
+                                        </RelativeLayout>
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/dp_1"
+                                    android:background="#FFCCCCCC" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/dp_44"
+                                    android:orientation="horizontal">
+                                    <!--5   11-->
+                                    <LinearLayout
+                                        android:layout_width="@dimen/dp_75"
+                                        android:layout_height="match_parent"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:gravity="center"
+                                            android:text="5"
+                                            android:textColor="#ff333333"
+                                            android:textSize="18sp"
+                                            android:textStyle="bold" />
+                                    </LinearLayout>
+
+                                    <View
+                                        android:layout_width="@dimen/dp_1"
+                                        android:layout_height="match_parent"
+                                        android:background="#FFCCCCCC" />
+
+                                    <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="11"
+                                        android:orientation="horizontal">
+
+                                        <RelativeLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="0.7">
+
+                                            <LinearLayout
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="match_parent"
+                                                android:layout_alignParentRight="true"
+                                                android:gravity="center"
+                                                android:orientation="vertical">
+
+
+                                                <TextView
+                                                    android:id="@+id/tv_fifth_left_name"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_gravity="center"
+                                                    android:gravity="center"
+                                                    android:textColor="#ff333333"
+                                                    android:textSize="15sp" />
+
+
+                                            </LinearLayout>
+                                        </RelativeLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_gravity="center"
+                                            android:layout_weight="1.1"
+                                            android:gravity="center">
+
+                                            <TextView
+                                                android:id="@+id/tv_fifth_score"
+                                                android:onClick="@{v->listener.onClick(v)}"
+
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="2 : 0"
+                                                android:textColor="#FF4795ED"
+                                                android:textSize="18sp"
+                                                android:textStyle="bold"
+                                                android:visibility="gone" />
+
+                                            <TextView
+                                                android:visibility="gone"
+                                                android:id="@+id/tv_fifth_start"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:background="@drawable/shape_club_blue"
+                                                android:paddingLeft="@dimen/dp_12"
+                                                android:paddingTop="@dimen/dp_7"
+                                                android:paddingRight="@dimen/dp_12"
+                                                android:paddingBottom="@dimen/dp_7"
+                                                android:text="开始"
+                                                android:textColor="#ffffffff"
+                                                android:textSize="13sp" />
+
+                                            <ImageView
+                                                android:id="@+id/iv_close_match_five"
+                                                android:layout_width="22dp"
+                                                android:layout_height="22dp"
+                                                android:src="@drawable/img_match_close"
+                                                android:visibility="gone" />
+                                        </LinearLayout>
+
+                                        <RelativeLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="0.7">
+
+                                            <LinearLayout
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="match_parent"
+                                                android:layout_alignParentLeft="true"
+                                                android:gravity="center"
+                                                android:orientation="vertical">
+
+                                                <TextView
+                                                    android:id="@+id/tv_fifth_right_name"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_gravity="center"
+                                                    android:gravity="center"
+                                                    android:textColor="#ff333333"
+                                                    android:textSize="15sp" />
+                                            </LinearLayout>
+                                        </RelativeLayout>
+                                    </LinearLayout>
+
+                                </LinearLayout>
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/dp_1"
+                                    android:background="#FFCCCCCC" />
+                            </LinearLayout>
+
+
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dp_66"
+                                android:orientation="horizontal">
+                                <!--5   11-->
+                                <LinearLayout
+                                    android:layout_width="@dimen/dp_75"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:gravity="center"
+                                        android:text="比赛结果"
+                                        android:textColor="#ff333333"
+                                        android:textSize="15sp"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="@dimen/dp_1"
+                                    android:layout_height="match_parent"
+                                    android:background="#FFCCCCCC" />
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="11"
+                                    android:gravity="center"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:id="@+id/tv_left_winner_status"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginRight="@dimen/dp_21"
+                                        android:text="胜"
+                                        android:textColor="#fffb312f"
+                                        android:textSize="15sp" />
+
+                                    <FrameLayout
+                                        android:layout_width="@dimen/dp_42"
+                                        android:layout_height="@dimen/dp_50"
+                                        android:layout_marginRight="@dimen/dp_3">
+
+                                        <ImageView
+                                            android:layout_width="@dimen/dp_42"
+                                            android:layout_height="@dimen/dp_50"
+                                            android:src="@drawable/img_score_board" />
+
+                                        <RelativeLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent">
+
+                                            <TextView
+                                                android:id="@+id/tv_left_count"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_centerInParent="true"
+                                                android:text="0"
+                                                android:textColor="#ffffffff"
+                                                android:textSize="@dimen/sp_23" />
+                                        </RelativeLayout>
+                                    </FrameLayout>
+
+                                    <ImageView
+                                        android:layout_width="@dimen/dp_7"
+                                        android:layout_height="@dimen/dp_19"
+                                        android:layout_marginRight="@dimen/dp_3"
+                                        android:src="@drawable/img_colon_icon" />
+
+                                    <FrameLayout
+                                        android:layout_width="@dimen/dp_42"
+                                        android:layout_height="@dimen/dp_50"
+                                        android:layout_marginRight="@dimen/dp_19">
+
+                                        <ImageView
+                                            android:layout_width="@dimen/dp_42"
+                                            android:layout_height="@dimen/dp_50"
+                                            android:src="@drawable/img_score_board" />
+
+                                        <RelativeLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent">
+
+                                            <TextView
+                                                android:id="@+id/tv_right_count"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_centerInParent="true"
+                                                android:text="0"
+                                                android:textColor="#ffffffff"
+                                                android:textSize="@dimen/sp_23" />
+                                        </RelativeLayout>
+                                    </FrameLayout>
+
+                                    <TextView
+                                        android:id="@+id/tv_right_winner_status"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginRight="@dimen/dp_21"
+                                        android:text="负"
+                                        android:textColor="#fffb312f"
+                                        android:textSize="15sp" />
+                                </LinearLayout>
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <ImageView
+                            android:visibility="gone"
+                            android:layout_width="@dimen/dp_85"
+                            android:layout_height="@dimen/dp_85"
+                            android:layout_gravity="bottom|right"
+                            android:layout_marginTop="@dimen/dp_20"
+                            android:layout_marginRight="@dimen/dp_22"
+                            android:src="@drawable/img_special_seal" />
+                    </FrameLayout>
+
+
+                    <TextView
+                        android:id="@+id/tv_end_competition"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_12"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:layout_marginBottom="@dimen/dp_30"
+                        android:layout_marginRight="@dimen/dp_12"
+                        android:background="@drawable/shape_club_blue"
+                        android:gravity="center"
+                        android:onClick="@{v->listener.onClick(v)}"
+                        android:paddingTop="@dimen/dp_13"
+                        android:paddingBottom="@dimen/dp_12"
+                        android:text="结束比赛"
+                        android:textColor="#ffffffff"
+                        android:textSize="15sp"
+                        android:visibility="visible" />
+
+
+                    <LinearLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_26"
+                        android:layout_marginTop="@dimen/dp_20"
+                        android:layout_marginRight="@dimen/dp_26"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="@dimen/dp_110"
+                                android:layout_height="@dimen/dp_50"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/icon_test_one" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp_20"
+                                android:text="教练员签名"
+                                android:textColor="#ff333333"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp_10"
+                                android:text="（宏亮俱乐部）"
+                                android:textColor="#ff999999"
+                                android:textSize="10sp" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="@dimen/dp_30"
+                            android:layout_height="10dp" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="@dimen/dp_110"
+                                android:layout_height="@dimen/dp_50"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/icon_test_one" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp_20"
+                                android:text="裁判员签名"
+                                android:textColor="#ff333333"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp_10"
+                                android:text="（宏亮俱乐部）"
+                                android:textColor="#ff999999"
+                                android:textSize="10sp" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="@dimen/dp_30"
+                            android:layout_height="10dp" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/dp_50"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/icon_test_one" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp_20"
+                                android:text="教练员签名"
+                                android:textColor="#ff333333"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp_10"
+                                android:text="（宏亮俱乐部）"
+                                android:textColor="#ff999999"
+                                android:textSize="10sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+</layout>

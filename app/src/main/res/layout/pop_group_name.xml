@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent_20">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="@dimen/dp_27"
+        android:layout_marginRight="@dimen/dp_27"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_20"
+            android:layout_marginBottom="@dimen/dp_14"
+            android:gravity="center"
+            android:text="组别名称"
+            android:textColor="#ff333333"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginLeft="@dimen/dp_60"
+            android:layout_marginRight="@dimen/dp_40"
+            android:layout_marginBottom="@dimen/dp_30"
+
+            android:background="@drawable/shape_group_corners_solid"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/et_group_name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:hint="请输入新建的组别名称"
+                android:paddingLeft="@dimen/dp_8"
+                android:textColorHint="#999999"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_12" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_19"
+            android:layout_marginBottom="@dimen/dp_20"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/btnSubmit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_30"
+                android:layout_marginRight="@dimen/dp_20"
+                android:layout_weight="1.1"
+                android:background="@drawable/shape_club_blue"
+                android:gravity="center"
+                android:paddingTop="@dimen/dp_11"
+                android:paddingBottom="@dimen/dp_11"
+                android:text="确定"
+                android:textColor="#ffffffff"
+                android:textSize="18sp" />
+
+            <View
+                android:id="@+id/view_divider"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_40"
+                android:layout_weight="0.4"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/btnCancel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_marginRight="@dimen/dp_30"
+                android:layout_weight="1.1"
+                android:background="@drawable/shape_club_gray"
+                android:gravity="center"
+                android:paddingTop="@dimen/dp_11"
+                android:paddingBottom="@dimen/dp_11"
+                android:text="取消"
+                android:textColor="#ffffffff"
+                android:textSize="18sp"
+                android:visibility="visible" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

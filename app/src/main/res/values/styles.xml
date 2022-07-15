@@ -1,0 +1,185 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:homeAsUpIndicator">@drawable/fanhui</item>
+        <item name="topbar_background">@color/topbar_background_color</item>
+        <item name="android:overScrollMode">never</item>
+        <item name="android:lineSpacingMultiplier">1.2</item>
+        <item name="android:listDivider">@drawable/divider_match_parent</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:windowBackground">@android:color/white</item>
+    </style>
+   <!-- <declare-styleable name="SegmentTabLayout">
+        &lt;!&ndash; indicator &ndash;&gt;
+        <attr name="tl_indicator_color" format="color"/>
+        <attr name="tl_indicator_height" format="dimension"/>
+        <attr name="tl_indicator_margin_left" format="dimension"/>
+        <attr name="tl_indicator_margin_top" format="dimension"/>
+        <attr name="tl_indicator_margin_right" format="dimension"/>
+        <attr name="tl_indicator_margin_bottom" format="dimension"/>
+        <attr name="tl_indicator_corner_radius" format="dimension"/>
+        <attr name="tl_indicator_anim_enable" format="boolean"/>
+        <attr name="tl_indicator_anim_duration" format="integer"/>
+        <attr name="tl_indicator_bounce_enable" format="boolean"/>
+
+        &lt;!&ndash; divider &ndash;&gt;
+        <attr name="tl_divider_color"  format="color"/>
+        <attr name="tl_divider_width"  format="dimension"/>
+        <attr name="tl_divider_padding"  format="dimension"/>
+
+        &lt;!&ndash; tab &ndash;&gt;
+        <attr name="tl_tab_padding"  format="dimension"/>
+        <attr name="tl_tab_space_equal" format="boolean"/>
+        <attr name="tl_tab_width" format="dimension"/>
+
+        &lt;!&ndash; title &ndash;&gt;
+        <attr name="tl_textsize"  format="dimension"/>
+        <attr name="tl_textSelectColor" format="color"/>
+        <attr name="tl_textUnselectColor"  format="color"/>
+        <attr name="tl_textBold"  format="dimension"/>
+        <attr name="tl_textAllCaps" format="boolean"/>
+
+        <attr name="tl_bar_color" format="color"/>
+        <attr name="tl_bar_stroke_color" format="color"/>
+        <attr name="tl_bar_stroke_width" format="dimension"/>
+
+    </declare-styleable>-->
+    <style name="WheelDialog" parent="android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowBackground">@null</item>
+    </style>
+    <declare-styleable name="WheelView">
+        <attr name="wheelTextColor" format="color"/>
+        <attr name="wheelTextSize" format="dimension"/>
+        <attr name="wheelShowCount" format="integer"/>
+        <attr name="wheelTotalOffsetX" format="dimension"/>
+        <attr name="wheelItemVerticalSpace" format="dimension"/>
+        <attr name="wheelRotationX" format="float"/>
+        <attr name="wheelVelocityUnits" format="integer"/>
+    </declare-styleable>
+    <!--MaxHeightLayout 使用-->
+    <declare-styleable name="mMaxRatio">
+        <attr name="linear_max_ratio" format="float"></attr>
+    </declare-styleable>
+    <declare-styleable name="WheelMaskView">
+        <attr name="wheelMaskLineColor" format="color"/>
+    </declare-styleable>
+
+    <style name="DialogStyle" parent="@android:style/Theme.Dialog">
+
+        <!-- 背景透明 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <!-- 浮于Activity之上 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 边框 -->
+        <item name="android:windowFrame">@null</item>
+        <!-- Dialog以外的区域模糊效果 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!-- 无标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 半透明 -->
+        <item name="android:windowIsTranslucent">false</item>
+        <!-- Dialog进入及退出动画 -->
+        <item name="android:windowAnimationStyle">@null</item>
+    </style>
+    <!--APP的底部导航-->
+    <style name="itemTextAppearanceActive">
+        <item name="android:textSize">@dimen/sp11</item>
+    </style>
+    <!-- 自定义仿IOS的AlertDialog的样式 -->
+    <style name="AlertDialogStyle" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+    <!--设置冷启动画面-->
+    <style name="AppTheme.Launcher" parent="Theme.AppCompat.Light.NoActionBar">
+        <!--        <item name="android:windowBackground">@drawable/img_splash</item>-->
+        <!--        <item name="android:windowFullscreen">true</item>-->
+        <!--        <item name="android:windowDrawsSystemBarBackgrounds">false</item>-->
+        <!--        <item name="windowActionBar">false</item>-->
+        <!--        <item name="windowNoTitle">true</item>-->
+        <!--        <item name="android:windowBackground">@drawable/bg_splash_lay_list</item>-->
+        <item name="android:windowBackground">@drawable/launch_screen</item>
+    </style>
+
+    <style name="Transparent">
+        <item name="android:windowBackground">@color/transparent_background</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Translucent</item>
+    </style>
+    <style name="action_sheet_seek_bar">
+        <item name="android:minHeight">@dimen/live_room_action_sheet_seek_bar_height</item>
+        <item name="android:maxHeight">@dimen/live_room_action_sheet_seek_bar_height</item>
+        <item name="android:progressDrawable">@drawable/setting_progress</item>
+        <item name="android:thumb">@drawable/seekbar_thumb</item>
+    </style>
+
+    <style name="action_sheet_beauty_seek_bar" parent="action_sheet_seek_bar">
+        <item name="android:max">10</item>
+    </style>
+    <style name="live_room_dialog" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:backgroundDimAmount">0</item>
+    </style>
+    <style name="live_room_dialog_center_in_window" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:windowBackground">@color/gray_alpha2</item>
+    </style>
+    <style name="CustomMaterialAlertDialog" parent="ThemeOverlay.MaterialComponents.MaterialAlertDialog">
+        <item name="android:textAppearance">?attr/textAppearanceButton</item>
+    </style>
+
+    <style name="seat_item_dialog" parent="live_room_dialog">
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowCloseOnTouchOutside">true</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="host_in_seat_dialog_item_text">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/live_host_in_seat_item_height</item>
+        <item name="android:textAlignment">gravity</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="gift_anim_window">
+        <item name="android:windowFullscreen">true</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+    <style name="host_in_seat_dialog_item_divider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/live_host_in_seat_item_dialog_stroke_width</item>
+        <item name="android:layout_marginStart">@dimen/live_host_in_seat_item_padding</item>
+        <item name="android:layout_marginEnd">@dimen/live_host_in_seat_item_padding</item>
+        <item name="android:background">@android:color/white</item>
+    </style>
+    <style name="voice_action_sheet_button">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingTop">@dimen/live_room_action_sheet_voice_button_text_padding_vertical</item>
+        <item name="android:paddingBottom">@dimen/live_room_action_sheet_voice_button_text_padding_vertical</item>
+        <item name="android:paddingStart">@dimen/live_room_action_sheet_voice_button_text_padding_horizontal</item>
+        <item name="android:paddingEnd">@dimen/live_room_action_sheet_voice_button_text_padding_horizontal</item>
+        <item name="android:textAlignment">gravity</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/action_sheet_button_bg</item>
+    </style>
+</resources>

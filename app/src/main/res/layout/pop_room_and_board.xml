@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent_20">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="@dimen/dp_27"
+        android:layout_marginRight="@dimen/dp_27"
+        android:background="@drawable/shape_write_corners_5"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dp_20"
+            android:layout_marginBottom="@dimen/dp_14"
+            android:gravity="center"
+            android:text="请输入需要食宿服务的人数"
+            android:textColor="#ff333333"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/dp_19"
+            android:gravity="center"
+            android:text="（如果无人需要，请填0,最大数量应不大于报名人数）"
+            android:textColor="#ff666666"
+            android:textSize="12sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_60"
+            android:layout_marginRight="@dimen/dp_60"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/et_text_people"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_40"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/shape_f6_solid_blue_corners"
+                android:gravity="center_vertical"
+                android:inputType="number"
+                android:paddingLeft="@dimen/dp_13"
+                android:textColor="#333333"
+                android:textColorHint="#666666"
+                android:textSize="@dimen/sp_20" />
+
+            <TextView
+                android:id="@+id/tv_error"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_5"
+                android:layout_marginBottom="@dimen/dp_20"
+                android:text="填写数量不能大于报名人数"
+                android:textColor="#fff0180c"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_19"
+            android:layout_marginBottom="@dimen/dp_20"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_sure"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_30"
+                android:layout_marginRight="@dimen/dp_20"
+                android:layout_weight="1.1"
+                android:background="@drawable/shape_club_blue"
+                android:gravity="center"
+                android:paddingTop="@dimen/dp_11"
+                android:paddingBottom="@dimen/dp_11"
+                android:text="确定"
+                android:textColor="#ffffffff"
+                android:textSize="18sp" />
+
+            <View
+                android:id="@+id/view_divider"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_40"
+                android:layout_weight="0.4"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/tv_cancel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_marginRight="@dimen/dp_30"
+                android:layout_weight="1.1"
+                android:background="@drawable/shape_club_gray"
+                android:gravity="center"
+                android:paddingTop="@dimen/dp_11"
+                android:paddingBottom="@dimen/dp_11"
+                android:text="取消"
+                android:textColor="#ffffffff"
+                android:textSize="18sp"
+                android:visibility="visible" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

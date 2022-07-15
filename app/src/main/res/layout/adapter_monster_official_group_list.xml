@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/dp_94"
+    android:background="@drawable/shape_item_title_top_left_write_solid"
+    android:layout_height="@dimen/dp_45"
+    android:id="@+id/ll_content"
+    android:orientation="vertical"
+    android:gravity="center"
+ >
+    <TextView
+        android:gravity="center"
+        android:id="@+id/tv_group_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:lines="1"
+        android:maxEms="13"
+        android:ellipsize="end"
+        android:textColor="#ff333333"
+        android:textSize="13sp"
+        />
+    <TextView
+        android:gravity="center"
+        android:id="@+id/tv_group_club_name"
+        android:layout_marginTop="@dimen/dp_5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="#ff999999"
+        android:textSize="10sp"
+        />
+</LinearLayout>

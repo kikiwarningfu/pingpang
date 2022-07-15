@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_10"
+            android:background="@color/color_f5" />
+
+        <TextView
+            android:layout_marginTop="@dimen/dp_13"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_12"
+            android:layout_marginRight="@dimen/dp_12"
+            android:layout_marginBottom="@dimen/dp_6"
+            android:text="2021年“小亮杯”北京市大兴区荣华北路林肯公园乒乓公..."
+            android:textColor="#ff333333"
+            android:textSize="13sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_180">
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/icon_test_one" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/dp_8"
+                android:layout_marginRight="@dimen/dp_13"
+                android:background="@drawable/shape_order_tack_bg"
+                android:paddingLeft="@dimen/dp_7"
+                android:paddingTop="@dimen/dp_4"
+                android:paddingRight="@dimen/dp_8"
+                android:paddingBottom="@dimen/dp_4"
+                android:text="试看"
+                android:textColor="#ffffffff"
+                android:textSize="10sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40">
+            <TextView
+                android:id="@+id/tv_table_num"
+                android:layout_marginLeft="@dimen/dp_12"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="8台"
+                android:textColor="#ff333333"
+                android:textSize="13sp"
+                />
+            <TextView
+                android:layout_marginLeft="@dimen/dp_23"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/tv_table_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="11:00"
+                android:textColor="#ff333333"
+                android:textSize="13sp"
+                />
+            <TextView
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="苏察哈尔灿  VS  古力娜扎"
+                android:textColor="#ff333333"
+                android:textSize="13sp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/dp_6"
+                android:paddingBottom="@dimen/dp_6"
+                android:paddingLeft="@dimen/dp_10"
+                android:paddingRight="@dimen/dp_10"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/dp_9"
+                android:background="#4795ED"
+                android:layout_centerVertical="true"
+                android:text="观看视频"
+                android:textColor="#ffffffff"
+                android:textSize="12sp"
+                />
+        </RelativeLayout>
+
+    </LinearLayout>
+</layout>

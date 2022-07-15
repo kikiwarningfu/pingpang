@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="listener"
+            type="android.view.View.OnClickListener" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_f5"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/iv_finish"
+                android:onClick="@{v->listener.onClick(v)}"
+                android:layout_width="@dimen/dp_11"
+                android:layout_height="@dimen/dp_20"
+                android:layout_margin="@dimen/dp_12"
+                android:src="@drawable/img_left_back" />
+
+            <RelativeLayout
+                android:id="@+id/ll_search"
+                android:onClick="@{v->listener.onClick(v)}"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_30"
+                android:layout_marginLeft="@dimen/dp_34"
+                android:layout_marginTop="@dimen/dp_7"
+                android:layout_marginRight="@dimen/dp_20"
+                android:background="@drawable/shape_live_search"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/iv_logo"
+                    android:visibility="visible"
+                    android:layout_width="@dimen/dp_18"
+                    android:layout_height="@dimen/dp_18"
+                    android:layout_marginLeft="@dimen/dp_9"
+                    android:src="@drawable/img_search_gray" />
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_9"
+                    android:layout_marginTop="@dimen/dp_2"
+                    android:layout_toRightOf="@id/iv_logo"
+                    android:textColor="#ff666666"
+                    android:textSize="13sp" />
+                <ImageView
+                    android:visibility="gone"
+                    android:id="@+id/iv_clear"
+                    android:onClick="@{v->listener.onClick(v)}"
+                    android:layout_marginRight="@dimen/dp_11"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/img_live_search_game_close"
+                    android:layout_width="@dimen/dp_17"
+                    android:layout_height="@dimen/dp_17"/>
+            </RelativeLayout>
+        </RelativeLayout>
+        <LinearLayout
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <View
+                android:layout_width="0dp"
+                android:layout_weight="57"
+                android:layout_height="@dimen/dp_1"/>
+            <LinearLayout
+                android:id="@+id/ll_all"
+                android:onClick="@{v->listener.onClick(v)}"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_all"
+                    android:layout_marginTop="@dimen/dp_13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp_7"
+                    android:text="全部"
+                    android:textColor="#333333"
+                    android:textSize="13sp"
+                    />
+                <View
+                    android:id="@+id/view_all"
+                    android:visibility="gone"
+                    android:background="#4795ED"
+                    android:layout_width="@dimen/dp_25"
+                    android:layout_height="1.5dp"/>
+            </LinearLayout>
+            <View
+                android:layout_width="0dp"
+                android:layout_weight="86"
+                android:layout_height="@dimen/dp_1"/>
+            <LinearLayout
+                android:id="@+id/ll_zhuanye"
+                android:onClick="@{v->listener.onClick(v)}"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_zhuanye"
+                    android:layout_marginTop="@dimen/dp_13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp_7"
+                    android:text="专业级"
+                    android:textColor="#333333"
+                    android:textSize="13sp"
+                    />
+                <View
+                    android:id="@+id/view_zhuanye"
+                    android:visibility="gone"
+                    android:background="#4795ED"
+                    android:layout_width="@dimen/dp_25"
+                    android:layout_height="1.5dp"/>
+            </LinearLayout>
+            <View
+                android:layout_width="0dp"
+                android:layout_weight="68"
+                android:layout_height="@dimen/dp_1"/>
+            <LinearLayout
+                android:id="@+id/ll_yeyu"
+                android:onClick="@{v->listener.onClick(v)}"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_yeyu"
+                    android:layout_marginTop="@dimen/dp_13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp_7"
+                    android:text="业余级"
+                    android:textColor="#333333"
+                    android:textSize="13sp"
+                    />
+                <View
+                    android:id="@+id/view_yeyu"
+                    android:visibility="gone"
+                    android:background="#4795ED"
+                    android:layout_width="@dimen/dp_25"
+                    android:layout_height="1.5dp"/>
+            </LinearLayout>
+            <View
+                android:layout_width="0dp"
+                android:layout_weight="62"
+                android:layout_height="@dimen/dp_1"/>
+        </LinearLayout>
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+
+</layout>

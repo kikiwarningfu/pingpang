@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:background="#CCCCCC" />
+
+        <LinearLayout
+            android:id="@+id/ll_container"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:background="#FFFFFF"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_left_one"
+                android:layout_width="@dimen/dp_57"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="1台"
+                android:textColor="#FF333333"
+                android:textSize="@dimen/sp_15"
+                 />
+
+            <View
+                android:layout_width="@dimen/dp_1"
+                android:layout_height="match_parent"
+                android:background="#CCCCCC" />
+
+            <TextView
+                android:id="@+id/tv_all"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="总场次"
+                android:textColor="#333333"
+                android:textSize="@dimen/sp_13" />
+
+            <View
+                android:layout_width="@dimen/dp_1"
+                android:layout_height="match_parent"
+                android:background="#CCCCCC" />
+
+            <TextView
+                android:id="@+id/tv_wancheng"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="已完成"
+                android:textColor="#333333"
+                android:textSize="@dimen/sp_13" />
+
+            <View
+                android:layout_width="@dimen/dp_1"
+                android:layout_height="match_parent"
+                android:background="#CCCCCC" />
+
+            <TextView
+                android:id="@+id/tv_bisai_ing"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="比赛中"
+                android:textColor="#333333"
+                android:textSize="@dimen/sp_13" />
+
+            <View
+                android:layout_width="@dimen/dp_1"
+                android:layout_height="match_parent"
+                android:background="#CCCCCC" />
+
+            <TextView
+                android:id="@+id/tv_daisai"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="待赛"
+                android:textColor="#333333"
+                android:textSize="@dimen/sp_13" />
+
+            <View
+                android:layout_width="@dimen/dp_1"
+                android:layout_height="match_parent"
+                android:background="#CCCCCC" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:gravity="center"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+                <TextView
+                    android:id="@+id/tv_right_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="岳亚红"
+                    android:lines="1"
+                    android:maxEms="4"
+                    android:ellipsize="end"
+                    android:textColor="#4795ED"
+                    android:textSize="@dimen/sp_13"
+                    android:textStyle="bold" />
+                <ImageView
+                    android:id="@+id/iv_add"
+                    android:visibility="gone"
+                    android:layout_gravity="center"
+                    android:layout_width="@dimen/dp_19"
+                    android:layout_height="@dimen/dp_19"
+                    android:src="@drawable/img_chief_add"/>
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+</layout>

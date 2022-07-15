@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+                name="listener"
+                type="android.view.View.OnClickListener" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/color_f5"
+            android:orientation="vertical"
+            tools:context=".ui.homepage.activity.CreateEventsActivity">
+
+
+        <heyong.handong.framework.widget.TopBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:centerText="俱乐部（管理人员）报名通道" />
+
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="#F6F6F6" />
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:orientation="vertical">
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_20"
+                        android:orientation="horizontal">
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_12"
+                            android:layout_marginBottom="@dimen/dp_20"
+                            android:text="赛事名称"
+                            android:textColor="#ff333333"
+                            android:textSize="15sp" />
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_21"
+                            android:textColor="#ff333333"
+                            android:textSize="15sp" />
+                </LinearLayout>
+
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_1"
+                        android:layout_marginLeft="@dimen/dp_12"
+                        android:layout_marginRight="@dimen/dp_12"
+                        android:background="#CCCCCC" />
+
+                <LinearLayout
+                        android:layout_marginTop="@dimen/dp_22"
+                        android:id="@+id/ll_select_club_and_team"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_12"
+                        android:layout_marginRight="@dimen/dp_12"
+                        android:onClick="@{v->listener.onClick(v)}"
+                        android:orientation="horizontal">
+
+                    <TextView
+                            android:id="@+id/tv_club_text"
+                            android:layout_width="@dimen/dp_62"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/dp_17"
+                            android:text="选择俱乐
+部/团体"
+                            android:textColor="#FF333333"
+                            android:textSize="15sp" />
+
+                    <RelativeLayout
+                            android:id="@+id/ll_text_container"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/dp_40"
+                            android:layout_weight="1"
+                            android:background="@drawable/shape_solid_stroke_black_5">
+
+                        <TextView
+                                android:id="@+id/ll_text_select"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:text="请选择"
+                                android:textColor="#FF333333"
+                                android:textSize="15sp" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                            android:id="@+id/ll_bg_container"
+                            android:layout_width="@dimen/dp_45"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:background="#FF4795ED"
+                            android:gravity="center">
+
+                        <ImageView
+                                android:layout_width="@dimen/dp_21"
+                                android:layout_height="@dimen/dp_12"
+                                android:layout_gravity="center"
+                                android:src="@drawable/img_down_write" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                        android:layout_marginBottom="@dimen/dp_21"
+                        android:layout_marginTop="@dimen/dp_30"
+                        android:layout_marginLeft="@dimen/dp_13"
+                        android:layout_marginRight="@dimen/dp_17"
+                        android:layout_width="match_parent"
+                        android:layout_height="31dp"
+                        android:gravity="center"
+                        android:text="如果您有多个俱乐部，请认真选择"
+                        android:textColor="#ff999999"
+                        android:textSize="12sp"
+                        />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+                android:layout_marginTop="@dimen/dp_20"
+                android:id="@+id/tv_commit"
+                android:onClick="@{v->listener.onClick(v)}"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_40"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/dp_12"
+                android:layout_marginRight="@dimen/dp_12"
+                android:layout_marginBottom="@dimen/dp_23"
+                android:background="@drawable/shape_club_blue"
+                android:gravity="center"
+                android:text="提交"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_15" />
+
+    </LinearLayout>
+</layout>

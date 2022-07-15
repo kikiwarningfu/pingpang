@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="listener"
+            type="android.view.View.OnClickListener" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        tools:context=".ui.homepage.activity.CreateEventsActivity">
+
+
+        <heyong.handong.framework.widget.TopBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:centerText="实名认证" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:background="#F6F6F6" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:layout_height="@dimen/dp_44"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_13"
+                android:text="姓名"
+                android:textColor="#ff666666"
+                android:textSize="15sp" />
+            <EditText
+                android:textColor="@color/black"
+                android:id="@+id/et_name"
+                android:paddingRight="@dimen/dp_10"
+                android:textSize="@dimen/sp_15"
+                android:layout_gravity="right|center"
+                android:gravity="right|center"
+                android:background="@null"
+                android:hint="请输入姓名"
+                android:layout_width="0dp"
+                android:textFontWeight="1"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+            </EditText>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:layout_marginLeft="@dimen/dp_12"
+            android:layout_marginRight="@dimen/dp_12"
+            android:background="#F6F6F6" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:layout_height="@dimen/dp_44"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_13"
+                android:text="身份证号"
+                android:textColor="#ff666666"
+                android:textSize="15sp" />
+            <EditText
+                android:lines="1"
+                android:digits="0123456789xX"
+                android:id="@+id/et_identify"
+                android:textColor="@color/black"
+                android:paddingRight="@dimen/dp_10"
+                android:textSize="@dimen/sp_15"
+                android:layout_gravity="right|center"
+                android:gravity="right|center"
+                android:background="@null"
+                android:hint="请输入身份证号"
+                android:layout_width="0dp"
+                android:textFontWeight="1"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+            </EditText>
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_209"
+            android:background="#F6F6F6">
+
+            <ImageView
+                android:id="@+id/iv_logo"
+                android:layout_width="@dimen/dp_142"
+                android:layout_height="@dimen/dp_142"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:onClick="@{v->listener.onClick(v)}"
+                android:src="@drawable/img_real_name_upload" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/tv_confirm"
+            android:onClick="@{v->listener.onClick(v)}"
+            android:layout_marginLeft="@dimen/dp_30"
+            android:textSize="@dimen/sp_15"
+            android:textColor="#FEFEFE"
+            android:layout_marginRight="@dimen/dp_30"
+            android:layout_marginBottom="@dimen/dp_20"
+            android:background="@drawable/shape_club_blue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:paddingTop="@dimen/dp_13"
+            android:paddingBottom="@dimen/dp_13"
+            android:text="开始实名认证" />
+    </LinearLayout>
+</layout>

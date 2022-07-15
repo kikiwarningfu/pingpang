@@ -1,0 +1,754 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="listener"
+            type="android.view.View.OnClickListener" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        tools:context=".ui.homepage.activity.CreateEventsActivity">
+
+        <heyong.handong.framework.widget.TopBar
+            android:id="@+id/topbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:centerText="俱乐部（管理人员）报名通道" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:background="#F6F6F6" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_68"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_12"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_event_information"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_14"
+                    android:layout_marginBottom="@dimen/dp_15"
+                    android:text="选择俱乐部"
+                    android:textColor="#ff4795ed"
+                    android:textSize="13sp" />
+
+                <View
+                    android:id="@+id/view_event_information"
+                    android:layout_width="@dimen/dp_10"
+                    android:layout_height="@dimen/dp_10"
+                    android:layout_marginBottom="@dimen/dp_15"
+                    android:background="@drawable/shape_competition_blue_circle" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_45"
+                android:layout_weight="1"
+                android:src="@drawable/icon_little_point" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_charging_set"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_14"
+                    android:layout_marginBottom="@dimen/dp_15"
+                    android:text="选择参赛人员"
+                    android:textColor="#333333"
+                    android:textSize="13sp" />
+
+                <View
+                    android:id="@+id/view_charging_set"
+                    android:layout_width="@dimen/dp_10"
+                    android:layout_height="@dimen/dp_10"
+                    android:layout_marginBottom="@dimen/dp_15"
+                    android:background="@drawable/shape_competition_big_gray_circle" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_45"
+                android:layout_weight="1"
+                android:src="@drawable/icon_little_point" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/dp_12"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_competition_item"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_14"
+                    android:layout_marginBottom="@dimen/dp_15"
+                    android:text="提交申请"
+                    android:textColor="#FF333333"
+                    android:textSize="13sp" />
+
+                <View
+                    android:id="@+id/view_competition_item"
+                    android:layout_width="@dimen/dp_10"
+                    android:layout_height="@dimen/dp_10"
+                    android:layout_marginBottom="@dimen/dp_15"
+                    android:background="@drawable/shape_competition_big_gray_circle" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_10"
+            android:background="#FFF6F6F6" />
+        <!--    选择俱乐部-->
+        <LinearLayout
+            android:id="@+id/ll_select_club"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_20"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_12"
+                            android:layout_marginBottom="@dimen/dp_20"
+                            android:text="赛事名称"
+                            android:textColor="#ff333333"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/tv_match_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_21"
+                            android:text="2020盐湖区乒乓球友谊赛"
+                            android:textColor="#ff333333"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_1"
+                        android:layout_marginLeft="@dimen/dp_12"
+                        android:layout_marginRight="@dimen/dp_12"
+                        android:background="#CCCCCC" />
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_1"
+                        android:layout_marginLeft="@dimen/dp_12"
+                        android:layout_marginRight="@dimen/dp_12"
+                        android:layout_marginBottom="@dimen/dp_20"
+                        android:background="#CCCCCC" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_select_club_and_team"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_40"
+                        android:layout_marginLeft="@dimen/dp_12"
+                        android:layout_marginRight="@dimen/dp_12"
+                        android:onClick="@{v->listener.onClick(v)}"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_club_text"
+                            android:layout_width="@dimen/dp_62"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="@dimen/dp_17"
+                            android:gravity="center"
+                            android:text="选择俱乐
+部/团体"
+                            android:textColor="#FF333333"
+                            android:textSize="15sp" />
+
+                        <RelativeLayout
+                            android:id="@+id/ll_text_container"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/dp_40"
+                            android:layout_weight="1"
+                            android:background="@drawable/shape_solid_stroke_gray_5">
+
+                            <TextView
+                                android:id="@+id/ll_text_select"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:text="请选择"
+                                android:textColor="#FF666666"
+                                android:textSize="15sp" />
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_bg_container"
+                            android:layout_width="@dimen/dp_45"
+                            android:layout_height="@dimen/dp_40"
+                            android:layout_gravity="center"
+                            android:background="#FF4795ED"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:src="@drawable/img_down_write" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_30"
+                        android:layout_marginBottom="@dimen/dp_40"
+                        android:gravity="center"
+                        android:text="如果您有多个俱乐部，请认真选择"
+                        android:textColor="#ff999999"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/tv_next_step"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_30"
+                    android:layout_marginRight="@dimen/dp_30"
+                    android:layout_marginBottom="@dimen/dp_20"
+                    android:background="@drawable/shape_club_blue"
+                    android:gravity="center"
+                    android:onClick="@{v->listener.onClick(v)}"
+                    android:paddingTop="@dimen/dp_13"
+                    android:paddingBottom="@dimen/dp_13"
+                    android:text="下一步"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+        <!--选择参赛人员-->
+        <LinearLayout
+            android:id="@+id/ll_select_coach_team"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/color_f5"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_select_people_project"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@color/white" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_f5"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_marginLeft="@dimen/dp_30"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:layout_marginBottom="@dimen/dp_20"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_select_last"
+
+                        android:layout_width="@dimen/dp_125"
+                        android:layout_height="@dimen/dp_40"
+                        android:background="@drawable/shape_club_blue"
+                        android:gravity="center"
+                        android:onClick="@{v->listener.onClick(v)}"
+                        android:text="上一步"
+                        android:textColor="@color/white" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:id="@+id/tv_select_next"
+                        android:layout_width="@dimen/dp_125"
+                        android:layout_height="@dimen/dp_40"
+                        android:layout_marginRight="@dimen/dp_30"
+                        android:background="@drawable/shape_club_blue"
+                        android:gravity="center"
+                        android:onClick="@{v->listener.onClick(v)}"
+                        android:text="下一步"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+        <!--提交申请-->
+        <LinearLayout
+            android:id="@+id/ll_submit_apply"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/color_f5"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_submit_apply"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/dp_30"
+                        android:background="@color/white"
+                        android:visibility="visible" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_20"
+                        android:background="@color/white"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:id="@+id/rl_have_pay_baoming"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/dp_12"
+                                android:layout_marginTop="@dimen/dp_20"
+                                android:text="报名费"
+                                android:textColor="#ff333333"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:id="@+id/tv_baoming_money"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="@dimen/dp_21"
+                                android:text="¥200/人"
+                                android:textColor="#ff333333"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:id="@+id/tv_baoming_people"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginTop="@dimen/dp_20"
+                                android:layout_marginRight="@dimen/dp_12"
+                                android:text="共14人"
+                                android:textColor="#ff333333"
+                                android:textSize="15sp" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rl_no_have_pay_baoming"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/dp_12"
+                                android:layout_marginTop="@dimen/dp_20"
+                                android:text="报名费"
+                                android:textColor="#ff333333"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+
+                                android:layout_marginLeft="@dimen/dp_67"
+                                android:layout_marginTop="@dimen/dp_20"
+                                android:text="(本次比赛APP不代收报名费，请自行联系主办方)"
+                                android:textColor="#ff666666"
+                                android:textSize="12sp" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rl_need_eat"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/dp_12"
+                                android:layout_marginTop="@dimen/dp_25"
+                                android:text="食宿费"
+                                android:textColor="#ff333333"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:id="@+id/tv_shisu_money"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="@dimen/dp_23"
+                                android:text="¥300/人/天"
+                                android:textColor="#ff333333"
+                                android:textSize="15sp" />
+
+                            <RelativeLayout
+                                android:id="@+id/rl_select_people"
+                                android:onClick="@{v->listener.onClick(v)}"
+                                android:layout_width="@dimen/dp_95"
+                                android:layout_height="@dimen/dp_35"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginTop="@dimen/dp_15"
+                                android:layout_marginRight="@dimen/dp_12"
+                                android:background="@drawable/shape_limit_people_blue"
+                                android:visibility="visible">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="@dimen/dp_8"
+                                    android:text="选择人数"
+                                    android:textColor="#ff4795ed"
+                                    android:textSize="15sp" />
+
+                                <ImageView
+                                    android:layout_width="@dimen/dp_10"
+                                    android:layout_height="@dimen/dp_17"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginRight="@dimen/dp_10"
+                                    android:src="@drawable/img_right_back_blue" />
+                            </RelativeLayout>
+
+                            <LinearLayout
+                                android:id="@+id/ll_shisu_show"
+                                android:visibility="gone"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginTop="@dimen/dp_25"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/tv_change_people"
+                                    android:onClick="@{v->listener.onClick(v)}"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="@dimen/dp_12"
+                                    android:text="修改"
+                                    android:textColor="#ff4795ed"
+                                    android:textSize="15sp" />
+
+                                <TextView
+                                    android:id="@+id/tv_count"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="@dimen/dp_12"
+                                    android:text="共10人"
+                                    android:textColor="#ff333333"
+                                    android:textSize="15sp" />
+                            </LinearLayout>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rl_not_need_eat"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/dp_12"
+                                android:layout_marginTop="@dimen/dp_25"
+                                android:text="食宿费"
+                                android:textColor="#ff333333"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/dp_66"
+                                android:layout_marginTop="@dimen/dp_25"
+                                android:text="(本次比赛APP不代收食宿费，请自行联系主办方）"
+                                android:textColor="#ff333333"
+                                android:textSize="15sp" />
+
+
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/dp_12"
+                                android:layout_marginTop="@dimen/dp_25"
+                                android:text="食宿费"
+                                android:textColor="#ff333333"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/dp_10"
+                                android:layout_marginTop="@dimen/dp_26"
+                                android:text="(本次比赛APP不代收食宿费，请自行联系主办方）"
+                                android:textColor="#ff666666"
+                                android:textSize="15sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/dp_26"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tv_heji"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/dp_53"
+                                android:layout_marginTop="@dimen/dp_24"
+                                android:text="合计"
+                                android:textColor="#ff333333"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:id="@+id/tv_money"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/dp_69"
+                                android:layout_marginTop="@dimen/dp_25"
+                                android:text="¥0"
+                                android:textColor="#ffe53333"
+                                android:textSize="20sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:visibility="gone"
+                            android:id="@+id/ll_pay_way"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/dp_18"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="@dimen/dp_43"
+                                android:text="支付方式"
+                                android:textColor="#ff333333"
+                                android:textSize="15sp" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <CheckBox
+                                    android:id="@+id/cb_pay_wx"
+                                    android:layout_width="@dimen/dp_25"
+                                    android:layout_height="@dimen/dp_25"
+                                    android:layout_marginRight="@dimen/dp_11"
+                                    android:button="@drawable/check_block"
+                                    android:onClick="@{v->listener.onClick(v)}" />
+
+                                <LinearLayout
+                                    android:id="@+id/ll_cb_pay_wx"
+                                    android:onClick="@{v->listener.onClick(v)}"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:layout_width="@dimen/dp_31"
+                                        android:layout_height="@dimen/dp_31"
+                                        android:src="@drawable/img_pay_wx" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/dp_8"
+                                        android:text="微信"
+                                        android:textColor="#ff333333"
+                                        android:textSize="12sp" />
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/dp_50"
+                                android:orientation="horizontal">
+
+                                <CheckBox
+                                    android:id="@+id/cb_pay_zfb"
+                                    android:layout_width="@dimen/dp_25"
+                                    android:layout_height="@dimen/dp_25"
+                                    android:layout_marginRight="@dimen/dp_11"
+                                    android:button="@drawable/check_block"
+                                    android:onClick="@{v->listener.onClick(v)}" />
+
+                                <LinearLayout
+                                    android:id="@+id/ll_cb_pay_zfb"
+                                    android:onClick="@{v->listener.onClick(v)}"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:layout_width="@dimen/dp_31"
+                                        android:layout_height="@dimen/dp_31"
+                                        android:src="@drawable/img_pay_zfb" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/dp_8"
+                                        android:text="支付宝"
+                                        android:textColor="#ff333333"
+                                        android:textSize="12sp" />
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_13"
+                        android:layout_marginTop="@dimen/dp_20"
+                        android:layout_marginRight="@dimen/dp_13"
+                        android:layout_marginBottom="@dimen/dp_17"
+                        android:text="可以先将报名表保存，在截止报名前都可以修改，支付提
+交后则不可以更改报名表"
+                        android:textColor="#ff999999"
+                        android:textSize="14sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_40"
+                        android:layout_marginLeft="@dimen/dp_12"
+                        android:layout_marginRight="@dimen/dp_12"
+                        android:layout_marginBottom="@dimen/dp_23"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_change_sign_up"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="@dimen/dp_25"
+                            android:layout_weight="1"
+                            android:background="@drawable/shape_red_corners_5"
+                            android:gravity="center"
+                            android:onClick="@{v->listener.onClick(v)}"
+                            android:text="修改报名"
+                            android:textColor="@color/white" />
+
+                        <TextView
+                            android:id="@+id/tv_save_sign_up"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="@dimen/dp_25"
+                            android:layout_weight="1"
+                            android:background="@drawable/shape_club_blue"
+                            android:gravity="center"
+                            android:onClick="@{v->listener.onClick(v)}"
+                            android:text="保存报名"
+                            android:textColor="@color/white" />
+
+                        <TextView
+                            android:id="@+id/tv_pay_commit"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:background="@drawable/shape_club_yellow"
+                            android:gravity="center"
+                            android:onClick="@{v->listener.onClick(v)}"
+                            android:text="提交"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+
+        </LinearLayout>
+    </LinearLayout>
+</layout>

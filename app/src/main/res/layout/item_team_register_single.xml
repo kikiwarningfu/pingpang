@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:id="@+id/tv_text_six_module"
+        android:layout_height="wrap_content"
+        android:text="张云鹏"
+        android:textColor="#FF4795ED"
+        android:textSize="@dimen/sp_14">
+
+</TextView>

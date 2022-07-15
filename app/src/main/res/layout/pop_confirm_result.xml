@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent_20">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="@dimen/dp_27"
+            android:layout_marginRight="@dimen/dp_27"
+            android:background="@drawable/shape_write_corners_5"
+            android:orientation="vertical">
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_20"
+                android:layout_marginBottom="@dimen/dp_19"
+                android:gravity="center"
+                android:text="确认比赛结果成功"
+                android:textColor="#ff4795ed"
+                android:textSize="18sp" />
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/dp_17"
+                android:gravity="center"
+                android:text="请为本场比赛裁判员打分"
+                android:textColor="#ff333333"
+                android:textSize="15sp" />
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/dp_22"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/iv_one_score"
+                    android:src="@drawable/img_stars_select"
+                    android:layout_width="@dimen/dp_31"
+                    android:layout_height="@dimen/dp_31" />
+            <ImageView
+                android:id="@+id/iv_two_score"
+                    android:layout_marginLeft="@dimen/dp_12"
+                    android:src="@drawable/img_starts_unselect"
+                    android:layout_width="@dimen/dp_31"
+                    android:layout_height="@dimen/dp_31" />
+            <ImageView
+                android:id="@+id/iv_three_score"
+                    android:layout_marginLeft="@dimen/dp_12"
+                    android:src="@drawable/img_starts_unselect"
+                    android:layout_width="@dimen/dp_31"
+                    android:layout_height="@dimen/dp_31" />
+        </LinearLayout>
+        <TextView
+                android:id="@+id/tv_confirm"
+                android:layout_marginBottom="@dimen/dp_25"
+                android:textColor="@color/white"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_marginRight="@dimen/dp_20"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="确定"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_40"
+                android:background="@drawable/shape_club_blue"/>
+    </LinearLayout>
+</RelativeLayout>

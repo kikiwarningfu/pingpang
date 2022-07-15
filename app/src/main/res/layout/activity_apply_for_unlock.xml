@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="listener"
+            type="android.view.View.OnClickListener" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_f5"
+        android:orientation="vertical"
+        tools:context=".ui.homepage.activity.CreateEventsActivity">
+
+
+        <heyong.handong.framework.widget.TopBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:centerText="申请解封" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:background="#F6F6F6" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_marginTop="@dimen/dp_28"
+                android:layout_marginBottom="@dimen/dp_22"
+                android:layout_gravity="center"
+                android:id="@+id/iv_logo"
+                android:src="@drawable/img_apply_fengjin"
+                android:layout_width="@dimen/dp_39"
+                android:layout_height="@dimen/dp_39"/>
+            <TextView
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/dp_19"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="您的接单员身份被封禁"
+                android:textColor="#ffe51919"
+                android:textSize="15sp"
+                />
+            <TextView
+                android:layout_marginLeft="@dimen/dp_13"
+                android:layout_marginRight="@dimen/dp_13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="系统检测到您在操作中存在违规行为，固对您的接单员身份进行
+封禁处理，如想解封请联系客服"
+                android:textColor="#ff666666"
+                android:layout_marginBottom="@dimen/dp_20"
+                android:textSize="12sp"
+                />
+
+        </LinearLayout>
+        <TextView
+            android:id="@+id/tv_connect_tell"
+            android:onClick="@{v->listener.onClick(v)}"
+            android:layout_marginTop="@dimen/dp_36"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="联系客服"
+            android:textColor="#ffffffff"
+            android:textSize="15sp"
+            android:paddingTop="@dimen/dp_12"
+            android:paddingBottom="@dimen/dp_13"
+            android:background="@drawable/shape_club_blue"
+            android:paddingLeft="@dimen/dp_90"
+            android:paddingRight="@dimen/dp_90"
+            />
+    </LinearLayout>
+</layout>

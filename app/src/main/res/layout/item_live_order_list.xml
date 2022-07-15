@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/rl_center"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:background="#1A4795ED"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_90"
+        >
+
+        <RelativeLayout
+            android:id="@+id/iv_logo"
+            android:layout_centerVertical="true"
+            android:layout_width="@dimen/dp_45"
+            android:layout_height="@dimen/dp_45"
+            android:layout_marginLeft="@dimen/dp_12"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:background="@drawable/shape_order_list_bg" >
+            <TextView
+                android:id="@+id/tv_table_num"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffffff"
+                android:textSize="17sp"
+                />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_left_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_21"
+            android:layout_toRightOf="@id/iv_logo"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_left_user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+
+
+                android:textColor="#ff333333"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tv_left_team_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dp_17"
+                android:gravity="center"
+                android:textColor="#ff999999"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/iv_vs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_28"
+            android:text="VS"
+            android:textColor="#ff333333"
+            android:textSize="15sp" />
+        <TextView
+            android:id="@+id/tv_game_time"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_13"
+            android:layout_below="@id/iv_vs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="比赛时间：11:30"
+            android:textColor="#ff333333"
+            android:textSize="11sp"
+            />
+        <LinearLayout
+            android:id="@+id/ll_time"
+            android:layout_marginRight="@dimen/dp_12"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tv_money"
+                android:layout_marginTop="@dimen/dp_19"
+                android:layout_marginBottom="@dimen/dp_14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="赏金：50.00¥"
+                android:textColor="#ff333333"
+                android:textSize="11sp"
+                />
+            <TextView
+                android:id="@+id/tv_acccept_order"
+                android:background="@drawable/shape_orange_jiedan"
+                android:paddingTop="@dimen/dp_7"
+                android:paddingBottom="@dimen/dp_7"
+                android:paddingLeft="@dimen/dp_18"
+                android:paddingRight="@dimen/dp_19"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="接单"
+                android:textColor="#ffffffff"
+                android:textSize="12sp"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginRight="@dimen/dp_29"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_21"
+            android:layout_toLeftOf="@id/ll_time"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_right_user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="#ff333333"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tv_right_team_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dp_17"
+                android:gravity="center"
+                android:textColor="#ff999999"
+                android:textSize="10sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+
+    </LinearLayout>
+</layout>

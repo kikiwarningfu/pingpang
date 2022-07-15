@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+<!--    <RelativeLayout-->
+<!--        android:id="@+id/rl_title"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="@dimen/dp_44"-->
+<!--        android:layout_alignParentStart="true"-->
+<!--        android:layout_alignParentTop="true"-->
+<!--        android:background="@color/white">-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/tv_cancel"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_centerVertical="true"-->
+<!--            android:gravity="center"-->
+<!--            android:paddingLeft="15dp"-->
+<!--            android:paddingRight="15dp"-->
+<!--            android:text="取消"-->
+<!--            android:textColor="#2e2e2e"-->
+<!--            android:textSize="14sp" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/tv_next"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_alignParentEnd="true"-->
+<!--            android:gravity="center"-->
+<!--            android:paddingLeft="15dp"-->
+<!--            android:paddingRight="15dp"-->
+<!--            android:text="上传"-->
+<!--            android:textColor="#2e2e2e"-->
+<!--            android:textSize="14sp" />-->
+
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_centerInParent="true"-->
+<!--            android:text="本地视频"-->
+<!--            android:textColor="#2e2e2e"-->
+<!--            android:textSize="17.1sp" />-->
+
+<!--    </RelativeLayout>-->
+
+<!--    <heyong.intellectPinPang.live.aliview.SquareRelativeLayout-->
+<!--        android:id="@+id/rl_video_play"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@+id/rl_title"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_marginTop="0.5dp"-->
+<!--        android:gravity="center">-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/iv_empty"-->
+<!--            android:layout_width="200dp"-->
+<!--            android:layout_height="200dp"-->
+<!--            android:layout_centerInParent="true"-->
+<!--            android:src="@drawable/img_place_holder_7" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/tv_empty"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_below="@+id/iv_empty"-->
+<!--            android:layout_centerHorizontal="true"-->
+<!--            android:text="上传视频"-->
+<!--            android:textColor="#ababab" />-->
+
+<!--    </heyong.intellectPinPang.live.aliview.SquareRelativeLayout>-->
+
+<!--    <androidx.recyclerview.widget.RecyclerView-->
+<!--        android:id="@+id/rv_video_list"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:layout_below="@id/rl_video_play"-->
+<!--        android:background="#fff" />-->
+
+<!--    <View-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="2dp"-->
+<!--        android:layout_below="@id/rl_video_play"-->
+<!--        android:background="@color/white" />-->
+
+<!--    <RelativeLayout-->
+<!--        android:id="@+id/rl_new_add_content"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:layout_below="@+id/rl_title"-->
+<!--        android:background="#f2f2f2"-->
+<!--        android:visibility="gone">-->
+
+<!--        <androidx.recyclerview.widget.RecyclerView-->
+<!--            android:id="@+id/rv_new_add"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_alignParentBottom="true" />-->
+
+<!--    </RelativeLayout>-->
+
+<!--    <FrameLayout-->
+<!--        android:id="@+id/fl_loading"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_centerInParent="true"-->
+<!--        android:visibility="gone">-->
+
+<!--        <include layout="@layout/dialog_loading" />-->
+<!--    </FrameLayout>-->
+
+
+
+<!--    <View-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="@dimen/dp_3"-->
+<!--        android:layout_below="@id/rl_title"-->
+<!--        android:background="@drawable/img_home_toolbar_shadow" />-->
+</RelativeLayout>
+
+</layout>

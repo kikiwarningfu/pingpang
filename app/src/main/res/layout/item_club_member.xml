@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="@dimen/dp_51"
+    android:id="@+id/ll_container"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_logo"
+            android:layout_width="@dimen/dp_51"
+            android:layout_height="@dimen/dp_51"
+            android:src="@drawable/img_default_avatar"/>
+    <TextView
+        android:id="@+id/tv_name"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/dp_14"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="云鹤九..."
+            android:textColor="#ff171717"
+            android:textSize="13sp"
+            />
+    <TextView
+        android:id="@+id/tv_identify"
+            android:layout_marginTop="@dimen/dp_12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+
+            android:gravity="center"
+            android:text="负责人"
+            android:textColor="#ff666666"
+            android:textSize="12sp"
+            />
+</LinearLayout>
+
+</layout>

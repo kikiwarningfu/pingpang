@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent_20">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="@dimen/dp_37"
+        android:layout_marginRight="@dimen/dp_37"
+        android:background="@drawable/shape_write_corners_8"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_22"
+            android:layout_marginBottom="@dimen/dp_22"
+            android:gravity="center"
+            android:text="完成拍摄"
+            android:textColor="#ff333333"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_40"
+            android:layout_marginRight="@dimen/dp_40"
+            android:layout_marginBottom="@dimen/dp_27"
+            android:text="系统检测您的直播时长小于3分钟，此
+订单未正常完成，提前结束此订单则按
+照异常订单处理，赏金会自动返还给下
+单人，是否结束？"
+            android:textColor="#ff333333"
+            android:textSize="13sp" />
+
+        <RelativeLayout
+            android:layout_marginBottom="@dimen/dp_17"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/tv_back_finish"
+                    android:layout_marginRight="@dimen/dp_50"
+                    android:paddingTop="@dimen/dp_10"
+                    android:paddingBottom="@dimen/dp_10"
+                    android:layout_width="@dimen/dp_100"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_club_item_stroke"
+                    android:text="返回拍摄"
+                    android:textColor="#ff666666"
+                    android:textSize="16sp"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_submit"
+                    android:background="@drawable/shape_accept_blue_corners"
+                    android:paddingTop="@dimen/dp_10"
+                    android:paddingBottom="@dimen/dp_10"
+                    android:layout_width="@dimen/dp_100"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="确认"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    />
+            </LinearLayout>
+
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

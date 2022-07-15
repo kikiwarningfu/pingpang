@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/dp_17"
+    android:layout_marginRight="@dimen/dp_17"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_amateur_level"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_13"
+        android:layout_marginBottom="@dimen/dp_13"
+        android:gravity="center"
+        android:text="业余级"
+        android:textColor="#ff333333"
+        android:textSize="15sp" />
+
+    <View
+        android:id="@+id/view_divider"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:layout_marginLeft="@dimen/dp_45"
+        android:layout_marginRight="@dimen/dp_45"
+        android:background="#E5E5E5" />
+</LinearLayout>
+
+</layout>

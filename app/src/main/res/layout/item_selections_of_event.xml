@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+                name="listener"
+                type="android.view.View.OnClickListener" />
+    </data>
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+           >
+
+        <ImageView
+                android:id="@+id/cb_the_ping"
+                android:layout_width="@dimen/dp_16"
+                android:layout_height="@dimen/dp_16"
+                android:layout_marginLeft="@dimen/dp_12"
+                android:layout_marginRight="@dimen/dp_4"
+                android:src="@drawable/icon_login_unselected"
+                android:onClick="@{v->listener.onClick(v)}" />
+
+        <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_9"
+                android:text="Mi(男)单打"
+                android:textColor="#FF333333"
+                android:textSize="13sp" />
+    </LinearLayout>
+</layout>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+        <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_150"
+                android:scaleType="centerCrop"
+                android:src="@drawable/icon_test_one" />
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_8"
+                android:layout_marginBottom="@dimen/dp_10"
+                android:text="2020盐湖区乒乓球友谊赛暨小亮智乒app推广活动启动"
+                android:textColor="#ff333333"
+                android:textSize="@dimen/sp_15" />
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp_14"
+                android:orientation="horizontal">
+
+            <ImageView
+                    android:layout_width="@dimen/dp_12"
+                    android:layout_height="@dimen/dp_12"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:src="@drawable/icon_sponsor" />
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:text="主办方：盐湖区体育事业发展中心"
+                    android:textColor="#ff656565"
+                    android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp_14"
+                android:orientation="horizontal">
+
+            <ImageView
+                    android:layout_width="@dimen/dp_12"
+                    android:layout_height="@dimen/dp_12"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:src="@drawable/icon_match_time" />
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:text="比赛时间：2020-05-30"
+                    android:textColor="#ff656565"
+                    android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp_14"
+                android:orientation="horizontal">
+
+            <ImageView
+                    android:layout_width="@dimen/dp_12"
+                    android:layout_height="@dimen/dp_12"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:src="@drawable/icon_competition_site" />
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:text="山西省，运城市，盐湖区，宏亮俱乐部"
+                    android:textColor="#ff656565"
+                    android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+</layout>

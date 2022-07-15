@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/dp_5"
+    android:layout_marginRight="@dimen/dp_5"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<!--tv_chuzu_num-->
+    <TextView
+        android:visibility="visible"
+        android:id="@+id/tv_chuzu_num"
+        android:layout_width="@dimen/dp_65"
+        android:layout_height="@dimen/dp_45"
+        android:background="@drawable/shape_item_title_top_left_gray_solid"
+        android:gravity="center"
+        android:text=""
+        android:textColor="#062A74"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/rv_top_list"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_toRightOf="@id/tv_chuzu_num"
+        android:id="@+id/rv_top_list"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_45"
+        app:layout_constraintLeft_toLeftOf="@+id/rv_group_for_List"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_below="@id/tv_chuzu_num"
+        android:id="@+id/rv_left_list"
+        android:layout_width="@dimen/dp_65"
+        android:nestedScrollingEnabled="false"
+        android:layout_height="wrap_content"
+ />
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_toRightOf="@id/rv_left_list"
+        android:layout_below="@id/tv_chuzu_num"
+        android:id="@+id/rv_form_list"
+        android:nestedScrollingEnabled="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+    />
+<!--    <androidx.recyclerview.widget.RecyclerView-->
+<!--        android:id="@+id/rv_form_list"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:layout_constraintLeft_toRightOf="@+id/rv_left_list"-->
+<!--        app:layout_constraintRight_toRightOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/rv_top_list"/>-->
+
+<!--    <androidx.recyclerview.widget.RecyclerView-->
+<!--        android:id="@+id/rv_left_list"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:layout_constraintLeft_toLeftOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="@id/rv_form_list" />-->
+
+</RelativeLayout>

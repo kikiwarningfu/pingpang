@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="listener"
+            type="android.view.View.OnClickListener" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_f5"
+        android:orientation="vertical"
+        tools:context=".ui.homepage.activity.CreateEventsActivity">
+
+
+        <heyong.handong.framework.widget.TopBar
+            android:id="@+id/topbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:centerText="赛事消息" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:background="#F6F6F6" />
+
+        <LinearLayout
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:onClick="@{v->listener.onClick(v)}"
+                android:background="#FFFFFFFF"
+                android:id="@+id/rl_unread"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/tv_unread"
+                    android:gravity="center"
+                    android:layout_centerInParent="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="未读"
+                    android:textColor="#ff4795ed"
+                    android:textSize="14sp"
+                    />
+                <View
+                    android:id="@+id/view_unread"
+                    android:background="#FF4795ED"
+                    android:layout_alignParentBottom="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_2"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:onClick="@{v->listener.onClick(v)}"
+                android:background="#FFE5E5E5"
+                android:id="@+id/rl_have_read"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/tv_have_read"
+                    android:gravity="center"
+                    android:layout_centerInParent="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="已读"
+                    android:textColor="#ff666666"
+                    android:textSize="14sp"
+                    />
+                <View
+                    android:visibility="gone"
+                    android:id="@+id/view_haveread"
+                    android:background="#FF4795ED"
+                    android:layout_alignParentBottom="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_2"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/sw_fresh"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_event_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp_30" />
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+        <LinearLayout
+            android:id="@+id/ll_system_empty_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/dp_90"
+            android:visibility="visible"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/dp_88"
+                android:layout_height="@dimen/dp_77"
+                android:src="@drawable/img_empty_message" />
+
+            <TextView
+                android:id="@+id/tv_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_20"
+                android:text="您还未参加任何赛事"
+                android:textColor="#ff4795ed"
+                android:textSize="15sp" />
+        </LinearLayout>
+    </LinearLayout>
+</layout>

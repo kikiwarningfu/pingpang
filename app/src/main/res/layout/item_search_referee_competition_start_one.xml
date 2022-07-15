@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_marginRight="@dimen/dp_5"
+        android:layout_height="@dimen/dp_100"
+        android:id="@+id/card_view"
+        android:layout_marginTop="@dimen/dp_15"
+        app:cardElevation="@dimen/dp_4"
+        app:cardMaxElevation="@dimen/dp_2"
+        app:cardCornerRadius="@dimen/dp_8"
+        android:background="@drawable/img_one_referee"
+        >
+
+        <LinearLayout
+            android:id="@+id/ll_content"
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_marginTop="@dimen/dp_4"
+                android:layout_marginBottom="@dimen/dp_5"
+                android:id="@+id/tv_position"
+                android:layout_marginLeft="@dimen/dp_2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:background="#ff4795ed"
+                android:gravity="center"
+                android:text="1"
+                android:textColor="#FFFFFFFF"
+                android:textSize="@dimen/sp_12" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2.1"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/dp_20">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_left_name_one"
+                            android:layout_width="match_parent"
+                            android:gravity="center"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:lines="1"
+                            android:text="洪亮俱乐部乐部/一"
+                            android:textColor="#ff333333"
+                            android:textSize="12sp" />
+                        <TextView
+                            android:id="@+id/tv_left_club_name"
+                            android:layout_marginTop="@dimen/dp_3"
+
+                            android:layout_gravity="center_horizontal"
+                            android:gravity="center_horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColor="#ff999999"
+                            android:textSize="10sp"
+                            />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="@dimen/dp_19"
+                        android:layout_height="@dimen/dp_10"
+                        android:layout_marginLeft="@dimen/dp_7"
+                        android:layout_marginRight="@dimen/dp_7"
+                        android:src="@drawable/img_versus_icon" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_right_name_one"
+                            android:layout_width="match_parent"
+                            android:gravity="center"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:lines="1"
+                            android:text="洪亮俱乐部乐部/一"
+                            android:textColor="#ff333333"
+                            android:textSize="12sp" />
+                        <TextView
+
+                            android:id="@+id/tv_right_club_name"
+                            android:layout_marginTop="@dimen/dp_3"
+                            android:layout_gravity="center_horizontal"
+                            android:gravity="center_horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColor="#ff999999"
+                            android:textSize="10sp"
+                            />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_marginTop="@dimen/dp_23"
+                        android:ellipsize="end"
+                        android:lines="1"
+                        android:text="成人组女"
+                        android:textColor="#ff333333"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        android:visibility="gone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_marginTop="@dimen/dp_23"
+                        android:ellipsize="end"
+                        android:lines="1"
+                        android:text="【第一阶段A组】"
+                        android:textColor="#ff333333"
+                        android:textSize="11sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="@dimen/dp_0_5"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/dp_15"
+                android:layout_marginBottom="@dimen/dp_15"
+                android:background="#FFCCCCCC" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.1"
+
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingTop="@dimen/dp_15">
+
+                    <TextView
+                        android:id="@+id/tv_game_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/dp_15"
+                        android:gravity="center"
+                        android:text="待赛"
+                        android:textColor="#ff183a7e"
+                        android:textSize="13sp" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/dp_1"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:id="@+id/tv_begin_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/dp_12"
+                        android:text="08:50"
+                        android:textColor="#ff333333"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/dp_24"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/ll_no_move_up"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:visibility="visible">
+
+                        <TextView
+                        android:id="@+id/tv_table_num"
+                            android:layout_marginLeft="@dimen/dp_17"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="1台"
+                            android:textColor="#fffbd22e"
+                            android:textSize="14sp"
+                            />
+
+
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/dp_1"
+                            android:layout_weight="1" />
+
+
+                        <TextView
+                            android:id="@+id/tv_game_end_status"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/dp_12"
+                            android:background="@drawable/shape_club_blue_5"
+                            android:paddingLeft="@dimen/dp_9"
+                            android:paddingTop="@dimen/dp_6"
+                            android:paddingRight="@dimen/dp_9"
+                            android:paddingBottom="@dimen/dp_6"
+                            android:text="调台"
+                            android:textColor="#ff0d3078"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</layout>

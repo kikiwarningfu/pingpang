@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="listener"
+            type="android.view.View.OnClickListener" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFF3F3F3"
+        android:orientation="vertical"
+        tools:context=".ui.homepage.activity.CreateEventsActivity">
+
+
+        <heyong.handong.framework.widget.TopBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:centerText="个人认证" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:background="#F6F6F6" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/rl_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_16">
+
+                <ImageView
+                    android:layout_width="@dimen/dp_49"
+                    android:layout_height="@dimen/dp_49"
+                    android:layout_marginLeft="@dimen/dp_12"
+                    android:layout_marginBottom="@dimen/dp_10"
+                    android:src="@drawable/img_write_bg" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/iv_my_logo"
+                    android:layout_width="@dimen/dp_42"
+                    android:layout_height="@dimen/dp_42"
+                    android:layout_marginLeft="@dimen/dp_16"
+                    android:layout_marginTop="@dimen/dp_3"
+                    android:src="@drawable/img_default_avatar" />
+
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_11"
+                android:layout_marginTop="@dimen/dp_20"
+                android:layout_toRightOf="@id/rl_content"
+                android:text="老虎是个耽耽"
+                android:textColor="#ff333333"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_user_name"
+                android:layout_marginLeft="@dimen/dp_11"
+                android:layout_marginTop="@dimen/dp_4"
+                android:layout_toRightOf="@id/rl_content"
+                android:background="@drawable/shape_circle_user_detail_write"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/dp_2"
+                android:paddingBottom="@dimen/dp_2">
+
+                <ImageView
+                    android:layout_width="@dimen/dp_12"
+                    android:layout_height="@dimen/dp_12"
+                    android:layout_marginLeft="@dimen/dp_3"
+                    android:src="@drawable/img_sex_little_blue" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_3"
+                    android:layout_marginRight="@dimen/dp_6"
+                    android:text="男"
+                    android:textColor="#ff333333"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_13"
+            android:layout_marginTop="@dimen/dp_25"
+            android:layout_marginRight="@dimen/dp_13"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_28">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_24"
+                    android:layout_marginTop="@dimen/dp_7"
+                    android:layout_marginBottom="@dimen/dp_8"
+                    android:text="实名认证"
+                    android:textColor="#ff333333"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/dp_27"
+                    android:background="@drawable/shape_blue_certificate"
+                    android:paddingLeft="@dimen/dp_17"
+                    android:paddingTop="@dimen/dp_9"
+                    android:paddingRight="@dimen/dp_17"
+                    android:paddingBottom="@dimen/dp_9"
+                    android:text="去认证"
+                    android:textColor="#ffffffff"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_24"
+                android:layout_marginBottom="@dimen/dp_28"
+                android:text="实名认证个人信息"
+                android:textColor="#ff666666"
+                android:textSize="12sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_0_5"
+                android:layout_marginLeft="@dimen/dp_26"
+                android:layout_marginRight="@dimen/dp_28"
+                android:background="#979797" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_23">
+
+                <TextView
+                    android:id="@+id/tv_zhiye_real"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_24"
+                    android:layout_marginTop="@dimen/dp_7"
+                    android:layout_marginBottom="@dimen/dp_8"
+                    android:text="职业认证"
+                    android:textColor="#ff333333"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:layout_width="@dimen/dp_19"
+                    android:layout_height="@dimen/dp_19"
+                    android:layout_marginLeft="@dimen/dp_9"
+                    android:layout_marginTop="@dimen/dp_6"
+                    android:layout_toRightOf="@id/tv_zhiye_real"
+                    android:src="@drawable/img_yellow_real" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/dp_27"
+                    android:background="@drawable/shape_blue_certificate"
+                    android:paddingLeft="@dimen/dp_17"
+                    android:paddingTop="@dimen/dp_9"
+                    android:paddingRight="@dimen/dp_17"
+                    android:paddingBottom="@dimen/dp_9"
+                    android:text="去认证"
+                    android:textColor="#ffffffff"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_24"
+                android:layout_marginTop="@dimen/dp_4"
+                android:layout_marginBottom="@dimen/dp_28"
+                android:text="适用于类型为某机构购、俱乐部、公司的人员"
+                android:textColor="#ff666666"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_37"
+            android:gravity="center"
+            android:text="常见问题？"
+            android:textColor="#ff3049d5"
+            android:textSize="12sp" />
+    </LinearLayout>
+</layout>

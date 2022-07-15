@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="listener"
+            type="android.view.View.OnClickListener" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        tools:context=".ui.homepage.activity.CreateEventsActivity">
+
+
+        <heyong.handong.framework.widget.TopBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:centerText="退赛详情    " />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:background="#F6F6F6" />
+        <ImageView
+            android:layout_marginTop="@dimen/dp_35"
+            android:layout_marginBottom="@dimen/dp_24"
+            android:src="@drawable/img_success_green"
+            android:layout_width="@dimen/dp_72"
+            android:layout_gravity="center"
+            android:layout_height="@dimen/dp_72"/>
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp_18"
+            android:gravity="center"
+            android:text="您已成功退出本次比赛"
+            android:textColor="#ff333333"
+            android:textSize="16sp"
+            />
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_marginLeft="@dimen/dp_37"
+            android:layout_marginRight="@dimen/dp_37"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:text=""
+            android:textColor="#ff333333"
+            android:textSize="14sp"
+            />
+    </LinearLayout>
+</layout>

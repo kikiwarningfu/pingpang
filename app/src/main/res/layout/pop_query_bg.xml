@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:ignore="MissingDefaultResource">
+
+    <ImageView
+        android:id="@+id/iv_close"
+        android:layout_width="@dimen/dp_21"
+        android:layout_height="@dimen/dp_21"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="@dimen/dp_34"
+        android:layout_marginRight="@dimen/dp_12"
+        android:src="@drawable/img_bg_qur_close" />
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/dp_155"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center">
+        <LinearLayout
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+        <ImageView
+            android:src="@drawable/img_tel_phone"
+            android:layout_width="@dimen/dp_47"
+            android:layout_height="@dimen/dp_73" />
+        <ImageView
+            android:layout_marginRight="@dimen/dp_24"
+            android:layout_marginLeft="@dimen/dp_27"
+            android:src="@drawable/img_right_youjiantou"
+            android:layout_width="@dimen/dp_27"
+            android:layout_height="@dimen/dp_33"/>
+        <ImageView
+            android:src="@drawable/img_compute"
+            android:layout_width="@dimen/dp_127"
+            android:layout_height="@dimen/dp_122"/>
+        </LinearLayout>
+        <TextView
+            android:layout_marginTop="@dimen/dp_75"
+            android:layout_marginBottom="@dimen/dp_36"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="正在扫码登陆小亮智乒后台系统"
+            android:textColor="#ff333333"
+            android:textSize="13sp"
+            />
+
+        <TextView
+            android:id="@+id/tv_submit"
+            android:background="@drawable/shape_croci_corners_25"
+            android:paddingTop="@dimen/dp_11"
+            android:paddingBottom="@dimen/dp_11"
+            android:paddingLeft="@dimen/dp_61"
+            android:paddingRight="@dimen/dp_62"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="确认登录"
+            android:textColor="#ffffffff"
+            android:textSize="13sp"
+            />
+    </LinearLayout>
+</RelativeLayout>

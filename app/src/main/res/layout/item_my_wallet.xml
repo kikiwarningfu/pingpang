@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_70"
+        >
+        <TextView
+            android:id="@+id/tv_wallet_status"
+            android:layout_marginTop="@dimen/dp_20"
+            android:layout_marginLeft="@dimen/dp_12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="直播收益"
+            android:textColor="#ff333333"
+            android:textSize="13sp"
+            />
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginLeft="@dimen/dp_12"
+            android:layout_below="@id/tv_wallet_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2021-08-21    12:21"
+            android:textColor="#ffcccccc"
+            android:textSize="10sp"
+            />
+        <View
+            android:layout_marginLeft="@dimen/dp_12"
+            android:layout_marginRight="@dimen/dp_12"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0_5"
+            android:background="#E6E6E6"/>
+
+        <TextView
+            android:id="@+id/tv_money"
+            android:layout_marginRight="@dimen/dp_12"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+40"
+            android:textColor="#fff33e3e"
+            android:textSize="15sp"
+            />
+        <ImageView
+            android:id="@+id/iv_fail_logo"
+            android:layout_marginLeft="@dimen/dp_8"
+            android:layout_marginTop="@dimen/dp_18"
+            android:layout_toRightOf="@id/tv_wallet_status"
+            android:src="@drawable/img_with_draw_fail"
+            android:layout_width="@dimen/dp_17"
+            android:layout_height="@dimen/dp_17"/>
+
+
+    </RelativeLayout>
+
+</layout>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent_20">
+
+    <LinearLayout
+
+        android:id="@+id/ll_mr"
+        android:layout_marginLeft="@dimen/dp_55"
+        android:layout_width="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_marginRight="@dimen/dp_62"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rect_menu_ios_press_gray"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
+        <TextView
+            android:layout_marginTop="@dimen/dp_25"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="@dimen/dp_67"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_marginRight="@dimen/dp_66"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp_23"
+            android:text="该昵称已被占用
+请重新输入"
+            android:textColor="#ff333333"
+            android:textSize="16sp"
+            />
+        <View
+            android:layout_marginLeft="@dimen/dp_17"
+            android:layout_marginRight="@dimen/dp_14"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0_5"
+            android:background="#DDDDDD"/>
+
+        <TextView
+            android:layout_marginTop="@dimen/dp_7"
+            android:layout_marginBottom="@dimen/dp_13"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:text="确定"
+            android:textColor="#ff2c36cc"
+            android:textSize="16sp"
+            />
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_16"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:gravity="center"
+        android:text="2020-09-01  09:30"
+        android:textColor="#ff999999"
+        android:textSize="12sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_12"
+        android:layout_marginRight="@dimen/dp_12"
+        android:background="@drawable/shape_write_corners_5"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_20"
+            android:gravity="center"
+            android:text="2020盐湖区乒乓球友谊赛"
+            android:textColor="#ff333333"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_19"
+            android:layout_marginTop="@dimen/dp_14"
+            android:layout_marginRight="@dimen/dp_19"
+            android:layout_marginBottom="@dimen/dp_20"
+            android:text="【张三】您好，您参加的2020【小亮杯】乒乓球友
+谊比赛，第一阶段比赛还有30分钟就要开始了，请
+您到3号球台做好准备！"
+            android:textColor="#ff666666"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_see_result"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginLeft="@dimen/dp_85"
+            android:layout_marginRight="@dimen/dp_85"
+            android:layout_marginBottom="@dimen/dp_20"
+            android:background="@drawable/shape_club_solid_stroke"
+            android:gravity="center"
+            android:text="查看比赛结果"
+            android:textColor="#FF4795ED"
+            android:textSize="@dimen/sp_15" />
+    </LinearLayout>
+</LinearLayout>
+
+</layout>

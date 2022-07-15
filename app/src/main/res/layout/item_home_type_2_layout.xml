@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  xmlns:app="http://schemas.android.com/apk/res-auto"
+                  android:orientation="vertical"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:padding="@dimen/dp15"
+                  android:background="@drawable/bottom_margin_line"
+    >
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="在房产交易过程中，出卖人未经抵押权人同意"
+                android:textColor="#FF222222"
+                android:textSize="@dimen/sp18"
+                android:maxLines="3"
+                android:ellipsize="end"
+        />
+
+        <heyong.intellectPinPang.widget.RatioImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hand_ratio_width="354"
+                app:hand_ratio_height="194"
+                android:layout_marginTop="@dimen/dp6"
+                android:background="#FFF2F2F6"
+                android:scaleType="centerCrop"
+        />
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/dp6"
+        >
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="房屋抵押贷款"
+                    android:textColor="#FFADADAD"
+                    android:textSize="@dimen/sp12"
+            />
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="365阅"
+                    android:textColor="#FFBABABA"
+                    android:textSize="@dimen/sp12"
+                    android:layout_marginLeft="@dimen/dp10"
+            />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</layout>

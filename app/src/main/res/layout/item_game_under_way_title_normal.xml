@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/dp_89"
+    android:layout_height="@dimen/dp_44"
+    android:id="@+id/rl_content"
+    android:background="@drawable/shape_item_title_top_left_gray_solid">
+    <FrameLayout
+        android:id="@+id/fl_content"
+        android:layout_width="@dimen/dp_30"
+        android:layout_height="@dimen/dp_30">
+
+        <ImageView
+            android:layout_width="@dimen/dp_30"
+            android:src="@drawable/img_sanjiao_blue"
+            android:layout_height="@dimen/dp_30"/>
+        <TextView
+            android:id="@+id/tv_position"
+            android:layout_marginTop="@dimen/dp_3"
+            android:layout_marginLeft="@dimen/dp_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="16"
+            android:textColor="#ffffffff"
+            android:textSize="10sp"
+            />
+    </FrameLayout>
+    <TextView
+        android:id="@+id/tv_item"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="张三"
+        android:textColor="#062A74"
+        android:textSize="@dimen/sp_13" />
+</RelativeLayout>

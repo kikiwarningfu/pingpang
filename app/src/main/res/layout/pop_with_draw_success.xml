@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent_20">
+
+    <LinearLayout
+        android:id="@+id/ll_out"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/dp_37"
+        android:layout_marginRight="@dimen/dp_37"
+        android:background="@drawable/shape_message_dialog"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_28"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:lineSpacingExtra="4dp"
+            android:layout_marginBottom="@dimen/dp_59"
+            android:layout_marginLeft="@dimen/dp_33"
+            android:layout_marginRight="@dimen/dp_41"
+            android:text="您的提现申请已提交，请等待系统审核，
+审核成功后则提现成功"
+            android:textColor="#ff333333"
+            android:textSize="13sp"
+            />
+
+        <TextView
+            android:id="@+id/tv_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/dp_19"
+            android:background="@drawable/shape_order_track_orange"
+            android:paddingLeft="@dimen/dp_60"
+            android:paddingTop="@dimen/dp_10"
+            android:paddingRight="@dimen/dp_60"
+            android:paddingBottom="@dimen/dp_10"
+            android:text="好的"
+            android:textColor="#ffffffff"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</LinearLayout>

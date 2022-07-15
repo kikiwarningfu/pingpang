@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+>
+
+    <item
+            android:id="@+id/item_home_page"
+            android:icon="@drawable/main_tab_shouye_selector"
+            android:title="首页"
+            app:showAsAction="always" />
+
+    <item
+            android:id="@+id/item_bowling"
+            android:icon="@drawable/main_tab_question_selector"
+            android:title="保龄"
+            app:showAsAction="always"
+    />
+    <item
+            android:id="@+id/item_cloud_consultant"
+            android:icon="@drawable/main_tab_question_selector"
+            android:title="云顾问"
+            app:showAsAction="always"
+            />
+    <item
+            android:id="@+id/item_shop_mall"
+            android:icon="@drawable/main_tab_question_selector"
+            android:title="商城"
+            app:showAsAction="always"
+            />
+    <item
+            android:id="@+id/item_mine"
+            android:icon="@drawable/main_tab_mine_selector"
+            android:title="我的"
+            app:showAsAction="always"
+    />
+
+</menu>

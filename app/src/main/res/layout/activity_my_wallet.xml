@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="listener"
+            type="android.view.View.OnClickListener" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        tools:context=".ui.homepage.activity.CreateEventsActivity">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_210">
+
+            <ImageView
+
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_210"
+                android:scaleType="centerCrop"
+                android:src="@drawable/img_wallet_now" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_210">
+
+                <ImageView
+                    android:id="@+id/iv_finish"
+                    android:layout_width="@dimen/dp_13"
+                    android:layout_height="@dimen/dp_22"
+                    android:layout_marginLeft="@dimen/dp_11"
+                    android:layout_marginTop="@dimen/dp_34"
+                    android:onClick="@{v->listener.onClick(v)}"
+                    android:src="@drawable/img_write_left_back" />
+
+                <TextView
+                    android:id="@+id/wallet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/dp_41"
+                    android:text="金额"
+                    android:textColor="#ffffffff"
+                    android:textSize="16sp" />
+                <TextView
+                    android:id="@+id/tv_bind_account"
+                    android:onClick="@{v->listener.onClick(v)}"
+                    android:paddingTop="@dimen/dp_7"
+                    android:paddingBottom="@dimen/dp_7"
+                    android:paddingLeft="@dimen/dp_7"
+                    android:paddingRight="@dimen/dp_7"
+                    android:background="@drawable/shape_write_wallet_corners"
+                    android:layout_marginRight="@dimen/dp_12"
+                    android:layout_alignTop="@id/iv_finish"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="绑定账户"
+                    android:textColor="#ffffffff"
+                    android:textSize="10sp"
+                    />
+                <LinearLayout
+                    android:id="@+id/ll_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/wallet"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/dp_18"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="@dimen/dp_22"
+                        android:layout_height="@dimen/dp_0_5"
+                        android:layout_gravity="center_vertical"
+                        android:background="#FFFFFF" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="总金额（元）"
+                        android:textColor="#ffffffff"
+                        android:textSize="10sp" />
+
+                    <View
+                        android:layout_width="@dimen/dp_22"
+                        android:layout_height="@dimen/dp_0_5"
+                        android:layout_gravity="center_vertical"
+                        android:background="#FFFFFF" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_all_money"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ll_money"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/dp_25"
+                    android:gravity="center"
+                    android:text="2268.82"
+                    android:textColor="#ffffffff"
+                    android:textSize="30sp" />
+
+                <LinearLayout
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_below="@id/tv_all_money"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_marginLeft="@dimen/dp_11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_height="wrap_content"
+                            android:text="今日收益（元）"
+                            android:textColor="#ffffffff"
+                            android:textSize="10sp"
+                            />
+
+                        <TextView
+                            android:id="@+id/tv_day_money"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/dp_8"
+                            android:gravity="center"
+                            android:text="300.00"
+                            android:textColor="#ffffffff"
+                            android:textSize="10sp" />
+                    </LinearLayout>
+                    <View
+                        android:layout_weight="80"
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"/>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_height="wrap_content"
+                            android:text="本月收益（元）"
+                            android:textColor="#ffffffff"
+                            android:textSize="10sp"
+                            />
+
+                        <TextView
+                            android:id="@+id/tv_month_money"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/dp_8"
+                            android:gravity="center"
+                            android:text="300.00"
+                            android:textColor="#ffffffff"
+                            android:textSize="10sp" />
+                    </LinearLayout>
+                    <View
+                        android:layout_weight="80"
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"/>
+                    <LinearLayout
+                        android:layout_marginRight="@dimen/dp_12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_height="wrap_content"
+                            android:text="累计收益（元）"
+                            android:textColor="#ffffffff"
+                            android:textSize="10sp"
+                            />
+
+                        <TextView
+                            android:id="@+id/tv_total_money"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/dp_8"
+                            android:gravity="center"
+                            android:text="300.00"
+                            android:textColor="#ffffffff"
+                            android:textSize="10sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </FrameLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_45"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/tv_may_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp_13"
+                android:text="可提现余额：2268.82元"
+                android:textColor="#ff666666"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tv_with_draw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dp_25"
+                android:background="@drawable/shape_wallet_red"
+                android:onClick="@{v->listener.onClick(v)}"
+                android:paddingLeft="@dimen/dp_17"
+                android:paddingTop="@dimen/dp_7"
+                android:paddingRight="@dimen/dp_17"
+                android:paddingBottom="@dimen/dp_7"
+                android:text="提现"
+                android:textColor="#ffffffff"
+                android:textSize="13sp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_5"
+            android:background="@color/color_f5" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_40"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/rl_all"
+                    android:layout_width="@dimen/dp_75"
+                    android:layout_height="match_parent"
+                    android:onClick="@{v->listener.onClick(v)}"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/dp_14"
+                        android:gravity="center"
+                        android:text="全部"
+                        android:textColor="#ff666666"
+                        android:textSize="12sp" />
+
+                    <View
+                        android:id="@+id/view_all"
+                        android:layout_width="@dimen/dp_75"
+                        android:layout_height="@dimen/dp_2"
+                        android:layout_alignParentBottom="true"
+                        android:background="#089BFF" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="74" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_get_record"
+                    android:layout_width="@dimen/dp_75"
+                    android:layout_height="match_parent"
+                    android:onClick="@{v->listener.onClick(v)}"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/dp_14"
+                        android:gravity="center"
+                        android:text="收益记录"
+                        android:textColor="#ff666666"
+                        android:textSize="12sp" />
+
+                    <View
+                        android:id="@+id/view_record_get"
+                        android:layout_width="@dimen/dp_75"
+                        android:layout_height="@dimen/dp_2"
+                        android:layout_alignParentBottom="true"
+                        android:background="#089BFF" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="57" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_with_draw_record"
+                    android:layout_width="@dimen/dp_75"
+                    android:layout_height="match_parent"
+                    android:onClick="@{v->listener.onClick(v)}"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/dp_14"
+                        android:gravity="center"
+                        android:text="提现记录"
+                        android:textColor="#ff666666"
+                        android:textSize="12sp" />
+
+                    <View
+                        android:id="@+id/view_withdraw_record"
+                        android:layout_width="@dimen/dp_75"
+                        android:layout_height="@dimen/dp_2"
+                        android:layout_alignParentBottom="true"
+                        android:background="#089BFF" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_0_5"
+                android:background="#E6E6E6" />
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

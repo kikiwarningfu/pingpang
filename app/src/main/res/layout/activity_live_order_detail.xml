@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="listener"
+            type="android.view.View.OnClickListener" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <heyong.handong.framework.widget.TopBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:centerText="订单详情" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:background="#F6F6F6" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/color_f5"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:id="@+id/tv_game_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_9"
+                        android:layout_marginTop="@dimen/dp_14"
+                        android:layout_marginRight="@dimen/dp_9"
+                        android:layout_marginBottom="@dimen/dp_13"
+                        android:ellipsize="end"
+                        android:lines="1"
+                        android:text="2021年“小亮杯”北京市大兴区荣华北路2号林肯公园..."
+                        android:textColor="#333333"
+                        android:textSize="14sp" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_50"
+                        android:background="@drawable/shape_live_detail_another_blue">
+
+                        <TextView
+                            android:id="@+id/tv_table_num"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_25"
+                            android:layout_marginTop="@dimen/dp_17"
+                            android:text="1台"
+                            android:textColor="#ffffffff"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/tv_name_player"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_40"
+                            android:layout_marginTop="@dimen/dp_17"
+                            android:layout_toRightOf="@id/tv_table_num"
+                            android:text="张三/李四  VS  赵虎/张龙"
+                            android:textColor="#ffffffff"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/tv_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="@dimen/dp_17"
+                            android:layout_marginRight="@dimen/dp_10"
+                            android:text="11:00"
+                            android:textColor="#ffffffff"
+                            android:textSize="13sp" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/tv_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_9"
+                        android:layout_marginTop="@dimen/dp_16"
+                        android:layout_marginRight="@dimen/dp_18"
+                        android:ellipsize="end"
+                        android:lineSpacingExtra="@dimen/dp_3"
+                        android:lines="2"
+                        android:text="比赛地点： 北京市大兴区亦庄经济技术开发区荣华北路2号
+林肯公园"
+                        android:textColor="#ff333333"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/tv_xiadanren"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_9"
+                        android:layout_marginTop="@dimen/dp_12"
+                        android:layout_marginRight="@dimen/dp_10"
+                        android:layout_marginBottom="@dimen/dp_15"
+                        android:text="下单人： 乔杉    17863272939"
+                        android:textColor="#ff333333"
+                        android:textSize="13sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_0_5"
+                        android:background="#F0F0F0" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_9"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_order_no"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/dp_30"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="订单编号： 415257513567170998833"
+                            android:textColor="#ff999999"
+                            android:textSize="11sp" />
+
+                        <LinearLayout
+                            android:id="@+id/ll_money"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/dp_30"
+                            android:layout_marginRight="@dimen/dp_10"
+                            android:gravity="center_vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="赏金："
+                                android:textColor="#ff868686"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/tv_money"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="40¥"
+                                android:textColor="#DC3C3C"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_7"
+                        android:background="@color/color_f5" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_40">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/dp_10"
+                            android:text="订单状态"
+                            android:textColor="#ff333333"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:id="@+id/tv_text_order_status"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/dp_11"
+                            android:text="进行中 "
+                            android:textColor="#ffdc3c3c"
+                            android:textSize="13sp" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_0_5"
+                        android:background="#F0F0F0" />
+
+                    <TextView
+                        android:id="@+id/tv_explain_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_marginTop="@dimen/dp_15"
+                        android:layout_marginRight="@dimen/dp_15"
+                        android:layout_marginBottom="@dimen/dp_15"
+                        android:text="当前比赛正在进行中，请尽快完成直播，如果直播中断，可
+点击下方继续直播按钮，继续直播"
+                        android:textColor="#ff666666"
+                        android:textSize="13sp" />
+
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_9">
+
+                    <TextView
+                        android:id="@+id/tv_xuzhi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="@dimen/dp_10"
+                        android:layout_marginBottom="@dimen/dp_28"
+                        android:text="直播须知？"
+                        android:textColor="#ff4795ed"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_status_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="@dimen/dp_10"
+                        android:gravity="center"
+                        android:text="直播时间未到"
+                        android:textColor="#fff33e3e"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tv_start_live"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/shape_order_track_blue"
+                        android:gravity="center"
+                        android:onClick="@{v->listener.onClick(v)}"
+                        android:paddingLeft="@dimen/dp_100"
+                        android:paddingTop="@dimen/dp_12"
+                        android:paddingRight="@dimen/dp_100"
+                        android:paddingBottom="@dimen/dp_12"
+                        android:text="继续直播"
+                        android:textColor="#ffffffff"
+                        android:textSize="15sp"
+                        android:visibility="visible" />
+
+                    <TextView
+                        android:id="@+id/tv_complete_order"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/dp_15"
+                        android:background="@drawable/shape_order_track_red_bg"
+                        android:gravity="center"
+                        android:onClick="@{v->listener.onClick(v)}"
+                        android:paddingLeft="@dimen/dp_100"
+                        android:paddingTop="@dimen/dp_12"
+                        android:paddingRight="@dimen/dp_100"
+                        android:paddingBottom="@dimen/dp_12"
+                        android:text="完成订单"
+                        android:textColor="#ffffffff"
+                        android:textSize="15sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+</layout>

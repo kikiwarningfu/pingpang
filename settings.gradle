@@ -1,0 +1,11 @@
+include ':matisse', ':jiaozilibary', ':citypicker', ':datepicker', ':qsvideoplayer'
+include ':zxing'
+include ':iosdialog'
+include ':loopcityview'
+include ':pickerview'
+include ':dialog'
+include ':formlayoutmanager'
+include ':app', 'framework', ':imagepicker', ':umeng', ':autoupdate'
+include ':livefaceunity'
+include ':liveframework'
+

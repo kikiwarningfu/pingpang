@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="listener"
+            type="android.view.View.OnClickListener" />
+    </data>
+
+    <LinearLayout
+        android:id="@+id/ll_live_order"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <LinearLayout
+                android:id="@+id/ll_all_live"
+                android:onClick="@{v->listener.onClick(v)}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_30"
+                android:layout_marginTop="@dimen/dp_11"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_all_live"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="所有直播"
+                    android:textColor="#ff4895ed"
+                    android:textSize="13sp" />
+
+                <View
+                    android:id="@+id/view_all_live"
+                    android:layout_width="@dimen/dp_51"
+                    android:layout_height="1.5dp"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:background="#4895ED" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_yigou_live"
+                android:onClick="@{v->listener.onClick(v)}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_125"
+                android:layout_marginTop="@dimen/dp_11"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_yigou_live"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="已购直播"
+                    android:textColor="#666666"
+                    android:textSize="13sp" />
+
+                <View
+                    android:id="@+id/view_yigou_live"
+                    android:layout_width="@dimen/dp_51"
+                    android:layout_height="1.5dp"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:background="#4895ED"
+                    android:visibility="invisible" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/sw_fresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+          >
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_live_order"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+    </LinearLayout>
+</layout>

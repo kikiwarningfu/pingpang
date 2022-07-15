@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="listener"
+            type="android.view.View.OnClickListener" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <RelativeLayout
+            android:id="@+id/activity_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <FrameLayout
+                android:id="@+id/foreground_video"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <ImageView
+                android:id="@+id/iv_finish_logo"
+                android:layout_width="@dimen/dp_10"
+                android:layout_height="@dimen/dp_18"
+                android:layout_marginLeft="@dimen/dp_12"
+                android:layout_marginTop="@dimen/dp_33"
+                android:onClick="@{v->listener.onClick(v)}"
+                android:src="@drawable/img_left_back_write" />
+
+            <RelativeLayout
+                android:id="@+id/rl_logo_container"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_55"
+                android:layout_below="@id/iv_finish_logo"
+                android:layout_marginLeft="@dimen/dp_12"
+                android:layout_marginTop="@dimen/dp_13"
+                android:layout_marginRight="@dimen/dp_12"
+                android:background="@drawable/shape_live_write_stroke">
+
+                <ImageView
+                    android:id="@+id/iv_left_logo"
+                    android:layout_width="@dimen/dp_42"
+                    android:visibility="gone"
+                    android:layout_height="@dimen/dp_42"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dp_7"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/morentouxiang" />
+
+                <TextView
+                    android:id="@+id/tv_left_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dp_14"
+                    android:layout_toRightOf="@id/iv_left_logo"
+                    android:text="张三"
+                    android:textColor="#fffefefe"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/tv_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="0:0"
+                    android:textColor="#fffefefe"
+                    android:textSize="30sp" />
+
+                <ImageView
+                    android:id="@+id/img_right_logo"
+                    android:layout_width="@dimen/dp_42"
+                    android:layout_height="@dimen/dp_42"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:visibility="gone"
+                    android:layout_marginRight="@dimen/dp_7"
+                    android:src="@drawable/morentouxiang" />
+
+                <TextView
+                    android:layout_alignParentRight="true"
+                    android:id="@+id/tv_right_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/dp_14"
+                    android:layout_toLeftOf="@id/img_right_logo"
+                    android:text="李四"
+                    android:textColor="#fffefefe"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_right_container"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/dp_42"
+                android:layout_marginRight="@dimen/dp_11"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="观看人数："
+                    android:textColor="#ffffffff"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tv_see_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="11W"
+                    android:textColor="#FF7500"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_no_pursace_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rl_logo_container"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/dp_4"
+                android:layout_marginRight="@dimen/dp_18"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="@dimen/dp_7"
+                    android:gravity="center_vertical"
+                    android:text="可试看60s，完整版请购买观看"
+                    android:textColor="#ffffffff"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tv_no_pursace_view_buy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_solid_red_corners_10"
+                    android:paddingLeft="@dimen/dp_11"
+                    android:paddingTop="@dimen/dp_4"
+                    android:paddingRight="@dimen/dp_11"
+                    android:paddingBottom="@dimen/dp_4"
+                    android:text="购买"
+                    android:textColor="#ffffffff"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_already_end"
+                android:visibility="gone"
+                android:layout_below="@id/rl_logo_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_30"
+                android:layout_centerHorizontal="true"
+                android:text="直播已结束"
+                android:textColor="#ffd11b10"
+                android:textSize="@dimen/sp_19" />
+
+            <TextView
+                android:id="@+id/tv_room_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_42"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/dp_28"
+                android:layout_toLeftOf="@id/ll_right_container"
+                android:text="房间号：1234657"
+                android:textColor="#ffcecece"
+                android:textSize="12sp" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/message_list"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_140"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/dp_25"
+                android:paddingStart="@dimen/dp_12"
+                android:paddingEnd="@dimen/dp_12" />
+
+            <LinearLayout
+                android:id="@+id/ll_content_tips"
+                android:layout_width="@dimen/dp_262"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="@dimen/dp_12"
+                android:layout_marginBottom="@dimen/dp_202"
+                android:background="@drawable/shape_live_bg_corners"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/dp_20"
+                    android:paddingTop="@dimen/dp_16"
+                    android:paddingRight="@dimen/dp_17"
+                    android:paddingBottom="@dimen/dp_18"
+                    android:text="欢迎来到小亮直播间，小亮倡导绿色健康
+直播，直播内容和评论严禁包含政治，禁
+止低俗直播，若有违反将封号处理"
+                    android:textColor="#fff0b62c"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_travier_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#99000000"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_244"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="可试看60s，完整版请购买观看"
+                    android:textColor="#ffffffff"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_buy_order"
+                    android:layout_width="@dimen/dp_110"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/dp_22"
+                    android:background="@drawable/shape_red_corners_14"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/dp_8"
+                    android:paddingBottom="@dimen/dp_8"
+                    android:text="购买全部：¥ 1"
+                    android:textColor="#ffffffff"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_cancel_order"
+                    android:layout_width="@dimen/dp_110"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/dp_22"
+                    android:background="@drawable/shape_stroke_gray_14"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/dp_8"
+                    android:paddingBottom="@dimen/dp_8"
+                    android:text="取消"
+                    android:textColor="#999999"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/iv_switch_camera"
+            android:layout_width="@dimen/dp_32"
+            android:layout_height="@dimen/dp_32"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center|right"
+            android:layout_marginRight="@dimen/dp_11"
+            android:onClick="@{v->listener.onClick(v)}"
+            android:src="@drawable/img_switch_camera" />
+    </FrameLayout>
+</layout>
+

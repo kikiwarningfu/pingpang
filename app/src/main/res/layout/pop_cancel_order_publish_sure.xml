@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent_20">
+<LinearLayout
+    android:id="@+id/ll_out"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/dp_27"
+    android:layout_marginRight="@dimen/dp_27"
+    android:layout_gravity="center"
+
+    android:background="@drawable/shape_message_dialog"
+    android:gravity="center_vertical"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_marginBottom="@dimen/dp_9"
+        android:gravity="center"
+        android:text="是否取消订单？"
+        android:textColor="#333333"
+        android:textSize="18sp" />
+    <TextView
+        android:id="@+id/tv_service_charge"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/dp_13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="需扣除手续费：¥ 1.00"
+        android:textColor="#ffe84242"
+        android:textSize="9sp"
+        />
+    <TextView
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:id="@+id/tv_message"
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="@dimen/dp_40"
+        android:layout_marginRight="@dimen/dp_40"
+        android:layout_marginBottom="@dimen/dp_22"
+        android:layout_height="wrap_content"
+        android:text="取消订单后，订单金额将在扣除手续费后返回
+到您的账户，您可以在该比赛开始前继续下单"
+        android:textColor="#ff999999"
+        android:textSize="11sp"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp_25"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_sure"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_30"
+            android:layout_marginRight="@dimen/dp_20"
+            android:layout_weight="1.1"
+            android:background="@drawable/shape_club_blue"
+            android:gravity="center"
+            android:paddingTop="@dimen/dp_11"
+            android:paddingBottom="@dimen/dp_11"
+            android:text="确定"
+            android:textColor="#ffffffff"
+            android:textSize="18sp" />
+
+        <View
+            android:id="@+id/view_divider"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_40"
+            android:layout_weight="0.4"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:layout_marginRight="@dimen/dp_30"
+            android:layout_weight="1.1"
+            android:background="@drawable/shape_club_gray"
+            android:gravity="center"
+            android:paddingTop="@dimen/dp_11"
+            android:paddingBottom="@dimen/dp_11"
+            android:text="取消"
+            android:textColor="#ffffffff"
+            android:textSize="18sp"
+            android:visibility="visible" />
+    </LinearLayout>
+</LinearLayout>
+</LinearLayout>

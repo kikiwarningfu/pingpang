@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_content_score"
+    android:layout_width="@dimen/dp_69"
+    android:layout_height="@dimen/dp_45"
+    android:background="@drawable/shape_item_title_top_left_write_solid">
+    <!--shape_item_title_top_left_write_solid-->
+
+
+    <TextView
+        android:id="@+id/tv_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text=""
+        android:textColor="#062A74"
+        android:textSize="15sp" />
+
+
+</RelativeLayout>

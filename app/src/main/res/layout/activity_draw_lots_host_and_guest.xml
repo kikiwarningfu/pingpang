@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="listener"
+            type="android.view.View.OnClickListener" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        tools:context=".ui.homepage.activity.CreateEventsActivity">
+
+
+        <heyong.handong.framework.widget.TopBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:centerText="主客队抽签" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:background="#F6F6F6" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginBottom="@dimen/dp_20">
+
+            <View
+                android:layout_width="@dimen/dp_213"
+                android:layout_height="@dimen/dp_10"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/shape_little_blude_solid_5" />
+
+            <TextView
+                android:id="@+id/tv_title_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/dp_6"
+                android:textColor="#ff333333"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <FrameLayout
+            android:layout_marginTop="@dimen/dp_73"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_132"
+
+            android:layout_gravity="center">
+
+            <ImageView
+                android:layout_marginLeft="@dimen/dp_11"
+                android:layout_marginRight="@dimen/dp_11"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_132"
+                android:layout_marginTop="@dimen/dp_26"
+
+                android:scaleType="centerCrop"
+                android:src="@drawable/img_zhuanpan_zhuo" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/tv_left_club_name"
+                        android:layout_marginTop="@dimen/dp_27"
+                        android:layout_centerHorizontal="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#fffefefe"
+                        android:textSize="24sp"
+                        />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/tv_right_name"
+                        android:layout_marginTop="@dimen/dp_27"
+                        android:layout_centerHorizontal="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#ffffffff"
+                        android:textSize="24sp"
+                        />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_marginTop="@dimen/dp_3"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/img_zhizhen"
+                    android:layout_width="@dimen/dp_72"
+                    android:layout_height="@dimen/dp_122"
+                    android:src="@drawable/img_zhukeke_ke2">
+
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/tv_start"
+                    android:layout_marginTop="@dimen/dp_51"
+                    android:textStyle="bold"
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="@{v->listener.onClick(v)}"
+                    android:text="抽签"
+                    android:textColor="#ff4795ed"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+        </FrameLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_5"
+            android:layout_marginTop="@dimen/dp_20"
+            android:background="#FFF6F6F6" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dp_17"
+            android:layout_marginBottom="@dimen/dp_40"
+            android:text="填写对阵名单"
+            android:textColor="#ff333333"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/dp_22"
+            android:layout_marginTop="@dimen/dp_58"
+            android:layout_marginRight="@dimen/dp_22"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/ll_left_click"
+                android:onClick="@{v->listener.onClick(v)}"
+                android:layout_width="@dimen/dp_125"
+                android:layout_height="@dimen/dp_40"
+                android:background="@drawable/shape_stroke_gray_0_5"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="@dimen/dp_18"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/shape_left_corners_blue"
+                    android:gravity="center"
+                    android:text="主队"
+                    android:textColor="#FFFFFF"
+                    android:textSize="@dimen/sp_11" />
+
+                <TextView
+                    android:id="@+id/tv_left_bottom_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="#ff999999"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="@dimen/dp_40"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:id="@+id/ll_right_click"
+                android:onClick="@{v->listener.onClick(v)}"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="@dimen/dp_125"
+                    android:layout_height="@dimen/dp_40"
+                    android:background="@drawable/shape_stroke_gray_0_5"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@+id/tv_right_bottom_name"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="#ff999999"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:layout_width="@dimen/dp_18"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/shape_right_corners_blue"
+                        android:gravity="center"
+                        android:text="客队"
+                        android:textColor="#FFFFFF"
+                        android:textSize="@dimen/sp_11" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+        <TextView
+            android:id="@+id/tv_start_competition_start"
+            android:onClick="@{v->listener.onClick(v)}"
+            android:layout_marginBottom="@dimen/dp_20"
+            android:layout_marginLeft="@dimen/dp_12"
+            android:layout_marginRight="@dimen/dp_12"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="@dimen/sp_15"
+            android:text="开始比赛"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/shape_club_gray_littele"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            />
+    </LinearLayout>
+</layout>

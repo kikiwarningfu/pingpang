@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginBottom="@dimen/dp_19"
+        android:orientation="vertical">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp_19"
+            android:orientation="horizontal">
+
+        <ImageView
+                android:layout_width="@dimen/dp_17"
+                android:layout_height="@dimen/dp_19"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_9"
+                android:src="@drawable/img_news_detail_yellow" />
+
+        <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_2"
+                android:text="成人组男子单打  比赛成绩"
+                android:textColor="#fffdb700"
+                android:textSize="12sp" />
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+        <!--shape_gray-->
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_45"
+                android:layout_marginLeft="@dimen/dp_12"
+                android:layout_marginRight="@dimen/dp_12"
+                android:layout_marginBottom="@dimen/dp_5"
+                android:background="@drawable/shape_news_detail_gray_solid"
+                android:orientation="horizontal">
+
+            <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="名   次"
+                    android:textColor="#0C3177"
+                    android:textSize="@dimen/sp_18"
+                    android:textStyle="bold" />
+
+            <View
+                    android:layout_width="@dimen/dp_0_5"
+                    android:layout_height="@dimen/dp_30"
+                    android:layout_marginTop="@dimen/dp_7"
+                    android:background="#CCCCCC" />
+
+            <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2.5"
+                    android:gravity="center"
+                    android:text="名    称"
+                    android:textColor="#0C3177"
+                    android:textSize="@dimen/sp_18"
+                    android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_45"
+                android:layout_marginLeft="@dimen/dp_12"
+                android:layout_marginRight="@dimen/dp_12"
+                android:layout_marginBottom="@dimen/dp_5"
+                android:background="@drawable/shape_news_detail_gray_solid"
+                android:orientation="horizontal">
+
+            <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+
+                    >
+
+                <ImageView
+                        android:layout_width="@dimen/dp_16"
+                        android:layout_height="@dimen/dp_23"
+                        android:layout_marginRight="@dimen/dp_12"
+                        android:src="@drawable/img_detail_champion" />
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="冠 军"
+                        android:textColor="#ff0c3177"
+                        android:textSize="18sp" />
+            </LinearLayout>
+
+            <View
+                    android:layout_width="@dimen/dp_0_5"
+                    android:layout_height="@dimen/dp_30"
+                    android:layout_marginTop="@dimen/dp_7"
+                    android:background="#CCCCCC" />
+
+            <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2.5"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/dp_5"
+                        android:text="战三"
+                        android:textColor="#ff333333"
+                        android:textSize="13sp" />
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/dp_3"
+                        android:text="江山市飞扬青少年乒乓球学校"
+                        android:textColor="#ff999999"
+                        android:textSize="11sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_45"
+                android:layout_marginLeft="@dimen/dp_12"
+                android:layout_marginRight="@dimen/dp_12"
+                android:layout_marginBottom="@dimen/dp_5"
+                android:background="@drawable/shape_news_detail_gray_solid"
+                android:orientation="horizontal">
+
+            <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+
+                    >
+
+                <ImageView
+                        android:layout_width="@dimen/dp_16"
+                        android:layout_height="@dimen/dp_23"
+                        android:layout_marginRight="@dimen/dp_12"
+                        android:src="@drawable/img_detail_second" />
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="亚 军"
+                        android:textColor="#ff0c3177"
+                        android:textSize="18sp" />
+            </LinearLayout>
+
+            <View
+                    android:layout_width="@dimen/dp_0_5"
+                    android:layout_height="@dimen/dp_30"
+                    android:layout_marginTop="@dimen/dp_7"
+                    android:background="#CCCCCC" />
+
+            <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2.5"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/dp_5"
+                        android:text="战三"
+                        android:textColor="#ff333333"
+                        android:textSize="13sp" />
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/dp_3"
+                        android:text="江山市飞扬青少年乒乓球学校"
+                        android:textColor="#ff999999"
+                        android:textSize="11sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_90"
+                android:layout_marginLeft="@dimen/dp_12"
+                android:layout_marginRight="@dimen/dp_12"
+                android:layout_marginBottom="@dimen/dp_5"
+                android:background="@drawable/shape_news_detail_gray_solid"
+                android:orientation="horizontal">
+
+            <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+
+                    >
+
+
+                <ImageView
+                        android:layout_width="@dimen/dp_16"
+                        android:layout_height="@dimen/dp_23"
+                        android:layout_marginRight="@dimen/dp_12"
+                        android:src="@drawable/img_detail_third" />
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="季 军"
+                        android:textColor="#ff0c3177"
+                        android:textSize="18sp" />
+            </LinearLayout>
+
+            <View
+                    android:layout_width="@dimen/dp_0_5"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/dp_7"
+                    android:layout_marginTop="@dimen/dp_7"
+                    android:background="#CCCCCC" />
+
+            <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2.5"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_45"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:orientation="vertical">
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/dp_5"
+                            android:text="战三"
+                            android:textColor="#ff333333"
+                            android:textSize="13sp" />
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="江山市飞扬青少年乒乓球学校"
+                            android:textColor="#ff999999"
+                            android:textSize="11sp" />
+
+                    <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_0_5"
+                            android:layout_marginLeft="@dimen/dp_12"
+                            android:layout_marginTop="@dimen/dp_8"
+                            android:layout_marginRight="@dimen/dp_12"
+                            android:background="#CCCCCC" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_45"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:orientation="vertical">
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/dp_5"
+                            android:text="战三"
+                            android:textColor="#ff333333"
+                            android:textSize="13sp" />
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="江山市飞扬青少年乒乓球学校"
+                            android:textColor="#ff999999"
+                            android:textSize="11sp" />
+
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_180"
+                android:layout_marginLeft="@dimen/dp_12"
+                android:layout_marginRight="@dimen/dp_12"
+                android:layout_marginBottom="@dimen/dp_5"
+                android:background="@drawable/shape_news_detail_gray_solid"
+                android:orientation="horizontal">
+
+            <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+
+                    >
+
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="第 五"
+                        android:textColor="#ff0c3177"
+                        android:textSize="18sp" />
+            </LinearLayout>
+
+            <View
+                    android:layout_width="@dimen/dp_0_5"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/dp_7"
+                    android:layout_marginTop="@dimen/dp_7"
+                    android:background="#CCCCCC" />
+
+            <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2.5"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_45"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:orientation="vertical">
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/dp_5"
+                            android:text="战三"
+                            android:textColor="#ff333333"
+                            android:textSize="13sp" />
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="江山市飞扬青少年乒乓球学校"
+                            android:textColor="#ff999999"
+                            android:textSize="11sp" />
+
+                    <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_0_5"
+                            android:layout_marginLeft="@dimen/dp_12"
+                            android:layout_marginTop="@dimen/dp_8"
+                            android:layout_marginRight="@dimen/dp_12"
+                            android:background="#CCCCCC" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_45"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:orientation="vertical">
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/dp_5"
+                            android:text="战三"
+                            android:textColor="#ff333333"
+                            android:textSize="13sp" />
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="江山市飞扬青少年乒乓球学校"
+                            android:textColor="#ff999999"
+                            android:textSize="11sp" />
+
+                    <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_0_5"
+                            android:layout_marginLeft="@dimen/dp_12"
+                            android:layout_marginTop="@dimen/dp_8"
+                            android:layout_marginRight="@dimen/dp_12"
+                            android:background="#CCCCCC" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_45"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:orientation="vertical">
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/dp_5"
+                            android:text="战三"
+                            android:textColor="#ff333333"
+                            android:textSize="13sp" />
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="江山市飞扬青少年乒乓球学校"
+                            android:textColor="#ff999999"
+                            android:textSize="11sp" />
+
+                    <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_0_5"
+                            android:layout_marginLeft="@dimen/dp_12"
+                            android:layout_marginTop="@dimen/dp_8"
+                            android:layout_marginRight="@dimen/dp_12"
+                            android:background="#CCCCCC" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_45"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:orientation="vertical">
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/dp_5"
+                            android:text="战三"
+                            android:textColor="#ff333333"
+                            android:textSize="13sp" />
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/dp_4"
+                            android:text="江山市飞扬青少年乒乓球学校"
+                            android:textColor="#ff999999"
+                            android:textSize="11sp" />
+
+
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
+
+</layout>

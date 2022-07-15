@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="listener"
+            type="android.view.View.OnClickListener" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_f5"
+        android:orientation="vertical">
+
+
+        <heyong.handong.framework.widget.TopBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:centerText="个人战绩" />
+
+        <LinearLayout
+            android:background="@color/white"
+            android:paddingTop="@dimen/dp_12"
+            android:paddingBottom="@dimen/dp_14"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <View
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_1"
+                android:layout_weight="33"/>
+            <LinearLayout
+                android:onClick="@{v->listener.onClick(v)}"
+                android:id="@+id/ll_win_status"
+                android:paddingTop="@dimen/dp_9"
+                android:paddingBottom="@dimen/dp_9"
+                android:paddingLeft="@dimen/dp_10"
+                android:paddingRight="@dimen/dp_7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="胜场次"
+                    android:textColor="#333333"
+                    android:textSize="14sp"
+                    />
+                <TextView
+                    android:layout_marginLeft="@dimen/dp_6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="(3)"
+                    android:textColor="#333333"
+                    android:textSize="14sp"
+                    />
+            </LinearLayout>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_1"
+                android:layout_weight="50"/>
+            <LinearLayout
+                android:onClick="@{v->listener.onClick(v)}"
+
+                android:id="@+id/ll_lose_status"
+
+                android:paddingTop="@dimen/dp_9"
+                android:paddingBottom="@dimen/dp_9"
+                android:paddingLeft="@dimen/dp_10"
+                android:paddingRight="@dimen/dp_7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="负场次"
+                    android:textColor="#333333"
+                    android:textSize="14sp"
+                    />
+                <TextView
+                    android:layout_marginLeft="@dimen/dp_6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="(3)"
+                    android:textColor="#333333"
+                    android:textSize="14sp"
+                    />
+            </LinearLayout>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_1"
+                android:layout_weight="56"/>
+            <LinearLayout
+                android:onClick="@{v->listener.onClick(v)}"
+
+                android:id="@+id/ll_give_up_status"
+                android:paddingTop="@dimen/dp_9"
+                android:paddingBottom="@dimen/dp_9"
+                android:paddingLeft="@dimen/dp_10"
+                android:paddingRight="@dimen/dp_7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="负场次"
+                    android:textColor="#333333"
+                    android:textSize="14sp"
+                    />
+                <TextView
+                    android:layout_marginLeft="@dimen/dp_6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="(3)"
+                    android:textColor="#333333"
+                    android:textSize="14sp"
+                    />
+            </LinearLayout>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_1"
+                android:layout_weight="41"/>
+        </LinearLayout>
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/sw_fresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_coach_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+          />
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+    </LinearLayout>
+</layout>

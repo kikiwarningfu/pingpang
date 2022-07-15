@@ -1,0 +1,542 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="heyong.intellectPinPang">
+
+    <permission
+        android:name="heyong.intellectPinPang.permission.JPUSH_MESSAGE"
+        android:protectionLevel="signature" /> <!-- Required -->
+    <uses-permission android:name="heyong.intellectPinPang.permission.JPUSH_MESSAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" /> <!-- 用于开启 debug 版本的应用在 6.0 系统上的层叠窗口权限 -->
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" /> <!-- 这个权限用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- 这个权限用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- 获取运营商信息，用于支持提供运营商信息相关的接口 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" /> <!-- 写入扩展存储，向扩展卡写入数据，用于写入离线定位数据 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- 访问网络，网络定位需要上网 -->
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- 允许挂载和反挂载文件系统可移动存储 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" /> <!-- 允许程序读取底层系统日志文件 -->
+    <uses-permission android:name="android.permission.READ_LOGS" /> <!-- 允许访问振动设备 -->
+    <uses-permission android:name="android.permission.VIBRATE" /> <!-- 允许使用PowerManager的 WakeLocks保持进程在休眠时从屏幕消失 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- 允许程序读取或写入系统设置 -->
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" /> <!-- android 9.0上使用前台服务，需要添加权限 -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" /> <!-- 用于读取手机当前的状态 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" /> <!-- 读取缓存数据 -->
+    <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" />
+    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_ADDED" />
+    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_CHANGED" />
+    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_INSTALL" />
+    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_REPLACED" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" /> <!-- 用于申请调用A-GPS模块 -->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" /> <!-- <uses-permission android:name="android.permission.RECORD_AUDIO" /> &lt;!&ndash; 录音 &ndash;&gt; -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.READ_SETTINGS" /> <!-- 硬件加速对X5视频播放非常重要，建议开启 -->
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
+    <uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER" />
+
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <application
+        android:name=".MyApp"
+        android:allowBackup="true"
+        android:icon="@drawable/img_logo_start"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:replace="android:allowBackup">
+
+        <activity android:name=".ui.competition.activity.SearchRefereeListActivity"></activity>
+        <activity android:name=".ui.mine.activity.live.OrderTackerSettingActivity" />
+        <activity android:name=".ui.mine.activity.live.OrderConfirmActivity" />
+        <activity android:name=".ui.mine.activity.live.RemoveOrderTackerActivity" />
+        <activity android:name=".ui.mine.activity.live.ClerkOrderApplyActivity" />
+        <activity android:name=".ui.mine.activity.live.WithDrawActivity"></activity>
+        <activity android:name=".ui.mine.activity.live.MyWalletActivity"></activity>
+        <activity android:name=".ui.mine.activity.live.OrderCancelActivity" />
+        <activity android:name=".soundnet.SoundBaseActivity" />
+        <activity android:name=".ui.friendcircle.FriendLocationSearchActivity" />
+        <activity android:name=".ui.friendcircle.FriendLocationActivity" />
+        <activity
+            android:name=".ui.friendcircle.FriendCircleVideoPlayActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity android:name=".ui.friendcircle.FillCertificationInformationActivity" />
+        <activity android:name=".ui.competition.activity.LeftForeHandActivity" />
+        <activity android:name=".ui.competition.activity.EnterSignatureActivity" />
+        <activity android:name=".ui.competition.activity.ShoesClothesInformationActivity" />
+        <activity android:name=".ui.competition.activity.GameInformationActivity" />
+        <activity android:name=".ui.competition.activity.RubberColorActivity" />
+        <activity android:name=".ui.competition.activity.CustomModelActivity" />
+        <activity android:name=".ui.competition.activity.CustomBrandActivity" />
+        <activity android:name=".ui.competition.activity.BrandModelActivity" />
+        <activity android:name=".ui.competition.activity.ChooseBrandActivity" />
+        <activity android:name=".ui.competition.activity.FillEquipmentInformationActivity" />
+        <activity android:name=".ui.competition.activity.GameSexSettingActivity" />
+        <activity android:name=".ui.competition.activity.GameNameSettingActivity" />
+        <activity android:name=".ui.competition.activity.FillGameInformationActivity" />
+        <activity android:name=".ui.competition.activity.SetUpPersonalSignActivity" />
+        <activity android:name=".ui.competition.activity.SetUpNickNameActivity" />
+        <activity android:name=".ui.competition.activity.PersonalInformationNewActivity" />
+        <activity android:name=".ui.club.activity.RegistrationDetailActivity" />
+        <activity android:name=".ui.friendcircle.RealNameFriendActivity" />
+        <activity android:name=".ui.competition.activity.PersonalRecordActivity" />
+        <activity android:name=".ui.friendcircle.FriendMyPersonalCertificateActivity" />
+        <activity android:name=".ui.friendcircle.HomePageUserActivity" />
+        <activity android:name=".ui.friendcircle.PublishFriendCircleListActivity" />
+        <activity android:name=".ui.friendcircle.AttentionFriendCircleActivity" />
+        <activity android:name=".ui.friendcircle.FansFriendCircleActivity" />
+        <activity android:name=".ui.coachdisplay.DisplayWavierUpActivity" />
+        <activity android:name=".ui.coachdisplay.WavierUpActivity" />
+        <activity android:name=".ui.coachdisplay.WavierTeamResultActivity" />
+        <activity android:name=".ui.friendcircle.CircleUserDetailActivity" />
+        <activity android:name=".ui.friendcircle.FriendCircleReplyDetailActivity" />
+        <activity android:name=".ui.friendcircle.FriendCircleDetailActivity" /> <!-- autoSize配置 -->
+        <meta-data
+            android:name="design_width_in_dp"
+            android:value="360" />
+        <meta-data
+            android:name="design_height_in_dp"
+            android:value="640" />
+
+        <activity
+            android:name=".ui.friendcircle.PlayVideoActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity android:name=".ui.competition.activity.SinglesDetailScoreNewActivity" />
+        <activity android:name=".ui.mine.activity.SportsConfirmationResultsActivity" />
+        <activity android:name=".ui.mine.activity.live.myself.MySelfOrderActivity" />
+        <activity android:name=".ui.mine.activity.live.accept.MyAcceptActivity" />
+        <activity android:name=".ui.mine.activity.live.publish.MyPublishActivity" />
+        <activity android:name=".ui.mine.activity.live.OrderCenterActivity" />
+        <activity android:name=".ui.mine.activity.live.LiveNewListChildActivity" />
+        <activity android:name=".ui.competition.activity.SelectAthletesSingleActivity" />
+        <activity
+            android:name=".live.activity.PublishPerfectMoneyOrderActivity"
+            android:launchMode="singleTask" /> <!-- <activity android:name=".live.activity.VideoSelectActivity" /> -->
+        <activity android:name=".ui.splash.GudienceActivity" />
+        <activity android:name=".live.activity.ReferenceVisitorMatchActivity" />
+        <activity android:name=".live.activity.MyGameActivity" />
+        <activity android:name=".live.activity.MyVideoLibraryActivity" />
+        <activity android:name=".live.activity.PayLiveChargeActivity" />
+        <activity android:name=".ui.mine.activity.live.MyLiveOrderActivity" />
+        <activity android:name=".ui.mine.activity.live.MyLivePublishOrderActivity" />
+        <activity android:name=".ui.mine.activity.live.WithDrawZFBActivity" />
+        <activity android:name=".ui.mine.activity.live.SearchLiveListActivity" />
+        <activity android:name=".ui.mine.activity.live.SearchLiveGameListActivity" />
+        <activity android:name=".ui.mine.activity.live.LiveListActivity" />
+        <activity android:name=".ui.competition.activity.SingleFirstOptionActivity" />
+        <activity
+            android:name=".ui.coachdisplay.DisplaySingleDetailOfficialActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".ui.coachdisplay.DisplaySingleFirstOptionActivity" />
+        <activity android:name=".ui.coachdisplay.DisplaySinglesDetailScoreOfficialActivity" />
+        <activity android:name=".ui.coachdisplay.DisplayTeamResultsOfficialActivity" />
+        <activity android:name=".ui.coachdisplay.DisplayTeamResultsOfficialScoreActivity" />
+        <activity android:name=".ui.coachdisplay.DisplayDrawForHostAndVistors" />
+        <activity android:name=".ui.coachdisplay.RefereeDisplayActivity" />
+        <activity android:name=".ui.coachdisplay.DisplayCoachFillMatchFormActivity" />
+        <activity
+            android:name=".ui.splash.SplashActivity"
+            android:theme="@style/AppTheme.Launcher">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.friendcircle.MyFriendCircleActivity"></activity>
+        <activity
+            android:name=".ui.friendcircle.PublishEditCircleActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity android:name=".ui.mine.activity.live.MyLiveActivity" />
+        <activity android:name=".ui.mine.activity.live.LiveOrderListActivity" />
+        <activity
+            android:name=".ui.mine.activity.WebViewActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".permissions.PermissionsActivity"
+            android:theme="@style/Transparent" />
+        <activity android:name=".live.activity.WithDrawDetailActivity" />
+        <activity
+            android:name=".live.activity.WatchLiveRecordActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleTask"></activity>
+        <activity android:name=".live.activity.WatchLiveActivity"></activity>
+        <activity android:name=".live.activity.YourOrderListActivity" />
+        <activity android:name=".live.activity.LiveOrderDetailActivity" />
+        <activity android:name=".live.activity.TeachFilmsActivity" />
+        <activity android:name=".live.activity.BindZFBActivity" />
+        <activity android:name=".live.activity.ComplainActivity" />
+        <activity
+            android:name=".live.activity.PublishRewardActivity"
+            android:launchMode="singleTask" />
+        <activity android:name=".live.activity.DetailOfOfferActivity" />
+        <activity android:name=".ui.mine.activity.live.LiveSearchNewListActivity" />
+        <activity android:name=".live.activity.liveRewardListActivity" />
+        <activity android:name=".live.activity.LiveTeachResultActivity" />
+        <activity android:name=".live.activity.RefundDetailActivity" />
+        <activity android:name=".live.activity.EvaluationRewardActivity" />
+        <activity android:name=".live.activity.EvaluationRewardDetailActivity" />
+        <activity android:name=".live.activity.LiveOrderActivity" />
+        <activity android:name=".live.activity.LiveOrderDetailAboutDetailActivity" />
+        <activity android:name=".live.activity.LivePublishOrderDetailActivity"></activity>
+        <activity android:name=".live.activity.PayLiveOrderActivity" />
+        <activity android:name=".live.activity.PayLiveOrderResultActivity" />
+        <activity android:name=".live.activity.ApplyRefundActivity" />
+        <activity android:name=".live.activity.LiveEndActivity" />
+        <activity android:name=".live.activity.BeginStartLiveActivity" />
+        <activity android:name=".ui.mine.activity.live.ApplyLiveQualificationActivity" />
+        <activity android:name=".ui.mine.activity.live.BindAccountActivity" />
+        <activity android:name=".ui.mine.activity.live.BindPageActivity" />
+        <activity android:name=".ui.mine.activity.live.ApplyForUnlockActivity" />
+        <activity android:name=".ui.competition.activity.OutRaceOfDetailActivity" />
+        <activity android:name=".ui.competition.activity.EventDetailPaiedActivity" /> <!-- <service android:name=".service.KeepAppAliveService" /> -->
+        <activity android:name=".ui.shopmall.fragment.ShopMallKotlinActivity" /> <!-- <service android:name=".service.KeepAppAliveService" /> -->
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="8e18408408a1bf624c148fcb89c307d4" />
+
+        <activity android:name=".ui.mine.activity.VerityOldPhoneActivity" />
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:launchMode="singleTop" />
+        <activity android:name=".ui.club.activity.AllGamesActivity" />
+        <activity android:name=".ui.competition.activity.EventDetailToPayActivity" />
+        <activity android:name=".ui.mine.activity.AlReadyBindPhoneActivity" />
+        <activity android:name=".ui.mine.activity.live.FreezeOrderTackerActivity" />
+        <activity android:name=".ui.mine.activity.live.LiveGameListActivity" />
+        <activity android:name=".ui.mine.activity.live.PayOrderTackerActivity" />
+        <activity android:name=".ui.mine.activity.RealNameSuccessActivity" />
+        <activity
+            android:name=".ui.competition.activity.DoubleDetailActivity"
+            android:windowSoftInputMode="adjustResize|stateHidden" /> <!-- stateVisible|adjustResize  adjustPan" -->
+        <!-- adjustResize|stateHidden -->
+        <activity
+            android:name=".ui.competition.activity.DoubleDetailOfficialActivity"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity android:name=".ui.SignInterfaceActivity" />
+        <activity android:name=".ui.competition.activity.SelectPlayersForTeamAndSinglesActivity" />
+        <activity android:name=".ui.competition.activity.ChooseNoAthleteMajorActivity" />
+        <activity android:name=".ui.club.activity.SelectTeamNumberSingleActivity" />
+        <activity android:name=".ui.competition.activity.ChooseAthleteMajorActivity" />
+        <activity android:name=".ui.competition.activity.SelectAthletesAndCoachesActivity" />
+        <activity android:name=".ui.competition.activity.ClubRegistrationChanncelActivity" />
+        <activity
+            android:name=".ui.club.activity.CoachFillMatchFormActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".ui.club.activity.CoachDrawLotsHostAndGusetActivity"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="com.example.SECOND_ACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="second" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.mine.activity.ContactUsActivity" />
+        <activity android:name=".ui.mine.activity.ChangeBindPhoneActivity" />
+        <activity android:name=".ui.mine.activity.AboutUsKotlinActivity" />
+        <activity android:name=".ui.mine.activity.AccountNumberSecurityKotlinActivity" />
+        <activity android:name=".ui.mine.activity.SettingActivity" />
+        <activity android:name=".ui.mine.activity.MyRegistrationActivity" />
+        <activity android:name=".ui.mine.activity.RefereeExperienceActivity" />
+        <activity android:name=".ui.mine.activity.RefereeDetailAcitivty" />
+        <activity android:name=".ui.mine.activity.AllGradeActivity" />
+        <activity android:name=".ui.mine.activity.AwardWinningScoreActivity" />
+        <activity android:name=".ui.mine.activity.MyGradeActivity" />
+        <activity android:name=".ui.mine.activity.ConfirmationResultsActivity" />
+        <activity android:name=".ui.mine.activity.EventMessageActivity" />
+        <activity android:name=".ui.mine.activity.MyMessageActivity" />
+        <activity android:name=".ui.club.activity.MyClubActivity" />
+        <activity android:name=".ui.competition.activity.CoachTeamDetailActivity" />
+        <activity android:name=".ui.competition.activity.MyEventActivity" />
+        <activity android:name=".ui.competition.activity.PersonalInformationActivity" />
+        <activity android:name=".ui.competition.activity.RefereeEntryChannelActivity" />
+        <activity android:name=".ui.competition.activity.CompetitionDetailsListActivity" />
+        <activity android:name=".ui.competition.activity.ClubTeamRegisterChannelActivity" />
+        <activity android:name=".ui.competition.activity.ClubAndTeamRegisterChannelActivity" />
+        <activity android:name=".ui.competition.activity.SelectionsOfEventActivity" />
+        <activity
+            android:name=".ui.competition.activity.SportsPersonalChannelActivity"
+            android:launchMode="singleTask" />
+        <activity android:name=".ui.competition.activity.EventRegisterActivity" />
+        <activity
+            android:name=".ui.competition.activity.EventSignUpActivity"
+            android:launchMode="singleTask" />
+        <activity android:name=".ui.club.activity.DrawLotsHostAndGuestActivity" />
+        <activity android:name=".ui.club.activity.RecentGamesAthletesActivity" />
+        <activity android:name=".ui.club.activity.FillMatchFormActivity" />
+        <activity android:name=".ui.club.activity.ChooseFormatActivity" />
+        <activity android:name=".ui.club.activity.SelectTeamNumbersActivity" />
+        <activity android:name=".ui.club.activity.CreateTeamGamesActivity" />
+        <activity android:name=".ui.club.activity.InternalGameListActivity" />
+        <activity android:name=".ui.club.activity.ClubMemberActivity" />
+        <activity android:name=".ui.club.activity.MemberShipDetailsActivity" />
+        <activity android:name=".ui.homepage.activity.EventListActivity" />
+        <activity android:name=".ui.club.activity.ClubDetailActivity" />
+        <activity android:name=".ui.homepage.activity.NewsDetailActivity" />
+        <activity android:name=".ui.homepage.activity.CompetitionNewsActivity" />
+        <activity android:name=".ui.login.activity.FindPasswordActivity" />
+        <activity android:name=".ui.login.activity.SetPasswordActivity" />
+        <activity android:name=".ui.homepage.activity.GameDetailActivity" />
+        <activity android:name=".ui.homepage.activity.FileDisplayActivity"></activity>
+        <activity android:name=".ui.homepage.activity.RankingListActivity" />
+        <activity android:name=".ui.homepage.activity.SearchActivity" />
+        <activity android:name=".ui.homepage.activity.NewCompetitionActivity" />
+        <activity android:name=".ui.club.activity.CreateClubActivity" />
+        <activity android:name=".ui.homepage.activity.CreateEventsActivity" />
+        <activity android:name=".ui.club.activity.GameUnderWayScoreActivity" />
+        <activity android:name=".ui.club.activity.TeamResultsScoreActivity" />
+        <activity android:name=".ui.competition.activity.DoubleDetailScoreActivity" />
+        <activity android:name=".ui.competition.activity.DoubleDetailScoreNewActivity" />
+        <activity android:name=".ui.competition.activity.DoubleDetailScoreOfficialActivity" />
+        <activity android:name=".ui.competition.activity.SinglesDetailScoreActivity" />
+        <activity
+            android:name=".ui.competition.activity.SinglesDetailActivity"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity android:name=".ui.club.activity.GameUnderWayActivity" />
+        <activity android:name=".ui.club.activity.GameUnderWayTest" />
+        <activity android:name=".ui.club.activity.TeamResultsActivity" />
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="tencent1110991572" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            tools:replace="android:configChanges" />
+
+        <provider
+            android:name=".utils.ChoosePhotoProvider"
+            android:authorities="heyong.intellectPinPang.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths_public" />
+        </provider>
+        <provider
+            android:name=".utils.TakePhotoProvider"
+            android:authorities="heyong.intellectPinPang.myfileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true"
+            tools:replace="android:authorities">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+        <provider
+            android:name=".utils.MyFileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true"
+            tools:replace="android:authorities">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_provider_paths" />
+        </provider>
+
+        <activity android:name=".ui.login.activity.BindPhoneActivity" />
+        <activity
+            android:name=".ui.competition.activity.TeamNumbersActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".ui.club.activity.TeamResultsScoreOfficialActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".ui.competition.activity.SinglesDetailScoreOfficialActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".ui.competition.activity.ChiefJudgeConsoleActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".ui.mine.activity.ReferenceAllMatchActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".ui.competition.activity.DrawForHostAndVistors"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".ui.competition.activity.RefereeCompetitionInterfaceActivity"
+            android:launchMode="singleTask" /> <!-- <activity -->
+        <!-- android:name=".ui.aliplay.AliPlayVideoActivity" -->
+        <!-- android:configChanges="orientation|keyboardHidden|screenSize|smallestScreenSize|screenLayout" -->
+        <!-- android:launchMode="singleTop" -->
+        <!-- android:theme="@style/Theme.AppCompat.Light.NoActionBar" -->
+        <!-- android:windowSoftInputMode="adjustResize" /> -->
+        <activity
+            android:name=".live.activity.LivePublishKotlinActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize" />
+        <activity android:name=".ui.login.activity.LoginActivity">
+            <intent-filter>
+                <action android:name="${applicationId}.com.action.login" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity> <!-- <activity -->
+        <!-- android:name=".live.activity.LiveActivity" -->
+        <!-- android:configChanges="orientation|keyboardHidden|screenSize" /> -->
+        <!-- <activity android:name=".ui.login.activity.LoginActivity"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="${applicationId}.com.action.login" /> -->
+        <!-- <category android:name="android.intent.category.DEFAULT" /> -->
+        <!-- </intent-filter> -->
+        <!-- </activity> -->
+        <activity
+            android:name=".ui.competition.activity.SinglesDetailOfficialActivity"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity android:name=".ui.club.activity.TeamResultsOfficialActivity" />
+        <activity android:name=".ui.club.activity.TeamResultsScoreNewOfficialActivity" />
+        <activity android:name=".ui.mine.activity.RealNameImageActivity" />
+        <activity android:name=".ui.mine.activity.ApplyForRefereeActivity" />
+
+        <service android:name="com.amap.api.location.APSService" /> <!-- 魅族push应用定义消息receiver声明 -->
+        <!-- <receiver android:name=".receiver.MeiZuTestReceiver"> -->
+        <!-- <intent-filter> -->
+        <!-- &lt;!&ndash; 接收push消息 &ndash;&gt; -->
+        <!-- <action android:name="com.meizu.flyme.push.intent.MESSAGE" /> -->
+        <!-- &lt;!&ndash; 接收register消息 &ndash;&gt; -->
+        <!-- <action android:name="com.meizu.flyme.push.intent.REGISTER.FEEDBACK" /> -->
+        <!-- &lt;!&ndash; 接收unregister消息 &ndash;&gt; -->
+        <!-- <action android:name="com.meizu.flyme.push.intent.UNREGISTER.FEEDBACK" /> -->
+        <!-- &lt;!&ndash; 兼容低版本Flyme3推送服务配置 &ndash;&gt; -->
+        <!-- <action android:name="com.meizu.c2dm.intent.REGISTRATION" /> -->
+        <!-- <action android:name="com.meizu.c2dm.intent.RECEIVE" /> -->
+        <!-- <category android:name="${applicationId}" /> -->
+        <!-- </intent-filter> -->
+        <!-- </receiver> -->
+        <!-- <receiver android:name=".receiver.MyReceiver"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="chanchawReceiver" /> -->
+        <!-- </intent-filter> -->
+        <!-- </receiver> -->
+        <activity
+            android:name=".ui.MipushTestActivity"
+            android:exported="true"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".ui.MyHomePageActivity"
+            android:launchMode="singleTask" /> <!-- vivo push参数声明 -->
+        <!-- vivo start -->
+        <!-- <meta-data -->
+        <!-- android:name="com.vivo.push.api_key" -->
+        <!-- android:value="e24e01f45c651994c9653059df1eee02" /> -->
+        <!-- <meta-data -->
+        <!-- android:name="com.vivo.push.app_id" -->
+        <!-- android:value="105466990" /> -->
+        <service
+            android:name=".service.JPushService"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":pushcore">
+            <intent-filter>
+                <action android:name="cn.jiguang.user.service.action" />
+            </intent-filter>
+        </service>
+
+        <receiver android:name=".receiver.NotificationClickReceiver" /> <!-- Required SDK 核心功能 -->
+        <!-- 可配置 android:process 参数将 PushService 放在其他进程中 -->
+        <service
+            android:name="cn.jpush.android.service.PushService"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTER" />
+                <action android:name="cn.jpush.android.intent.REPORT" />
+                <action android:name="cn.jpush.android.intent.PushService" />
+                <action android:name="cn.jpush.android.intent.PUSH_TIME" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name="com.tencent.bugly.beta.ui.BetaActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@android:style/Theme.Translucent" /> <!-- Bugly -->
+        <activity
+            android:name=".soundnet.SingleHostLiveActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".soundnet.LivePrepareActivity"
+            android:keepScreenOn="true"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" /> <!-- 用于兼容7.0以上设备 -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="heyong.intellectPinPang.FileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true"
+            tools:replace="android:authorities">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths"
+                tools:replace="android:resource" />
+        </provider>
+        <provider
+            android:name=".utils.HofFixMyFileProvider"
+            android:authorities="heyong.intellectPinPang.fileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider> <!-- 用户自定义接收消息器,所有你想要知道的消息都在这里 -->
+        <receiver
+            android:name=".receiver.PushMessageReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.RECEIVE_MESSAGE" />
+
+                <category android:name="heyong.intellectPinPang" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".receiver.MyReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTRATION" />
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" />
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" />
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" />
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_CLICK_ACTION" />
+                <action android:name="cn.jpush.android.intent.CONNECTION" />
+
+                <category android:name="You package Name" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

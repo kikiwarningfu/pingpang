@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="listener"
+            type="android.view.View.OnClickListener" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_f5"
+        android:orientation="vertical"
+        tools:context=".ui.homepage.activity.CreateEventsActivity">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+
+                android:layout_width="match_parent"
+                android:layout_height="610dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_my_live_bg" />
+
+            <ImageView
+
+                android:id="@+id/iv_finish"
+                android:onClick="@{v->listener.onClick(v)}"
+                android:layout_width="@dimen/dp_11"
+                android:src="@drawable/img_left_back_write"
+                android:layout_height="@dimen/dp_20"
+                android:layout_marginLeft="@dimen/dp_11"
+                android:layout_marginTop="@dimen/dp_35"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_46"
+                android:layout_marginTop="@dimen/dp_70"
+                android:text="我的直播"
+                android:textStyle="bold"
+                android:textColor="#ffffffff"
+                android:textSize="29sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/dp_156"
+                android:background="@drawable/shape_top_right_corners_19"
+                android:orientation="vertical">
+
+                <androidx.core.widget.NestedScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fillViewport="true">
+
+                    <LinearLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/ll_jiedan_center"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_25"
+                            android:layout_marginTop="@dimen/dp_42"
+                            android:layout_marginRight="@dimen/dp_25"
+                            android:gravity="center_vertical"
+                            android:onClick="@{v->listener.onClick(v)}"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="@dimen/dp_19"
+                                android:layout_height="@dimen/dp_21"
+                                android:src="@drawable/img_live_my_jiedan" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/dp_19"
+                                android:text="接单员中心"
+                                android:textColor="#ff5b5b5b"
+                                android:textSize="17sp" />
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="1dp"
+                                android:layout_weight="1" />
+                            <TextView
+                                android:id="@+id/tv_freezing"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="@dimen/dp_13"
+                                android:text="账号被封禁"
+                                android:textColor="#ffe51919"
+                                android:textSize="13sp"
+                                />
+                            <ImageView
+                                android:layout_width="@dimen/dp_7"
+                                android:layout_height="@dimen/dp_12"
+                                android:src="@drawable/img_right_gray_back" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_1"
+                            android:layout_marginLeft="@dimen/dp_25"
+                            android:layout_marginTop="@dimen/dp_21"
+                            android:layout_marginRight="@dimen/dp_25"
+                            android:layout_marginBottom="@dimen/dp_21"
+                            android:background="#F6F6F6" />
+
+                        <LinearLayout
+                            android:id="@+id/ll_jiequ_order"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_25"
+                            android:layout_marginRight="@dimen/dp_25"
+                            android:gravity="center_vertical"
+                            android:onClick="@{v->listener.onClick(v)}"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="@dimen/dp_19"
+                                android:layout_height="@dimen/dp_21"
+                                android:src="@drawable/img_my_live_order" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/dp_19"
+                                android:text="直播订单"
+                                android:textColor="#ff5b5b5b"
+                                android:textSize="17sp" />
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="1dp"
+                                android:layout_weight="1" />
+
+                            <ImageView
+                                android:layout_width="@dimen/dp_7"
+                                android:layout_height="@dimen/dp_12"
+                                android:src="@drawable/img_right_gray_back" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_1"
+                            android:layout_marginLeft="@dimen/dp_25"
+                            android:layout_marginTop="@dimen/dp_21"
+                            android:layout_marginRight="@dimen/dp_25"
+                            android:layout_marginBottom="@dimen/dp_21"
+                            android:background="#F6F6F6" />
+
+                        <LinearLayout
+                            android:id="@+id/ll_my_self_order"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_25"
+                            android:layout_marginRight="@dimen/dp_25"
+                            android:gravity="center_vertical"
+                            android:onClick="@{v->listener.onClick(v)}"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="@dimen/dp_19"
+                                android:layout_height="@dimen/dp_21"
+                                android:src="@drawable/img_jiequ_order" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/dp_19"
+                                android:text="视频库"
+                                android:textColor="#ff5b5b5b"
+                                android:textSize="17sp" />
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="1dp"
+                                android:layout_weight="1" />
+
+                            <ImageView
+                                android:layout_width="@dimen/dp_7"
+                                android:layout_height="@dimen/dp_12"
+                                android:src="@drawable/img_right_gray_back" />
+                        </LinearLayout>
+
+
+
+
+                    </LinearLayout>
+                </androidx.core.widget.NestedScrollView>
+
+            </LinearLayout>
+        </RelativeLayout>
+
+    </LinearLayout>
+</layout>

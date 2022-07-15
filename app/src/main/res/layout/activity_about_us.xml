@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+                name="listener"
+                type="android.view.View.OnClickListener" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/color_f5"
+            android:orientation="vertical"
+            tools:context=".ui.homepage.activity.CreateEventsActivity">
+
+
+        <heyong.handong.framework.widget.TopBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:centerText="关于我们" />
+
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="#F6F6F6" />
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <ImageView
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/dp_24"
+                    android:src="@drawable/img_big_logo"
+                    android:layout_width="@dimen/dp_96"
+                    android:layout_height="@dimen/dp_101"/>
+
+            <TextView
+                    android:layout_marginTop="@dimen/dp_26"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="小亮智乒"
+                    android:textColor="#ff333333"
+                    android:textSize="18sp"
+                    />
+            <LinearLayout
+                android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_version_date"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_13"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:layout_weight="1"
+                    android:text="版本："
+                    android:textColor="#ff333333"
+                    android:textSize="15sp" />
+                <TextView
+                    android:id="@+id/tv_version_update"
+                    android:onClick="@{v->listener.onClick(v)}"
+                        android:layout_marginTop="@dimen/dp_20"
+                        android:layout_marginRight="@dimen/dp_12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="版本更新"
+                        android:textColor="#ff4795ed"
+                        android:textSize="15sp"
+                        />
+            </LinearLayout>
+            <TextView
+                    android:layout_marginLeft="@dimen/dp_12"
+                    android:layout_marginRight="@dimen/dp_21"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="小亮智乒APP是北京小亮科技有限公司旗下的一款为
+运动员和裁判员提供强大比赛支持的app。"
+                    android:textColor="#ff333333"
+                    android:textSize="15sp"
+                    />
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

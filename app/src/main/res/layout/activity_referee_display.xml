@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="listener"
+            type="android.view.View.OnClickListener" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_f5"
+        android:orientation="vertical"
+        tools:context=".ui.homepage.activity.CreateEventsActivity">
+
+
+        <heyong.handong.framework.widget.TopBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:centerText="裁判员操作展示模拟赛" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_60"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/dp_23"
+            android:paddingRight="@dimen/dp_23">
+
+            <TextView
+                android:id="@+id/tv_all"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_34"
+                android:background="@drawable/shape_club_blue"
+                android:gravity="center"
+                android:minWidth="@dimen/dp_80"
+                android:onClick="@{v->listener.onClick(v)}"
+                android:text="总场次(2)"
+                android:textColor="#FFFFFFFF"
+                android:textSize="14sp" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_1"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/tv_daisai"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_34"
+                android:gravity="center"
+                android:minWidth="@dimen/dp_80"
+
+                android:onClick="@{v->listener.onClick(v)}"
+                android:text="待赛(2)"
+                android:textColor="#FF333333"
+                android:textSize="14sp" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_1"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/tv_end"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_34"
+                android:gravity="center"
+                android:minWidth="@dimen/dp_80"
+                android:onClick="@{v->listener.onClick(v)}"
+                android:text="已结束(0)"
+                android:textColor="#FF333333"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:background="#FFF6F6F6" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/tv_taishu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="@dimen/dp_12"
+                android:layout_marginTop="@dimen/dp_5"
+                android:layout_marginBottom="@dimen/dp_5"
+                android:background="@drawable/shape_club_yellow"
+                android:gravity="center"
+                android:minWidth="@dimen/dp_50"
+                android:paddingTop="@dimen/dp_6"
+                android:paddingBottom="@dimen/dp_6"
+                android:text="1台"
+                android:textColor="#FFFFFFFF"
+                android:textSize="18sp" />
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_time"
+                    android:layout_marginLeft="@dimen/dp_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="@dimen/dp_20"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/shape_gradient_music_player_left">
+
+                    </View>
+
+
+                    <View
+                        android:layout_width="@dimen/dp_20"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/shape_gradient_music_player">
+
+                    </View>
+                </RelativeLayout>
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/tv_paixu"
+                android:onClick="@{v->listener.onClick(v)}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_13"
+                android:gravity="center"
+                android:text="排序"
+                android:textColor="#ff4795ed"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_game_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</layout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    >
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ll_content"
+        android:background="@drawable/shape_big_blue_stroke_05"
+        android:orientation="vertical">
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/dp_7"
+            android:paddingTop="@dimen/dp_7"
+            android:paddingRight="@dimen/dp_7"
+            android:paddingBottom="@dimen/dp_7"
+            android:text="岳云鹏"
+            android:textColor="#ff0e3078"
+            android:textSize="12sp" />
+</LinearLayout>
+</layout>
