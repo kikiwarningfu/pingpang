@@ -59,6 +59,7 @@ public class Api {
                 .readTimeout(60, TimeUnit.SECONDS)
                 .writeTimeout(60, TimeUnit.SECONDS)
                 //这里添加的小米系的手机使用公司的网络，网络卡顿，而测试机好几个小米系 判断是IPV4 和IPV6  解决网络卡顿的问题
+//                这里需要详细的看
 //                .dns(DnsSelector.byName("ipv4only"))
                 .cookieJar(new CookieJar() {
 
